@@ -15,15 +15,19 @@ def covert_to_protein(seq):
     return protein #returns Seq object
 
 
-def blast_search_xml_save(sequence, filename, type='blastn', database = 'nt'):
-    handler = NCBIWWW.qblast(type, database, sequence.seq)
+def blast_search_xml_save(sequence, filename, taxid = '',type='blastn', database = 'nt'):
+    if len(taxid) >0:
+        handler = NCBIWWW.qblast(type, database, sequence.seq, entrez_query=taxid)
+    else:
+        handler = NCBIWWW.qblast(type, database, sequence.seq)
     storer = handler.read()
-    with open(filename.xml, 'w') as savefile:
+    with open(f'{filename}.xml', 'w') as savefile:
         savefile.write(storer)
 
 
+
 def single_result_xml_read_to_pd_dict(filename):
-    result = SearchIO.read(filename, 'blast-xml')
+    result = SearchIO.read(f'{filename}.xml', 'blast-xml')
     dictionary = SearchIO.to_dict(result)
     df = pd.DataFrame.from_dict(dictionary)
     return df
