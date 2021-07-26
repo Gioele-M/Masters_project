@@ -2,3 +2,5 @@ starting_ex/test_checkpoint
 starting_ex/.ipynb_checkpoints
 starting_ex/blastn_results.xml
 starting_ex/blastp_results.xml
+starting_ex/blastn_bytaxid_results.xml
+starting_ex/nblast_result.csv
