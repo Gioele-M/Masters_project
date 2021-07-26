@@ -1,3 +1,6 @@
+#parse the hits from the BLAST xml
+blast_qresult = SearchIO.read(b_res_filename, "blast-xml")
+
 #create the dictionary with BLAST results
 blast_resdi = {'name':[], 'id':[], 'q_cover':[], 'e_val':[], 'hit_length':[]}
 
