@@ -1,3 +1,8 @@
+#all available elements here:
+https://biopython.org/docs/1.75/api/Bio.SearchIO.BlastIO.html#blast-xml
+
+####    EXAMPLE    ####
+
 #parse the hits from the BLAST xml
 blast_qresult = SearchIO.read(b_res_filename, "blast-xml")
 
