@@ -1,0 +1,6 @@
+name	id	q_cover	e_val	hit_length	isoform	precursor	extra
+interferon-induced GTP-binding protein Mx1	XP_018873130.1	0.9984917043740572	0.0	662	 X1 [Gorilla gorilla gorilla]		
+interferon-induced GTP-binding protein Mx2	XP_004062883.3	0.9396681749622926	0.0	626			Gorilla gorilla gorilla]
+dynamin-1	XP_030870116.1	0.7104072398190046	3.34336e-67	482	 X1 [Gorilla gorilla gorilla]		
+dynamin-2	XP_030860281.1	0.7073906485671192	1.4822099999999998e-69	481			Gorilla gorilla gorilla]
+dynamin-3	XP_018882212.1	0.6395173453996983	2.0265899999999996e-65	434	 X1 [Gorilla gorilla gorilla]		

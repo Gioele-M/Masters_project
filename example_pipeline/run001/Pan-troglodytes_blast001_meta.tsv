@@ -1,0 +1,6 @@
+name	id	q_cover	e_val	hit_length	isoform	precursor	extra
+interferon-induced GTP-binding protein Mx1	XP_009431729.1	0.9984917043740572	0.0	662	 X1 [Pan troglodytes]		
+interferon-induced GTP-binding protein Mx2	XP_016794045.2	0.9396681749622926	0.0	626	 X1 [Pan troglodytes]		
+dynamin-2	XP_016790500.1	0.7179487179487181	2.8565399999999995e-67	488	 X1 [Pan troglodytes]		
+dynamin-1	XP_016817254.1	0.7104072398190046	6.063579999999999e-67	482	 X1 [Pan troglodytes]		
+dynamin-3	XP_016788111.1	0.6395173453996983	4.896719999999999e-65	434	 X1 [Pan troglodytes]		

@@ -1,0 +1,51 @@
+name	id	q_cover	e_val	hit_length
+interferon-induced GTP-binding protein Mx1 isoform X1 [Pan troglodytes]	XP_009431729.1	0.9984917043740573	0.0	662
+interferon-induced GTP-binding protein Mx1 [Pan troglodytes]	NP_001266765.1	0.9984917043740573	0.0	662
+interferon-induced GTP-binding protein Mx2 isoform X2 [Pan troglodytes]	XP_001171751.3	0.9396681749622926	0.0	626
+interferon-induced GTP-binding protein Mx2 isoform X1 [Pan troglodytes]	XP_016794045.2	0.9396681749622926	0.0	626
+interferon-induced GTP-binding protein Mx2 isoform X4 [Pan troglodytes]	XP_016794053.2	0.9396681749622926	0.0	626
+interferon-induced GTP-binding protein Mx2 isoform X3 [Pan troglodytes]	XP_016794052.2	0.9396681749622926	0.0	626
+dynamin-1 isoform X8 [Pan troglodytes]	XP_003312333.1	0.6440422322775264	5.06534e-68	439
+dynamin-1 isoform X2 [Pan troglodytes]	XP_016817263.1	0.6440422322775264	5.45249e-68	439
+dynamin-1 isoform X5 [Pan troglodytes]	XP_520289.3	0.6440422322775264	6.92959e-68	439
+dynamin-2 isoform X11 [Pan troglodytes]	XP_016790510.1	0.6485671191553545	8.93215e-68	439
+dynamin-2 isoform X12 [Pan troglodytes]	XP_016790511.1	0.6485671191553545	9.09077e-68	439
+dynamin-2 isoform X9 [Pan troglodytes]	XP_016790508.1	0.6485671191553545	1.01347e-67	439
+dynamin-2 isoform X6 [Pan troglodytes]	XP_016790505.1	0.6485671191553545	1.089e-67	439
+dynamin-2 isoform X10 [Pan troglodytes]	XP_016790509.1	0.717948717948718	1.35722e-67	488
+dynamin-2 isoform X13 [Pan troglodytes]	XP_016790512.1	0.717948717948718	1.56961e-67	488
+dynamin-3 isoform X11 [Pan troglodytes]	XP_016788146.1	0.6395173453996983	1.58586e-67	434
+dynamin-2 isoform X4 [Pan troglodytes]	XP_016790503.1	0.717948717948718	1.64146e-67	488
+dynamin-2 isoform X2 [Pan troglodytes]	XP_016790501.1	0.6485671191553545	1.72092e-67	439
+dynamin-2 isoform X7 [Pan troglodytes]	XP_016790506.1	0.717948717948718	1.80923e-67	488
+dynamin-3 isoform X10 [Pan troglodytes]	XP_024205896.1	0.6395173453996983	2.35543e-67	434
+dynamin-2 isoform X8 [Pan troglodytes]	XP_016790507.1	0.717948717948718	2.79717e-67	488
+dynamin-2 isoform X3 [Pan troglodytes]	XP_016790502.1	0.717948717948718	2.82332e-67	488
+dynamin-2 isoform X1 [Pan troglodytes]	XP_016790500.1	0.717948717948718	2.85654e-67	488
+dynamin-2 isoform X5 [Pan troglodytes]	XP_016790504.1	0.717948717948718	3.48852e-67	488
+dynamin-3 isoform X9 [Pan troglodytes]	XP_024205892.1	0.6395173453996983	5.2477e-67	434
+dynamin-1 isoform X3 [Pan troglodytes]	XP_016817255.1	0.7104072398190046	5.58863e-67	482
+dynamin-1 isoform X6 [Pan troglodytes]	XP_016817258.1	0.7104072398190046	5.6764e-67	482
+dynamin-1 isoform X4 [Pan troglodytes]	XP_009455628.1	0.7104072398190046	5.9543e-67	482
+dynamin-1 isoform X1 [Pan troglodytes]	XP_016817254.1	0.7104072398190046	6.06358e-67	482
+dynamin-1 isoform X7 [Pan troglodytes]	XP_003312334.1	0.7104072398190046	9.13653e-67	482
+dynamin-3 isoform X6 [Pan troglodytes]	XP_016788142.1	0.6395173453996983	2.95133e-65	434
+dynamin-3 isoform X3 [Pan troglodytes]	XP_016788120.1	0.6395173453996983	3.06097e-65	434
+dynamin-3 isoform X8 [Pan troglodytes]	XP_016788144.1	0.6395173453996983	3.35398e-65	434
+dynamin-3 isoform X7 [Pan troglodytes]	XP_024205891.1	0.6395173453996983	3.59234e-65	434
+dynamin-3 isoform X2 [Pan troglodytes]	XP_016788115.1	0.6395173453996983	4.07604e-65	434
+dynamin-3 isoform X4 [Pan troglodytes]	XP_016788127.1	0.6395173453996983	4.77301e-65	434
+dynamin-3 isoform X1 [Pan troglodytes]	XP_016788111.1	0.6395173453996983	4.89672e-65	434
+dynamin-3 isoform X5 [Pan troglodytes]	XP_016788138.1	0.6395173453996983	5.01537e-65	434
+dynamin-1-like protein isoform X8 [Pan troglodytes]	XP_016779161.1	0.6832579185520362	4.29626e-53	474
+dynamin-1-like protein isoform X4 [Pan troglodytes]	XP_016779157.1	0.6832579185520362	5.35352e-53	474
+dynamin-1-like protein isoform X7 [Pan troglodytes]	XP_016779160.1	0.6832579185520362	5.75039e-53	474
+dynamin-1-like protein isoform X3 [Pan troglodytes]	XP_016779156.1	0.6832579185520362	5.89658e-53	474
+dynamin-1-like protein isoform X5 [Pan troglodytes]	XP_016779158.1	0.6832579185520362	1.07942e-51	488
+dynamin-2 isoform X14 [Pan troglodytes]	XP_016790513.1	0.5897435897435898	1.53363e-51	397
+dynamin-1-like protein isoform X6 [Pan troglodytes]	XP_016779159.2	0.6832579185520362	1.69378e-51	488
+dynamin-1-like protein isoform X1 [Pan troglodytes]	XP_016779153.1	0.6832579185520362	1.91647e-51	488
+dynamin-1-like protein isoform X2 [Pan troglodytes]	XP_016779154.1	0.6832579185520362	2.11296e-51	488
+dynamin-1-like protein isoform X9 [Pan troglodytes]	XP_016779162.1	0.5414781297134238	4.91853e-35	366
+dynamin-like 120 kDa protein, mitochondrial isoform X2 [Pan troglodytes]	XP_003310225.1	0.37858220211161386	3.15697e-19	257
+dynamin-like 120 kDa protein, mitochondrial isoform X6 [Pan troglodytes]	XP_024211635.1	0.4193061840120664	3.37135e-19	285

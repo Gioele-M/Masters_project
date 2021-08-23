@@ -1,0 +1,6 @@
+name	id	q_cover	e_val	hit_length	isoform	precursor	extra
+interferon-induced GTP-binding protein Mx1	XP_008984967.1	0.9984917043740572	0.0	662	 X1 [Callithrix jacchus]		
+interferon-induced GTP-binding protein Mx2	XP_017822649.1	0.942684766214178	0.0	627			Callithrix jacchus]
+dynamin-2	XP_008985516.1	0.7179487179487181	1.92619e-68	488	 X1 [Callithrix jacchus]		
+dynamin-1	XP_017831987.1	0.7104072398190046	1.0705799999999997e-65	482	 X1 [Callithrix jacchus]		
+dynamin-3	XP_008983262.1	0.6395173453996983	9.329439999999998e-66	434	 X1 [Callithrix jacchus]		

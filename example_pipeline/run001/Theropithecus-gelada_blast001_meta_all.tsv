@@ -1,0 +1,45 @@
+name	id	q_cover	e_val	hit_length
+interferon-induced GTP-binding protein Mx1 [Theropithecus gelada]	XP_025236083.1	0.9984917043740573	0.0	662
+interferon-induced GTP-binding protein Mx2 [Theropithecus gelada]	XP_025234929.1	0.9683257918552036	0.0	656
+dynamin-2 isoform X6 [Theropithecus gelada]	XP_025221859.1	0.6485671191553545	7.01057e-69	439
+dynamin-2 isoform X7 [Theropithecus gelada]	XP_025221860.1	0.6485671191553545	7.57387e-69	439
+dynamin-2 isoform X4 [Theropithecus gelada]	XP_025221856.1	0.6485671191553545	8.70982e-69	439
+dynamin-2 isoform X2 [Theropithecus gelada]	XP_025221854.1	0.6485671191553545	9.84097e-69	439
+dynamin-2 isoform X5 [Theropithecus gelada]	XP_025221858.1	0.717948717948718	1.05546e-68	488
+dynamin-2 isoform X8 [Theropithecus gelada]	XP_025221861.1	0.717948717948718	1.29442e-68	488
+dynamin-1 isoform X7 [Theropithecus gelada]	XP_025214550.1	0.6440422322775264	1.97357e-68	439
+dynamin-1 isoform X6 [Theropithecus gelada]	XP_025214549.1	0.6440422322775264	2.12093e-68	439
+dynamin-1 isoform X8 [Theropithecus gelada]	XP_025214552.1	0.6440422322775264	2.20549e-68	439
+dynamin-2 isoform X3 [Theropithecus gelada]	XP_025221855.1	0.717948717948718	2.314e-68	488
+dynamin-2 isoform X1 [Theropithecus gelada]	XP_025221853.1	0.717948717948718	2.53692e-68	488
+dynamin-1 isoform X4 [Theropithecus gelada]	XP_025214546.1	0.6440422322775264	2.61777e-68	439
+dynamin-1 isoform X10 [Theropithecus gelada]	XP_025214554.1	0.6440422322775264	3.12447e-68	439
+dynamin-1 isoform X3 [Theropithecus gelada]	XP_025214545.1	0.6440422322775264	3.27391e-68	439
+dynamin-3 isoform X7 [Theropithecus gelada]	XP_025255775.1	0.6395173453996983	3.30875e-68	434
+dynamin-3 isoform X6 [Theropithecus gelada]	XP_025255768.1	0.6395173453996983	3.39534e-68	434
+dynamin-1 isoform X1 [Theropithecus gelada]	XP_025214543.1	0.6440422322775264	3.58122e-68	439
+dynamin-1 isoform X9 [Theropithecus gelada]	XP_025214553.1	0.7104072398190046	3.03822e-67	482
+dynamin-1 isoform X2 [Theropithecus gelada]	XP_025214544.1	0.7104072398190046	3.07719e-67	482
+dynamin-1 isoform X11 [Theropithecus gelada]	XP_025214555.1	0.7104072398190046	3.97633e-67	482
+dynamin-1 isoform X5 [Theropithecus gelada]	XP_025214547.1	0.7104072398190046	4.72176e-67	482
+dynamin-3 isoform X5 [Theropithecus gelada]	XP_025255758.1	0.6395173453996983	6.48333e-66	434
+dynamin-3 isoform X2 [Theropithecus gelada]	XP_025255731.1	0.6395173453996983	7.08671e-66	434
+dynamin-3 isoform X3 [Theropithecus gelada]	XP_025255739.1	0.6395173453996983	7.92581e-66	434
+dynamin-3 isoform X4 [Theropithecus gelada]	XP_025255747.1	0.6395173453996983	9.09011e-66	434
+dynamin-3 isoform X1 [Theropithecus gelada]	XP_025255724.1	0.6395173453996983	9.92473e-66	434
+dynamin-1-like protein isoform X5 [Theropithecus gelada]	XP_025259517.1	0.6832579185520362	1.44168e-53	482
+dynamin-1-like protein isoform X6 [Theropithecus gelada]	XP_025259518.1	0.6832579185520362	1.71805e-53	474
+dynamin-1-like protein isoform X8 [Theropithecus gelada]	XP_025259520.1	0.6832579185520362	1.99876e-53	474
+dynamin-1-like protein isoform X4 [Theropithecus gelada]	XP_025259516.1	0.6832579185520362	2.04956e-53	474
+dynamin-1-like protein isoform X1 [Theropithecus gelada]	XP_025259513.1	0.6832579185520362	2.85852e-53	474
+dynamin-1-like protein isoform X7 [Theropithecus gelada]	XP_025259519.1	0.6832579185520362	4.50235e-52	488
+dynamin-1-like protein isoform X2 [Theropithecus gelada]	XP_025259514.1	0.6832579185520362	4.63761e-52	488
+dynamin-1-like protein isoform X3 [Theropithecus gelada]	XP_025259515.1	0.6832579185520362	4.82174e-52	488
+dynamin-like 120 kDa protein, mitochondrial isoform X3 [Theropithecus gelada]	XP_025231917.1	0.4193061840120664	1.64923e-19	285
+dynamin-like 120 kDa protein, mitochondrial isoform X2 [Theropithecus gelada]	XP_025231916.1	0.37858220211161386	1.76369e-19	257
+dynamin-like 120 kDa protein, mitochondrial isoform X1 [Theropithecus gelada]	XP_025231915.1	0.4193061840120664	1.82967e-19	285
+ankyrin and armadillo repeat-containing protein [Theropithecus gelada]	XP_025261261.1	0.14177978883861236	0.111397	104
+GRB2-associated and regulator of MAPK protein 2 isoform X1 [Theropithecus gelada]	XP_025210057.1	0.08748114630467571	0.510736	60
+LOW QUALITY PROTEIN: reticulocalbin-2 [Theropithecus gelada]	XP_025246094.1	0.05580693815987934	0.721143	40
+DNA annealing helicase and endonuclease ZRANB3 isoform X1 [Theropithecus gelada]	XP_025261075.1	0.11613876319758673	6.25071	77
+DNA annealing helicase and endonuclease ZRANB3 isoform X2 [Theropithecus gelada]	XP_025261077.1	0.11613876319758673	6.30293	77

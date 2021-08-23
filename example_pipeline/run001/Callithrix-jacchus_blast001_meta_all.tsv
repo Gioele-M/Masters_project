@@ -1,0 +1,41 @@
+name	id	q_cover	e_val	hit_length
+PREDICTED: interferon-induced GTP-binding protein Mx1 isoform X1 [Callithrix jacchus]	XP_008984967.1	0.9984917043740573	0.0	662
+PREDICTED: interferon-induced GTP-binding protein Mx1 isoform X2 [Callithrix jacchus]	XP_017822651.1	0.9079939668174962	0.0	602
+PREDICTED: interferon-induced GTP-binding protein Mx2 [Callithrix jacchus]	XP_017822649.1	0.942684766214178	0.0	627
+PREDICTED: dynamin-2 isoform X4 [Callithrix jacchus]	XP_002761783.1	0.6485671191553545	5.36606e-69	439
+PREDICTED: dynamin-2 isoform X10 [Callithrix jacchus]	XP_008985523.1	0.6485671191553545	7.07733e-69	439
+PREDICTED: dynamin-2 isoform X7 [Callithrix jacchus]	XP_008985522.1	0.6485671191553545	7.14899e-69	439
+PREDICTED: dynamin-2 isoform X9 [Callithrix jacchus]	XP_002761785.1	0.6485671191553545	8.4074e-69	439
+PREDICTED: dynamin-2 isoform X5 [Callithrix jacchus]	XP_008985520.1	0.717948717948718	1.12257e-68	488
+PREDICTED: dynamin-2 isoform X11 [Callithrix jacchus]	XP_003735537.1	0.717948717948718	1.16221e-68	488
+PREDICTED: dynamin-2 isoform X3 [Callithrix jacchus]	XP_002761782.1	0.717948717948718	1.21578e-68	488
+PREDICTED: dynamin-2 isoform X8 [Callithrix jacchus]	XP_002761784.1	0.717948717948718	1.30409e-68	488
+PREDICTED: dynamin-2 isoform X6 [Callithrix jacchus]	XP_008985521.1	0.717948717948718	1.35349e-68	488
+PREDICTED: dynamin-2 isoform X2 [Callithrix jacchus]	XP_017822919.1	0.717948717948718	1.79291e-68	488
+PREDICTED: dynamin-2 isoform X1 [Callithrix jacchus]	XP_008985516.1	0.717948717948718	1.92619e-68	488
+PREDICTED: dynamin-1 isoform X2 [Callithrix jacchus]	XP_017831993.1	0.6440422322775264	1.03042e-66	439
+PREDICTED: dynamin-3 isoform X7 [Callithrix jacchus]	XP_008983267.1	0.6395173453996983	5.54038e-66	434
+PREDICTED: dynamin-3 isoform X3 [Callithrix jacchus]	XP_002760411.1	0.6395173453996983	5.9976e-66	434
+PREDICTED: dynamin-3 isoform X6 [Callithrix jacchus]	XP_008983266.1	0.6395173453996983	6.01378e-66	434
+PREDICTED: dynamin-3 isoform X4 [Callithrix jacchus]	XP_008983263.1	0.6395173453996983	6.94754e-66	434
+PREDICTED: dynamin-3 isoform X2 [Callithrix jacchus]	XP_003735244.1	0.6395173453996983	7.09835e-66	434
+PREDICTED: dynamin-3 isoform X5 [Callithrix jacchus]	XP_008983264.1	0.6395173453996983	8.7276e-66	434
+PREDICTED: dynamin-3 isoform X1 [Callithrix jacchus]	XP_008983262.1	0.6395173453996983	9.32944e-66	434
+PREDICTED: dynamin-1 isoform X1 [Callithrix jacchus]	XP_017831987.1	0.7104072398190046	1.07058e-65	482
+PREDICTED: dynamin-1-like protein isoform X4 [Callithrix jacchus]	XP_002807133.2	0.6832579185520362	1.44877e-53	474
+PREDICTED: dynamin-1-like protein isoform X1 [Callithrix jacchus]	XP_009001897.1	0.6832579185520362	1.60724e-53	474
+PREDICTED: dynamin-1-like protein isoform X2 [Callithrix jacchus]	XP_009001898.1	0.6832579185520362	1.63779e-53	474
+PREDICTED: dynamin-1-like protein isoform X5 [Callithrix jacchus]	XP_009001900.1	0.6832579185520362	1.90539e-53	474
+PREDICTED: dynamin-1-like protein isoform X7 [Callithrix jacchus]	XP_003733777.1	0.6832579185520362	4.13075e-52	488
+PREDICTED: dynamin-1-like protein isoform X3 [Callithrix jacchus]	XP_009001899.1	0.6832579185520362	4.29201e-52	488
+PREDICTED: dynamin-1-like protein isoform X8 [Callithrix jacchus]	XP_009001896.1	0.6832579185520362	4.59648e-52	488
+PREDICTED: dynamin-3 isoform X8 [Callithrix jacchus]	XP_017821579.1	0.4751131221719457	1.10216e-45	319
+PREDICTED: dynamin-1-like protein isoform X6 [Callithrix jacchus]	XP_017831488.1	0.5927601809954751	1.10498e-37	400
+PREDICTED: dynamin-like 120 kDa protein, mitochondrial [Callithrix jacchus]	XP_017820279.1	0.37858220211161386	2.34071e-19	257
+PREDICTED: LOW QUALITY PROTEIN: ankyrin and armadillo repeat-containing protein [Callithrix jacchus]	XP_017828672.1	0.14630467571644043	0.586006	107
+PREDICTED: LOW QUALITY PROTEIN: GRB2-associated and regulator of MAPK protein 2 [Callithrix jacchus]	XP_017819511.1	0.07993966817496229	0.645678	55
+PREDICTED: mitofusin-1 isoform X2 [Callithrix jacchus]	XP_008979499.1	0.05279034690799397	1.19815	36
+PREDICTED: mitofusin-1 isoform X1 [Callithrix jacchus]	XP_008979496.1	0.05279034690799397	1.23249	36
+PREDICTED: LOW QUALITY PROTEIN: ankyrin and armadillo repeat-containing protein-like [Callithrix jacchus]	XP_017824460.1	0.1478129713423831	1.30038	108
+PREDICTED: DNA annealing helicase and endonuclease ZRANB3 isoform X1 [Callithrix jacchus]	XP_008997222.2	0.11613876319758673	5.42533	77
+PREDICTED: DNA annealing helicase and endonuclease ZRANB3 isoform X2 [Callithrix jacchus]	XP_017828998.1	0.11613876319758673	5.56452	77

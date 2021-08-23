@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.8.1+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>/home2/db/blast_v5/refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>Query_1</BlastOutput_query-ID>
+  <BlastOutput_query-def>XM_005260978.4_cds_XP_005261035.1_1</BlastOutput_query-def>
+  <BlastOutput_query-len>663</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_1</Iteration_query-ID>
+  <Iteration_query-def>XM_005260978.4_cds_XP_005261035.1_1</Iteration_query-def>
+  <Iteration_query-len>663</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_011839575.1|</Hit_id>
+  <Hit_def>PREDICTED: interferon-induced GTP-binding protein Mx1 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011839575</Hit_accession>
+  <Hit_len>661</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1245.72</Hsp_bit-score>
+      <Hsp_score>3222</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>662</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>661</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>625</Hsp_identity>
+      <Hsp_positive>639</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>662</Hsp_align-len>
+      <Hsp_qseq>MVVSEVDIAKADPAAASHPLLLNGDATVAQKNPGSVAENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDYEIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGEETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAVDMLHTVTDMVRLAFTDVSIKNFEEFFNLHRTAKSKIEDIRAEQEREGEKLIRLHFQMEQIVYCQDQVYRGALQKVREKELEEEKKKKSWDFGAFQSSSATDSSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQLQKAMLQLLQDKDTYSWLLKERSDTSDKRKFLKERLARLTQARRRLAQFPG</Hsp_qseq>
+      <Hsp_hseq>MVLSEVDIVKADPAAASQPLLLNGDADVAQKSPGSVAENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDYETEILDASEVEEEINKAQNTIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPPDIGYKIKTLIRKYIQRQETINLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFEDHPHFRDLLEEGKATIPCLAEKLTSELIAHICKSLPLLENQIKESHQGITEELQKYGVDIPEDENEKMFFLIDKINAFNQDITALIQGEETVGEDDSRLFTRLRREFHKWGIIIENNLQEGHKITSRKMQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAVTMLHTVTDMVRLAFTDVSMKNFEELFNLHRTAKSKIEDIRTEQEREGEKLIRLHFQMEQIVYCQDQVYRGALQKVREKELEEEKKKKSWDVGTFQSSSTE-SSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQLQKAMLQLLQDKDTYSWLLKERSDTSDKRKFLKERLARLTQARRRLAQFPG</Hsp_hseq>
+      <Hsp_midline>MV+SEVDI KADPAAAS PLLLNGDA VAQK+PGSVAENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDYE EI DASEVE+EINKAQN IAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQP DIGYKIKTLI+KYIQRQETI+LVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFE+HP+FRDLLEEGKAT+PCLAEKLTSELI HICKSLPLLENQIKE+HQ ITEELQKYGVDIPEDENEKMFFLIDK+NAFNQDITAL+QGEETVGE+D RLFTRLR EFHKW  IIENN QEGHKI SRK+QKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV MLHTVTDMVRLAFTDVS+KNFEE FNLHRTAKSKIEDIR EQEREGEKLIRLHFQMEQIVYCQDQVYRGALQKVREKELEEEKKKKSWD G FQSSS   SSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQLQKAMLQLLQDKDTYSWLLKERSDTSDKRKFLKERLARLTQARRRLAQFPG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>ref|XP_011839576.1|</Hit_id>
+  <Hit_def>PREDICTED: interferon-induced GTP-binding protein Mx2 [Mandrillus leucophaeus] &gt;ref|XP_011839577.1| PREDICTED: interferon-induced GTP-binding protein Mx2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011839576</Hit_accession>
+  <Hit_len>715</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>802.357</Hsp_bit-score>
+      <Hsp_score>2071</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>660</Hsp_query-to>
+      <Hsp_hit-from>56</Hsp_hit-from>
+      <Hsp_hit-to>709</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>403</Hsp_identity>
+      <Hsp_positive>503</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>656</Hsp_align-len>
+      <Hsp_qseq>PLLLNGDATVAQKN----PGSVA-------ENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDYEIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGEETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAVDMLHTVTDMVRLAFTDVSIKNFEEFFNLHRTAKSKIEDIRAEQEREGEKLIRLHFQMEQIVYCQDQVYRGALQKVREKELEEEKKKKSWDF---GAFQSSSATDSSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQLQKAMLQLLQDKDTYSWLLKERSDTSDKRKFLKERLARLTQARRRLAQF</Hsp_qseq>
+      <Hsp_hseq>PAFLTKDFNLLTLNNQPLPGNTSQPRAKGPENNLHSQYEQKVRPYIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKKQPYK-AWAGRISYQNTEIELQDPGQVEKEIHKAQNVMAGNGLGISHELISLEITSPEVPDLTIIDLPGIARVAVGNQPRDIGLQIKALIKRYIQRQQTINLVVVPCNVDIATTEALSMAHEVDPEGDRTIGILTKPDLMDRGTEKSIINVVRNLTYPLKKGYMIVKCRGQQEIVNRLSLAEATKKEITFFQTHPCFRVLLEEGSATVPRLAERLTAELIMHIQKSLPLLEEQIRESHQKATEELRRCGADIPSQDADKMFFLIEKIKMFNQDIEKLIEGEEVVRENETRLYNKIREDFKNWIGILATNTQKVKNIIHEEVEKYEKQYRGKELLGFVNYKTFETIVHQYIQHLVEPALSMLQKAVEIIRQAFVNMAKKHFGEFFNLNHTVQSKIEDIKVRHTEKAENMIQLQFRMEQIVFCQDQIYSVVVKKVRE-EIFNPLGKPSQNMKLNSHFPINESSVSSFNEIGVHLNAYFSETSKRLANQIPFIIQYFMLRENGDSLQKAMMQILQEKNRYSWLLQEQSETATKRRMLKERIYRLTQARHALCQF</Hsp_hseq>
+      <Hsp_midline>P  L  D  +   N    PG+ +       ENNL SQYE+KVRP IDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVALPRGSGIVTRCPLVLKLKK   +  W G++SYQ+ EIE+ D  +VEKEI+KAQN +AG G+GISHELI+LEI+S +VPDLT+IDLPGI RVAVGNQP DIG +IK LIK+YIQRQ+TI+LVVVP NVDIATTEALSMA EVDPEGDRTIGILTKPDL+D+GTE  +++VVRNL + LKKGYMIVKCRGQQEI ++LSL+EA ++E  FF+ HP FR LLEEG ATVP LAE+LT+ELI HI KSLPLLE QI+E+HQ+ TEEL++ G DIP  + +KMFFLI+K+  FNQDI  L++GEE V E + RL+ ++R +F  W  I+  N Q+   I+  +++K+E QYRG+EL GFVNY+TFETIV Q I+ L EPA+ ML    +++R AF +++ K+F EFFNL+ T +SKIEDI+     + E +I+L F+MEQIV+CQDQ+Y   ++KVRE E+     K S +      F  + ++ SS  EI  HL AY  E SKR+++ IP IIQ+FML+  G  LQKAM+Q+LQ+K+ YSWLL+E+S+T+ KR+ LKER+ RLTQAR  L QF</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>ref|XP_011855826.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X6 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855826</Hit_accession>
+  <Hit_len>555</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.417</Hsp_bit-score>
+      <Hsp_score>594</Hsp_score>
+      <Hsp_evalue>2.36454e-68</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGV-ALPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>ref|XP_011855825.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X5 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855825</Hit_accession>
+  <Hit_len>848</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.417</Hsp_bit-score>
+      <Hsp_score>594</Hsp_score>
+      <Hsp_evalue>4.6332e-66</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVA-LPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>ref|XP_011855821.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855821</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.417</Hsp_bit-score>
+      <Hsp_score>594</Hsp_score>
+      <Hsp_evalue>5.5372e-66</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVA-LPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>ref|XP_011855823.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X3 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855823</Hit_accession>
+  <Hit_len>859</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.032</Hsp_bit-score>
+      <Hsp_score>593</Hsp_score>
+      <Hsp_evalue>5.60812e-66</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVA-LPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>ref|XP_011855820.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X1 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855820</Hit_accession>
+  <Hit_len>869</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.417</Hsp_bit-score>
+      <Hsp_score>594</Hsp_score>
+      <Hsp_evalue>5.87559e-66</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVA-LPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>ref|XP_011855824.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-3 isoform X4 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011855824</Hit_accession>
+  <Hit_len>858</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>233.032</Hsp_bit-score>
+      <Hsp_score>593</Hsp_score>
+      <Hsp_evalue>6.49609e-66</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>470</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>434</Hsp_align-len>
+      <Hsp_qseq>EKVRPCID-LIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVA-LPRGSGIVTRCPLVLKLKKLVNEDKWRGKVSYQDY----EIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE----ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAV</Hsp_qseq>
+      <Hsp_hseq>EELIPLVNRLQDAFSALGQSCLLELPQIAVVGGQSAGKSSVLENFVGRDFLPRGSGIVTRRPLVLQLVT--------SKAEYAEFLHCKGKKFTDFDEVRHEIEAETDRVTGMNKGISSIPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIREMIMQFITRENCLILAVTPANTDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYVGVVNRSQKDIDGKKDIKAAMLAERKFFLSHPAYRHIAD--RMGTPHLQKVLNQQLTNHIRDTLPNFRNKLQGQLLSIEHEVEAYKNFKPEDPTRKTKALLQMVQQFAVDFEKRIEGSGDQVDTLELSGGAKINRIFHERFPFE-IVKMEFNE--KELRREISYAIKNIHGIRTGLFTPDMAFEAIVKKQIVKLKGPSL</Hsp_hseq>
+      <Hsp_midline>E++ P ++ L D+  ALG    L LP IAV+G QS+GKSSVLE   G   LPRGSGIVTR PLVL+L           K  Y ++      + +D  EV  EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+I+ +I ++I R+  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  +  A+  E+ FF +HP +R + +  +   P L + L  +L  HI  +LP   N+++     I  E++ Y    PED   K   L+  V  F  D    ++G     +T+         R+ HE   +  I++  F E  K L R+I        G     F     FE IVK+QI  L+ P++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>ref|XP_011844076.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-1, partial [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011844076</Hit_accession>
+  <Hit_len>729</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>204.527</Hsp_bit-score>
+      <Hsp_score>519</Hsp_score>
+      <Hsp_evalue>2.13865e-56</Hsp_evalue>
+      <Hsp_query-from>95</Hsp_query-from>
+      <Hsp_query-to>473</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>379</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>214</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>389</Hsp_align-len>
+      <Hsp_qseq>LPRGSGIVTRCPLVLKLKKLVNEDK----WRGKVSYQDYEIEISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE-ETVGEEDIRLFTRLRHEFHKWST--IIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEP---AVDML</Hsp_qseq>
+      <Hsp_hseq>LPRGSGIVTRRPLVLQLVNATTEYAEFLHCKGK--------KFTDFEEVRLEIEAETDRVTGTNKGISPVPINLRVYSPHVLNLTLVDLPGMTKVPVGDQPPDIEFQIRDMLMQFVTKENCLILAVSPANSDLANSDALKVAKEVDPQGQRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYIGVVNRSQKDIDGKKDITAALAAERKFFLSHPSYRHLAD--RMGTPYLQKVLNQQLTNHIRDTLPGLRNKLQSQLLSIEKEVDEYKNFRPDDPARKTKALLQMVQQFAVDFEKRIEGSGDQIDTYELSGGARINRIFHERFPFELVKMEFDE--KELRREISYAIKNIHGIRTGLFTPDMAFETIVKKQVKKIREPCLKCVDMV</Hsp_hseq>
+      <Hsp_midline>LPRGSGIVTR PLVL+L     E       +GK        + +D  EV  EI    + + G   GIS   I L + S  V +LTL+DLPG+T+V VG+QP DI ++I+ ++ +++ ++  + L V P+N D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I  +  ++ AL  E+ FF +HP +R L +  +   P L + L  +L  HI  +LP L N+++     I +E+ +Y    P+D   K   L+  V  F  D    ++G  + +   ++    R+   FH+     +++  F E  K L R+I        G     F     FETIVK+Q+K + EP    VDM+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>ref|XP_011850431.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011850431</Hit_accession>
+  <Hit_len>816</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>192.971</Hsp_bit-score>
+      <Hsp_score>489</Hsp_score>
+      <Hsp_evalue>5.20618e-52</Hsp_evalue>
+      <Hsp_query-from>132</Hsp_query-from>
+      <Hsp_query-to>515</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>407</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>130</Hsp_identity>
+      <Hsp_positive>209</Hsp_positive>
+      <Hsp_gaps>27</Hsp_gaps>
+      <Hsp_align-len>390</Hsp_align-len>
+      <Hsp_qseq>EISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQGE-ETVGEEDIRLFTRLRHEFHKWST--IIENNFQEGHKILSRKIQKFENQYRGRELPGFVNYRTFETIVKQQIKALEEPAVDMLHTVTDMVRLAFTDVSIKNFEEFFNLHRTAKSKIED---IRAEQER</Hsp_qseq>
+      <Hsp_hseq>KFTDFDEVRQEIEAETDRVTGTNKGISPVPINLRVYSPHVLNLTLIDLPGITKVPVGDQPPDIEYQIKDMILQFISRESSLILAVTPANMDLANSDALKLAKEVDPQGLRTIGVITKLDLMDEGTDAR--DVLENKLLPLRRGYIGVVNRSQKDIEGKKDIRAALAAERKFFLSHPAYRHMAD--RMGTPHLQKTLNQQLTNHIRESLPALRSKLQSQLLSLEKEVEEYKNFRPDDPTRKTKALLQMVQQFGVDFEKRIEGSGDQVDTLELSGGARINRIFHERFPFELVKMEFDE--KDLRREISYAIKNIHGVRTGLFTPDLAFEAIVKKQVVKLKEPCLKCVDLV---------------IQELINTVRQCTSKLSSYPRLREETER</Hsp_hseq>
+      <Hsp_midline>+ +D  EV +EI    + + G   GIS   I L + S  V +LTLIDLPGIT+V VG+QP DI Y+IK +I ++I R+ ++ L V P+N+D+A ++AL +A+EVDP+G RTIG++TK DL+D+GT+ +  DV+ N +  L++GY+ V  R Q++I+ +  +  AL  E+ FF +HP +R + +  +   P L + L  +L  HI +SLP L ++++     + +E+++Y    P+D   K   L+  V  F  D    ++G  + V   ++    R+   FH+     +++  F E  K L R+I        G     F     FE IVK+Q+  L+EP +  +  V                +E  N  R   SK+     +R E ER</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>ref|XP_011834930.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-1-like protein [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011834930</Hit_accession>
+  <Hit_len>587</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>112.849</Hsp_bit-score>
+      <Hsp_score>281</Hsp_score>
+      <Hsp_evalue>6.99061e-26</Hsp_evalue>
+      <Hsp_query-from>182</Hsp_query-from>
+      <Hsp_query-to>499</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>312</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>94</Hsp_identity>
+      <Hsp_positive>164</Hsp_positive>
+      <Hsp_gaps>20</Hsp_gaps>
+      <Hsp_align-len>325</Hsp_align-len>
+      <Hsp_qseq>ITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDKGTEDKVVDVVRNLVFHLKKGYMIVKCRGQQEIQDQLSLSEALQREKIFFEN-HPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYGVDIPEDENEKMFFLIDKVNAFNQDITALMQG-EETVGEEDIRLFTRLRHEFHK-WSTIIENNFQEGHKILSRKIQKFENQYRGRELPG-FVNYRTFETIVKQQIKALEEPA---VDMLHTVTDMVRLAFTDVSIKNFEEFFNLH</Hsp_qseq>
+      <Hsp_hseq>MTKVPVGDQPKDIELQIRELILRFISNPNSIILAVTAANTDMATSEALKISREVDPDGRRTLAVITKLDLMDAGTD--AMDVLMGRVIPVKLGIIGVVNRSQLDINNKKSVTDSIRDEYAFLQKKYPSLAN-----RNGTKYLARTLNRLLMHHIRDCLPELKTRINVLAAQYQSLLNSYG----EPVDDKSATLLQLITKFATEYCNTIEGTAKYIETSELCGGARICYIFHETFGRTLESVDPLGGLNTIDILTAIRNATGPR--PALFVPEVSFELLVKRQIKRLEEPSLRCVELVHEEMQRIIQHCSNYSTQELLRFPKLH</Hsp_hseq>
+      <Hsp_midline>+T+V VG+QP DI  +I+ LI ++I    +I L V  +N D+AT+EAL +++EVDP+G RT+ ++TK DL+D GT+   +DV+   V  +K G + V  R Q +I ++ S++++++ E  F +  +P   +     +     LA  L   L+ HI   LP L+ +I     +    L  YG    E  ++K   L+  +  F  +    ++G  + +   ++    R+ + FH+ +   +E+    G       +    N    R  P  FV   +FE +VK+QIK LEEP+   V+++H     +    ++ S +    F  LH</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>ref|XP_011836725.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-like 120 kDa protein, mitochondrial isoform X2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011836725</Hit_accession>
+  <Hit_len>997</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>93.9745</Hsp_bit-score>
+      <Hsp_score>232</Hsp_score>
+      <Hsp_evalue>1.26039e-19</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>278</Hsp_query-to>
+      <Hsp_hit-from>284</Hsp_hit-from>
+      <Hsp_hit-to>538</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>72</Hsp_identity>
+      <Hsp_positive>124</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>257</Hsp_align-len>
+      <Hsp_qseq>VAQKNPGSVAENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVAL-PRGSG-IVTRCPLVLKLKKLVNEDKWRGKVSYQDYEI-EISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDK--GTEDKVVDVVRNLVFHLKK-GYMIV</Hsp_qseq>
+      <Hsp_hseq>VLQKDDKGIHHRKLKKSLIDMYSEVLDVLSDYDASYNTQD-HLPRVVVVGDQSAGKTSVLEMIAQARIFPRGSGEMMTRSPVKVTLSEGPHHVA-LFKDSSREFDLTKEEDLAALRHEIELRMRKNVKEGCTVSPETISLNVKGPGLQRMVLVDLPGVINTVTSGMAPDTKETIFSISKAYMQNPNAIILCIQDGSVDAERSIVTDLVSQMDPHGRRTIFVLTKVDLAEKNVASPSRIQQIIEGKLFPMKALGYFAV</Hsp_hseq>
+      <Hsp_midline>V QK+   +    L     +     +D++    A    QD  LP + V+GDQS+GK+SVLE ++   + PRGSG ++TR P+ + L +  +      K S +++++ +  D + +  EI         EG  +S E I+L +    +  + L+DLPG+          D    I ++ K Y+Q    I L +   +VD   +    +  ++DP G RTI +LTK DL +K   +  ++  ++   +F +K  GY  V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>ref|XP_011836724.1|</Hit_id>
+  <Hit_def>PREDICTED: dynamin-like 120 kDa protein, mitochondrial isoform X1 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011836724</Hit_accession>
+  <Hit_len>1015</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>93.9745</Hsp_bit-score>
+      <Hsp_score>232</Hsp_score>
+      <Hsp_evalue>1.30754e-19</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>305</Hsp_query-to>
+      <Hsp_hit-from>302</Hsp_hit-from>
+      <Hsp_hit-to>580</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>78</Hsp_identity>
+      <Hsp_positive>136</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>285</Hsp_align-len>
+      <Hsp_qseq>VAQKNPGSVAENNLCSQYEEKVRPCIDLIDSLRALGVEQDLALPAIAVIGDQSSGKSSVLEALSGVAL-PRGSG-IVTRCPLVLKLKKLVNEDKWRGKVSYQDYEI-EISDASEVEKEINKAQNAIAGEGMGISHELITLEISSRDVPDLTLIDLPGITRVAVGNQPADIGYKIKTLIKKYIQRQETISLVVVPSNVDIATTEALSMAQEVDPEGDRTIGILTKPDLVDK--GTEDKVVDVVRNLVFHLKK-GYM-IVKCRGQQEIQDQLSLSEALQREKIFFEN</Hsp_qseq>
+      <Hsp_hseq>VLQKDDKGIHHRKLKKSLIDMYSEVLDVLSDYDASYNTQD-HLPRVVVVGDQSAGKTSVLEMIAQARIFPRGSGEMMTRSPVKVTLSEGPHHVA-LFKDSSREFDLTKEEDLAALRHEIELRMRKNVKEGCTVSPETISLNVKGPGLQRMVLVDLPGVINTVTSGMAPDTKETIFSISKAYMQNPNAIILCIQDGSVDAERSIVTDLVSQMDPHGRRTIFVLTKVDLAEKNVASPSRIQQIIEGKLFPMKALGYFAVVTGKG----NSSESIEAIREYEEEFFQN</Hsp_hseq>
+      <Hsp_midline>V QK+   +    L     +     +D++    A    QD  LP + V+GDQS+GK+SVLE ++   + PRGSG ++TR P+ + L +  +      K S +++++ +  D + +  EI         EG  +S E I+L +    +  + L+DLPG+          D    I ++ K Y+Q    I L +   +VD   +    +  ++DP G RTI +LTK DL +K   +  ++  ++   +F +K  GY  +V  +G        S+    + E+ FF+N</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>ref|XP_011829644.1|</Hit_id>
+  <Hit_def>PREDICTED: ankyrin and armadillo repeat-containing protein [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011829644</Hit_accession>
+  <Hit_len>1434</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>36.5798</Hsp_bit-score>
+      <Hsp_score>83</Hsp_score>
+      <Hsp_evalue>0.0809726</Hsp_evalue>
+      <Hsp_query-from>299</Hsp_query-from>
+      <Hsp_query-to>392</Hsp_query-to>
+      <Hsp_hit-from>725</Hsp_hit-from>
+      <Hsp_hit-to>824</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>14</Hsp_gaps>
+      <Hsp_align-len>104</Hsp_align-len>
+      <Hsp_qseq>EKIFFENHPYFRDLLEEGKATVPCLAEKLTSELITHICKSLPLLENQIKETHQRITEELQKYG----------VDIPEDENEKMFFLIDKVNAFNQDITALMQG</Hsp_qseq>
+      <Hsp_hseq>EVICLANDQYWRCILDAG--TIPALINLLKSSKIKLQCKTVGLLSN--ISTHKRAVRALVEAGGIPSLINLLVCDEPEVHSRCAVILYDIAQCENKDVIAKYNG</Hsp_hseq>
+      <Hsp_midline>E I   N  Y+R +L+ G  T+P L   L S  I   CK++ LL N    TH+R    L + G           D PE  +     L D     N+D+ A   G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>ref|XP_011838061.1|</Hit_id>
+  <Hit_def>PREDICTED: LOW QUALITY PROTEIN: reticulocalbin-2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011838061</Hit_accession>
+  <Hit_len>335</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>0.515352</Hsp_evalue>
+      <Hsp_query-from>216</Hsp_query-from>
+      <Hsp_query-to>252</Hsp_query-to>
+      <Hsp_hit-from>274</Hsp_hit-from>
+      <Hsp_hit-to>313</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>18</Hsp_identity>
+      <Hsp_positive>23</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>40</Hsp_align-len>
+      <Hsp_qseq>VVPSNVDIATTEALSMAQEVDPEGDRTIG---ILTKPDLV</Hsp_qseq>
+      <Hsp_hseq>VVPNNQGIAQEEALHLIDEMDLNGDKKLSEEEILENPDLF</Hsp_hseq>
+      <Hsp_midline>VVP+N  IA  EAL +  E+D  GD+ +    IL  PDL </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>ref|XP_011835767.1|</Hit_id>
+  <Hit_def>PREDICTED: mitofusin-1 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011835767</Hit_accession>
+  <Hit_len>741</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.113</Hsp_bit-score>
+      <Hsp_score>74</Hsp_score>
+      <Hsp_evalue>0.885312</Hsp_evalue>
+      <Hsp_query-from>73</Hsp_query-from>
+      <Hsp_query-to>107</Hsp_query-to>
+      <Hsp_hit-from>78</Hsp_hit-from>
+      <Hsp_hit-to>113</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>18</Hsp_identity>
+      <Hsp_positive>21</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>36</Hsp_align-len>
+      <Hsp_qseq>IAVIGDQSSGKSSVLEA-LSGVALPRGSGIVTRCPL</Hsp_qseq>
+      <Hsp_hseq>VAFFGRTSSGKSSVINAMLWDKVLPSGIGHITNCFL</Hsp_hseq>
+      <Hsp_midline>+A  G  SSGKSSV+ A L    LP G G +T C L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>ref|XP_011828127.1|</Hit_id>
+  <Hit_def>PREDICTED: GRB2-associated and regulator of MAPK protein-like [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011828127</Hit_accession>
+  <Hit_len>738</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.113</Hsp_bit-score>
+      <Hsp_score>74</Hsp_score>
+      <Hsp_evalue>0.980176</Hsp_evalue>
+      <Hsp_query-from>394</Hsp_query-from>
+      <Hsp_query-to>443</Hsp_query-to>
+      <Hsp_hit-from>78</Hsp_hit-from>
+      <Hsp_hit-to>122</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>17</Hsp_identity>
+      <Hsp_positive>25</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>ETVGEEDIRLFTRLRHEFHKWSTIIENNFQEGHKILSRKIQKFENQYRGR</Hsp_qseq>
+      <Hsp_hseq>EGVSERDILLI----HSCRQWTTVTAHTLEEGHYVIGPKID-IPLQYPGK</Hsp_hseq>
+      <Hsp_midline>E V E DI L     H   +W+T+  +  +EGH ++  KI     QY G+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>ref|XP_011825671.1|</Hit_id>
+  <Hit_def>PREDICTED: DNA annealing helicase and endonuclease ZRANB3 isoform X1 [Mandrillus leucophaeus] &gt;ref|XP_011825673.1| PREDICTED: DNA annealing helicase and endonuclease ZRANB3 isoform X1 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011825671</Hit_accession>
+  <Hit_len>1078</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>30.8018</Hsp_bit-score>
+      <Hsp_score>68</Hsp_score>
+      <Hsp_evalue>4.42912</Hsp_evalue>
+      <Hsp_query-from>536</Hsp_query-from>
+      <Hsp_query-to>612</Hsp_query-to>
+      <Hsp_hit-from>464</Hsp_hit-from>
+      <Hsp_hit-to>535</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>77</Hsp_align-len>
+      <Hsp_qseq>QVYRGALQKVREKELEEEKKKKSWDFGAFQSSSATDSSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQL</Hsp_qseq>
+      <Hsp_hseq>QVTGSTLNGRKEKIQAEEGDKEKWDFLQFAEAWTPNDSSEELRKEALFTHFEKEKQHD-----IRSFFLPQPKKRQL</Hsp_hseq>
+      <Hsp_midline>QV    L   +EK   EE  K+ WDF  F  +   + S EE+ +  +  H E  K+       I  FF+ Q   +QL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>ref|XP_011825674.1|</Hit_id>
+  <Hit_def>PREDICTED: DNA annealing helicase and endonuclease ZRANB3 isoform X2 [Mandrillus leucophaeus]</Hit_def>
+  <Hit_accession>XP_011825674</Hit_accession>
+  <Hit_len>1076</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>30.8018</Hsp_bit-score>
+      <Hsp_score>68</Hsp_score>
+      <Hsp_evalue>4.46612</Hsp_evalue>
+      <Hsp_query-from>536</Hsp_query-from>
+      <Hsp_query-to>612</Hsp_query-to>
+      <Hsp_hit-from>464</Hsp_hit-from>
+      <Hsp_hit-to>535</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>77</Hsp_align-len>
+      <Hsp_qseq>QVYRGALQKVREKELEEEKKKKSWDFGAFQSSSATDSSMEEIFQHLMAYHQEASKRISSHIPLIIQFFMLQTYGQQL</Hsp_qseq>
+      <Hsp_hseq>QVTGSTLNGRKEKIQAEEGDKEKWDFLQFAEAWTPNDSSEELRKEALFTHFEKEKQHD-----IRSFFLPQPKKRQL</Hsp_hseq>
+      <Hsp_midline>QV    L   +EK   EE  K+ WDF  F  +   + S EE+ +  +  H E  K+       I  FF+ Q   +QL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>155334636</Statistics_db-num>
+      <Statistics_db-len>58941098972</Statistics_db-len>
+      <Statistics_hsp-len>109</Statistics_hsp-len>
+      <Statistics_eff-space>7586562978</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
+
