@@ -17,3 +17,6 @@ starting_ex/sequences_for_alignment.aln
 starting_ex/sequences_for_alignment.dnd
 starting_ex/sequences_for_alignment.fasta
 starting_ex/sequences_for_alignment.fasta.hat2
+starting_ex/aligned_mafft_filtered.fasta
+starting_ex/sequences_for_alignment_filtered.fasta
+starting_ex/sequences_for_alignment_filtered.fasta.hat2
