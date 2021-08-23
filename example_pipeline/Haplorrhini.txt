@@ -1,0 +1,34 @@
+Cercocebus atys
+Chlorocebus sabaeus
+Macaca fascicularis
+Macaca fuscata fuscata
+Macaca fuscata
+Macaca mulatta vestita
+Macaca mulatta
+Macaca nemestrina
+Mandrillus leucophaeus
+Papio anubis
+Theropithecus gelada
+Colobus angolensis
+Colobus angolensis palliatus
+Nasalis larvatus
+Piliocolobus tephrosceles
+Rhinopithecus bieti
+Rhinopithecus roxellana
+Gorilla gorilla gorilla
+Gorilla gorilla
+Homo sapiens neanderthalensis
+Homo sapiens
+Pan paniscus
+Pan troglodytes
+Pan troglodytes verus
+Pongo abelii
+Pongo pygmaeus
+Nomascus leucogenys
+Aotus nancymaae
+Callithrix jacchus
+Cebus capucinus
+Cebus imitator
+Saimiri boliviensis
+Saimiri boliviensis boliviensis
+Carlito syrichta
