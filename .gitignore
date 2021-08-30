@@ -21,3 +21,8 @@ starting_ex/aligned_mafft_filtered.fasta
 starting_ex/sequences_for_alignment_filtered.fasta
 starting_ex/sequences_for_alignment_filtered.fasta.hat2
 starting_ex/allfas.gbk
+starting_ex/aligned_mafft.stderr
+starting_ex/sequences_for_alignment_filtered_v2.fasta
+starting_ex/sequences_for_alignment_filtered_v2.fasta.hat2
+starting_ex/test_taxid_function_single.xml
+starting_ex/test_taxid_function_single_4.xml
