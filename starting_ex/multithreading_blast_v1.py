@@ -31,7 +31,7 @@ if __name__ ==  '__main__':
     iterable = zip(repeat(fasta_record), taxid_list)
 
     threads = []
-
+    results = []
     '''for i in range(len(taxid_list)):
         t = threading.Thread(target=run_blast, args=[fasta_record, taxid_list[i]])
         t.start()
@@ -39,8 +39,8 @@ if __name__ ==  '__main__':
     #WORKS TOO!!!!
 
 
-    for i in iterable:
-        t = threading.Thread(target=run_blast, args=i)
+    for taxid in taxid_list:
+        t = threading.Thread(target=lambda: results.append(run_blast(fasta_record, taxid)))
         t.start()
         threads.append(t)
 
@@ -53,7 +53,7 @@ if __name__ ==  '__main__':
 
     storer = ''
     
-    for request in thread:
+    for request in results:
         storer += str(request)
         storer += '\n'
 
@@ -62,3 +62,44 @@ if __name__ ==  '__main__':
 
     end = time.perf_counter()
     print(f'Finished in {round(end-start,2)}')
+
+
+
+
+    '''import tempfile
+list_of_results = []
+
+for result in results:
+    tmp = tempfile.NamedTemporaryFile(mode='a+')
+    tmp.write((result))
+    results_handler = SearchIO.read(tmp.name, 'blast-xml')
+    list_of_results.append(results_handler)
+    tmp.close()
+
+print(list_of_results[0])'''
+
+'''fasta_record = open_fasta('human_mx1.fas')
+taxid_list = ['9606', '9597']#, '9593', '9600', '9601', '61853', '9546', '9544', '9541', '54180']
+
+threads = []
+results = []
+
+for taxid in taxid_list:
+        t = threading.Thread(target=lambda: results.append(run_blast(fasta_record, taxid)))
+        t.start()
+        threads.append(t)
+
+for thread in threads:
+    thread.join()
+
+import tempfile
+list_of_results = []
+
+for result in results:
+    tmp = tempfile.NamedTemporaryFile(mode='a+')
+    tmp.write((result))
+    results_handler = SearchIO.read(tmp.name, 'blast-xml')
+    list_of_results.append(results_handler)
+    tmp.close()
+
+print(list_of_results)'''
