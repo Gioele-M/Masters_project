@@ -1,5 +1,7 @@
 from tkinter import *
 
+from numpy import double
+
 #create Root widget which is the window
 root = Tk()
 #Simple label example with .pack()
@@ -66,13 +68,5 @@ image_label = Label(image=my_image).pack()
 
 
 
-
-
-
 #Create event loop to start program
-#root.mainloop()
-
-query_length = 300
-difference_from_query = 50
-lower, upper = query_length*(difference_from_query/100), query_length*((difference_from_query + 100)/100)
-print(lower, upper)
+root.mainloop()
