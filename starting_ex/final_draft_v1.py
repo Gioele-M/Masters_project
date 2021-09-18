@@ -2,6 +2,7 @@ import os
 from sys import stderr, stdout
 import tempfile
 import subprocess
+from warnings import catch_warnings
 import pandas as pd
 import numpy as np
 from Bio import SeqIO, SeqRecord, Seq, SearchIO, AlignIO, Phylo
@@ -172,16 +173,31 @@ def retrieve_all_genbank(list_of_entries, email):
 
 #Create a dictionary from the genbank results
 def genbank_to_dictionary(list_of_genbank):
+    #Define function to retrieve values from the object. If the value doesn't exist an empty string is returned to avoid errors
+    def find_value(result, parameter):
+        to_return = ''
+        try:
+            to_return = result[parameter]
+        except KeyError:
+            print(f'Could not find {parameter}')
+        return to_return
+
+
+    
     #Define functions to find taxon, protein ID and protein Sequence in the JSON nest
     #Qualifiers names for the attributes are not flexible
     def find_taxon(list_feature_table):
         taxon = ''
+        #Loop through all the features in the list of features
         for feature in list_feature_table:
+            #If the feature is source hold the wrapper and loop through it
             if feature['GBFeature_key'] == 'source':
                 source_wrap = feature['GBFeature_quals']
                 for qualifier in source_wrap:
+                    #Check if the qualifier is actually a taxon and store it in the variable
                     if qualifier['GBQualifier_name'] == 'db_xref' and qualifier['GBQualifier_value'].startswith('taxon'):
                         taxon += (qualifier['GBQualifier_value'])
+        #Comment: artificial constructs have often more than 2 taxons, this will be removed later
         return taxon    
 
     def find_prot_id(list_feat_table):
@@ -208,16 +224,31 @@ def genbank_to_dictionary(list_of_genbank):
     dictionary_gen = {'Accession' : [], 'Accession_version': [], 'Gene_length' : [], 'Strandedness': [], 'Molecule_type':[], 'Organism':[], 'Taxonomy':[],
     'Nuc_sequence':[], 'Taxon':[], 'Protein_ID':[], 'Prot_sequence':[]} #'N_of_references':[]
     #Loop through genbank results and fill dictionary 
+    
+    #Pass all values through a function that returns 
     for gen in list_of_genbank:
         first_wrapper = gen[0]
+        dictionary_gen['Accession'].append(find_value(first_wrapper, 'GBSeq_primary-accession'))
+        dictionary_gen['Accession_version'].append(find_value(first_wrapper, 'GBSeq_accession-version'))
+        dictionary_gen['Gene_length'].append(find_value(first_wrapper, 'GBSeq_length'))
+        dictionary_gen['Strandedness'].append(find_value(first_wrapper, 'GBSeq_strandedness')) 
+        dictionary_gen['Molecule_type'].append(find_value(first_wrapper, 'GBSeq_moltype'))
+        dictionary_gen['Organism'].append(find_value(first_wrapper, 'GBSeq_organism'))
+        dictionary_gen['Taxonomy'].append(find_value(first_wrapper, 'GBSeq_taxonomy'))
+        dictionary_gen['Nuc_sequence'].append(find_value(first_wrapper, 'GBSeq_sequence'))
+
+        #Old extraction raised error
+        '''
         dictionary_gen['Accession'].append(first_wrapper['GBSeq_primary-accession'])
         dictionary_gen['Accession_version'].append(first_wrapper['GBSeq_accession-version'])
         dictionary_gen['Gene_length'].append(first_wrapper['GBSeq_length'])
-        dictionary_gen['Strandedness'].append(first_wrapper['GBSeq_strandedness'])
+        dictionary_gen['Strandedness'].append(first_wrapper['GBSeq_strandedness']) 
         dictionary_gen['Molecule_type'].append(first_wrapper['GBSeq_moltype'])
         dictionary_gen['Organism'].append(first_wrapper['GBSeq_organism'])
         dictionary_gen['Taxonomy'].append(first_wrapper['GBSeq_taxonomy'])
         dictionary_gen['Nuc_sequence'].append(first_wrapper['GBSeq_sequence'])
+        '''
+
         dictionary_gen['Taxon'].append(find_taxon(first_wrapper['GBSeq_feature-table']))
         dictionary_gen['Protein_ID'].append(find_prot_id(first_wrapper['GBSeq_feature-table']))
         dictionary_gen['Prot_sequence'].append(find_prot_seq(first_wrapper['GBSeq_feature-table']))
@@ -226,23 +257,37 @@ def genbank_to_dictionary(list_of_genbank):
 
 def filter_df_taxon(df:DataFrame, n_of_sequences = 1) -> DataFrame:
     #Make a list of all retrieved taxons
-    retrieved_taxons = df['Taxon'].tolist()
-    #Clean format
-    #retrieved_taxon = [taxid.replace('taxon:', '') for taxid in retrieved_taxon] 
+    retrieved_taxons = df['Taxon'].tolist() 
     #Make list from dictionary to eliminate duplicates 
     retrieved_taxons = list(dict.fromkeys(retrieved_taxons))
+    
+    #Clean format
+    retrieved_taxons = [taxid.replace('taxon:', '', 1) for taxid in retrieved_taxons] #Only remove first instance of taxon to be able to recognise synthetic constructs 
 
+    #Declare final list to loop through
+    final_list = []
+    #Check if it has different taxids, if it does it's likely to be a synthetic construct so can be excluded
+    for taxid in retrieved_taxons:
+        #If taxid is 'clean' can be appended to the list
+        if taxid.find('taxon') == -1:
+            final_list.append(taxid)
+        else:
+            continue
+    
     #Declare empty DF
     df_toreturn = pd.DataFrame()
 
     #For each taxon create a DF, sort and get best result to append to df_toreturn
-    for taxon in retrieved_taxons:
+    for taxon in final_list:
         #Create temporary DF exclusive to taxon
         temp_df = df[df['Taxon'] == taxon]
         temp_df = temp_df.sort_values(['Evalue', 'Identity', 'Bitscore'], ascending=[True, False, False]) #('Identity', ascending=False)
         if len(temp_df) > 0:
-            df_toreturn = df_toreturn.append(temp_df[:n_of_sequences])
-    
+            if len(temp_df) > n_of_sequences:
+                df_toreturn = df_toreturn.append(temp_df[:n_of_sequences])
+            else:
+                df_toreturn = df_toreturn.append(temp_df)
+
     #Refactor indexes
     df_toreturn = df_toreturn.reset_index(drop=True)
 
@@ -251,12 +296,10 @@ def filter_df_taxon(df:DataFrame, n_of_sequences = 1) -> DataFrame:
 
 #Prepare string for alingment file
 def fasta_for_alignment(query:SeqRecord, df:DataFrame) -> str:
-    #Get protein from query
-    query_protein = query.translate(to_stop=True)
     #Initialise string and add 
     string = ''
     string += f">Query:{query.id}\n"
-    string += f"{query_protein.seq}\n"
+    string += f"{query.seq}\n"
     #Add all sequence IDs and aa sequence
     for i in range(len(df['Accession'])):
         #Check if protein is missing ------------------------------------------------Add to report?
@@ -286,19 +329,44 @@ def run_mafft_from_string(fasta:str, mafft_directory:str) -> str:
     
     #Close temporary file
     tmp.close()
-    #Retrun alignment
+    #Retrun alignment 
     return stdout
 
 
+def run_mafft_saving_file(fasta:str, mafft_directory:str, filename:str) -> str:
+    file = f'{filename}.fasta'
+    with open(file, 'w') as handle:
+        handle.write(fasta)
+    
+    command_list = [mafft_directory, '--distout', f'{file}']
+    process = subprocess.Popen(command_list, universal_newlines= True, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+    stdout, stderr = process.communicate()
+
+    #Save standard error of mafft
+    with open('aligned_mafft_v1.stderr', 'w') as handle:
+        handle.write(stderr)
+
+    #Retrun alignment 
+    return stdout
+
+
+
+#For some reason it throws an error depending on the sequences parsed
+
+'''
 #Create an alignment file from the alignment fasta string
 def alignio_from_string(string:str):
     #Create temporary file to pass to AlignIO
-    tmp = tempfile.NamedTemporaryFile(mode='a+')
+    tmp = tempfile.NamedTemporaryFile(mode='a+', suffix='.fasta')
     tmp.write(string)
     #Open alignment
-    alignment = AlignIO.read(tmp.name, 'fasta')
+    filename = f'{tmp.name}'
+    print(filename)
+    alignment = AlignIO.read(open(filename), 'fasta')
     tmp.close()
     return alignment
+'''
+
 
 
 def tree_from_alignment(alignment):
@@ -332,7 +400,7 @@ if __name__ == '__main__':
             -!!!Number of threads !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Queue class
         -Query-size
         -Server used (blastn-nt/blastp-)
-        -PARAMETERS FOR RESEARCHES!!!!!!!!!!!!!!!!!!!!!!!!
+        -PARAMETERS FOR RESEARCHES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     -QC
         -Filter by Evalue
         -Filter by +-% query
@@ -340,15 +408,18 @@ if __name__ == '__main__':
     -Further filtering
         -N of sequences per taxon
 
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    -If given mRNA is ambiguous/has different table, allow importing .fasta for AA seq
+
     '''
     
     #USER INPUTS
-    filename = 'human_mx1.fas'
+    filename = 'sry_gene.fasta' #'human_mx1.fas'
     taxid_list = [] #['9592']
     mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
     email = 'A.N.Other@example.com'
-    output_name = ''
-
+    output_name = 'run1'
+    
 
     #OPTIONAL USER INPUTS
     local_query = False
@@ -361,15 +432,29 @@ if __name__ == '__main__':
     identity_threshold = 50
 
     sequences_per_taxon = 3
+    import_aa_sequence = True
+    query_protein = 'sry_protein.fasta'
+    
+    
+
+
+
+
+
+
+    #Implemented
+    output_df = f'{output_name}_df.csv'
+    output_alignment = f'{output_name}_alignment.fasta'
+    output_xml_tree = f'{output_name}_xml_tree.xml'
+    #To add
+    output_tree_newick = f'{output_name}_newick_tree.newick'
+    output_tree_jpg = f'{output_name}_tree_image.jpg'
     
     
     
-    
-    
-    
-    
-    
-    
+    #Start of script
+
+
     handlers = []
 
 
@@ -382,6 +467,7 @@ if __name__ == '__main__':
     print(f'In {round(time.perf_counter()-start,2)}')
 
 
+    #This has to be fixed 
     ''' 
     #Run blast, either in multi-list or single-threading - Append handlers to the list
     if not threading:
@@ -407,9 +493,6 @@ if __name__ == '__main__':
 
     print('Done Blast')
 
-
-
-
     #At this point all the results are in the list handlers
     #All the results will be converted to dictionary, then to DataFrame, and appended to the general DF
     #This solution was used to cover the cases for both inputs
@@ -420,6 +503,9 @@ if __name__ == '__main__':
         temp_df = pd.DataFrame.from_dict(dictionary)
         results_df.append(temp_df)
     '''
+
+
+    #Substitutive code for single list taxid
     #--------------
     #Taxid with list
     blast_results = blastn_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
@@ -430,28 +516,18 @@ if __name__ == '__main__':
     results_df = pd.DataFrame.from_dict(dictionary)
 
 
-
-    #--------------
     print('Prepared DF')
     print(f'In {round(time.perf_counter()-start,2)}')
     print(len(results_df))
-
-
-
-
+    #--------------
 
 
 
 
     #Filter DF by E-value / Bitscore / Identity
-
-
     filtered_blast_df = filter_df_blast(results_df, fasta_record, evalue=evalue_threshold, difference_from_query=len_threshold, identity_threshold=identity_threshold)
-    #print('!!!!!!!!NOT FILTERING')
-    #filtered_blast_df = results_df
     print('Done filtering')
     print(f'In {round(time.perf_counter()-start,2)}')
-
 
 
     #Filter any futher? 
@@ -463,33 +539,43 @@ if __name__ == '__main__':
     #Retrieve genbank results, the handlers are managed in the function and return a JSON nested-type object
     genbank_results = retrieve_all_genbank(accession_list, 'A.N.Other@example.com')
 
-
     print('Done Genbank')
     print(f'In {round(time.perf_counter()-start,2)}')
 
-    with open('genbank_results.txt', 'w') as savefile:
-        savefile.write(genbank_results)
 
+    #Useless ATM
+    '''    
+    with open('genbank_results.txt', 'w') as savefile:
+        savefile.write(str(genbank_results))
+    '''
 
     #Create a dictionary with the genbank results
     genbank_dictionary = genbank_to_dictionary(genbank_results)
 
     #Create DF from genbank dictionary
-    genbank_df = pd.DataFrame.from_dict(genbank_to_dictionary)
-
+    genbank_df = pd.DataFrame.from_dict(genbank_dictionary)
 
     print('Parsed Genbank')
     print(f'In {round(time.perf_counter()-start,2)}')
 
+
     #Merge DataFrames
     left = filtered_blast_df.loc[:,['Accession', 'ID', 'Description','Seq_length', 'Evalue', 'Bitscore', 'Tot_aln_span', 'Identity']]
     right = genbank_df.loc[:,['Accession', 'Accession_version','Organism', 'Taxonomy', 'Taxon', 'Nuc_sequence','Protein_ID', 'Prot_sequence']]
-
     combined_df = pd.merge(left, right, on='Accession')
-
 
     print('Merged dictionaries')
     print(f'In {round(time.perf_counter()-start,2)}')
+
+    #------------
+    #REMOVE
+    #Save DF of sequences that are going to be aligned 
+    with open(f'{output_df}_unfiltered.csv', 'w') as handle:
+        handle.write(combined_df.to_csv())
+
+    #-----------
+
+
 
 
 
@@ -497,27 +583,52 @@ if __name__ == '__main__':
     #Filter by taxon to prepare for alignment
     filtered_df = filter_df_taxon(combined_df, n_of_sequences=sequences_per_taxon)
 
+    #Save DF of sequences that are going to be aligned 
+    with open(output_df, 'w') as handle:
+        handle.write(filtered_df.to_csv())
+
+
+    #Declare protein
+    protein_seq = None
+    #Check if user specified ambiguities for AA translation
+    if import_aa_sequence:
+        protein_seq = open_fasta(query_protein)
+    else:
+        #Get protein from query if not specified otherwise
+        protein_seq = fasta_record.translate(to_stop=True)
+
+    
+
 
     #Prepare for multiple alingment
-    fasta_string = fasta_for_alignment(fasta_record, filtered_df)
+    fasta_string = fasta_for_alignment(protein_seq, filtered_df)
 
 
-    #Run mafft alingment 
-    mafft_alignment = run_mafft_from_string(fasta_string, mafft_directory)
+    #Run mafft alingment from string
+    #mafft_alignment = run_mafft_from_string(fasta_string, mafft_directory)
+
+    #Run mafft alignment saving file
+    mafft_alignment = run_mafft_saving_file(fasta_string, mafft_directory, 'multiple_seq_fasta')
 
     print('Alignment done')
     print(f'In {round(time.perf_counter()-start,2)}')
 
+    #Save mafft alignment
+    with open(output_alignment, 'w') as savefile:
+        savefile.write(mafft_alignment)
+    
+    
+    
+    
+    #Open AlignIO from fasta file 
 
-    #Open AlignIO from string 
-    alignment = alignio_from_string(mafft_alignment)
-
+    alignment = AlignIO.read(output_alignment, 'fasta')
 
     #Construct tree from alignment #To change 
     tree = tree_from_alignment(alignment)
 
     #Write tree in xml
-    Phylo.write(tree, 'tree_draft_v1.xml', 'phyloxml')
+    Phylo.write(tree, output_xml_tree, 'phyloxml')
 
     #Draw tree
     with open('tree.ascii', 'w') as savefile:
@@ -527,6 +638,17 @@ if __name__ == '__main__':
 
     end = time.perf_counter()
     print(f'Finished in {round(end-start,2)}')
+
+
+
+    '''
+
+    Make fasta for alignment 
+
+    '''
+
+
+
 
 
 
