@@ -10,60 +10,134 @@ Gap Penalty = -1.53, +0.00, +0.00
 
 Making a distance matrix ..
 
-    1 / 15
+There are 7 ambiguous characters.
+
+    1 / 48
 done.
 
 Constructing a UPGMA tree (efffree=0) ... 
 
-    0 / 15
-   10 / 15
+    0 / 48
+   10 / 48
+   20 / 48
+   30 / 48
+   40 / 48
 done.
 
 Progressive alignment 1/2... 
 
-STEP     1 / 14  f
-STEP     2 / 14  f
-STEP     3 / 14  f
-STEP     4 / 14  f
-STEP     5 / 14  f
-STEP     6 / 14  f
-STEP     7 / 14  f
-STEP     8 / 14  f
-STEP     9 / 14  f
-STEP    10 / 14  f
-STEP    11 / 14  f
-STEP    12 / 14  f
-STEP    13 / 14  f
-STEP    14 / 14  f
+STEP     1 / 47  f
+STEP     2 / 47  f
+STEP     3 / 47  f
+STEP     4 / 47  f
+STEP     5 / 47  f
+STEP     6 / 47  f
+STEP     7 / 47  f
+STEP     8 / 47  f
+STEP     9 / 47  f
+STEP    10 / 47  f
+STEP    11 / 47  f
+STEP    12 / 47  f
+STEP    13 / 47  f
+STEP    14 / 47  f
+STEP    15 / 47  f
+STEP    16 / 47  f
+STEP    17 / 47  f
+STEP    18 / 47  f
+STEP    19 / 47  f
+STEP    20 / 47  f
+STEP    21 / 47  f
+STEP    22 / 47  f
+STEP    23 / 47  f
+STEP    24 / 47  f
+STEP    25 / 47  f
+STEP    26 / 47  f
+STEP    27 / 47  f
+STEP    28 / 47  f
+STEP    29 / 47  f
+STEP    30 / 47  f
+STEP    31 / 47  f
+STEP    32 / 47  f
+STEP    33 / 47  f
+STEP    34 / 47  f
+STEP    35 / 47  f
+STEP    36 / 47  f
+STEP    37 / 47  f
+STEP    38 / 47  f
+STEP    39 / 47  f
+STEP    40 / 47  f
+STEP    41 / 47  f
+STEP    42 / 47  f
+STEP    43 / 47  f
+STEP    44 / 47  f
+STEP    45 / 47  f
+STEP    46 / 47  f
+STEP    47 / 47  f
 done.
 
 Making a distance matrix from msa.. 
 
-    0 / 15
+    0 / 48
 done.
 
 Constructing a UPGMA tree (efffree=1) ... 
 
-    0 / 15
-   10 / 15
+    0 / 48
+   10 / 48
+   20 / 48
+   30 / 48
+   40 / 48
 done.
 
 Progressive alignment 2/2... 
 
-STEP     1 / 14  f
-STEP     2 / 14  f
-STEP     3 / 14  f
-STEP     4 / 14  f
-STEP     5 / 14  f
-STEP     6 / 14  f
-STEP     7 / 14  f
-STEP     8 / 14  f
-STEP     9 / 14  f
-STEP    10 / 14  f
-STEP    11 / 14  f
-STEP    12 / 14  f
-STEP    13 / 14  f
-STEP    14 / 14  f
+STEP     1 / 47  f
+STEP     2 / 47  f
+STEP     3 / 47  f
+STEP     4 / 47  f
+STEP     5 / 47  f
+STEP     6 / 47  f
+STEP     7 / 47  f
+STEP     8 / 47  f
+STEP     9 / 47  f
+STEP    10 / 47  f
+STEP    11 / 47  f
+STEP    12 / 47  f
+STEP    13 / 47  f
+STEP    14 / 47  f
+STEP    15 / 47  f
+STEP    16 / 47  f
+STEP    17 / 47  f
+STEP    18 / 47  f
+STEP    19 / 47  f
+STEP    20 / 47  f
+STEP    21 / 47  f
+STEP    22 / 47  f
+STEP    23 / 47  f
+STEP    24 / 47  f
+STEP    25 / 47  f
+STEP    26 / 47  f
+STEP    27 / 47  f
+STEP    28 / 47  f
+STEP    29 / 47  f
+STEP    30 / 47  f
+STEP    31 / 47  f
+STEP    32 / 47  f
+STEP    33 / 47  f
+STEP    34 / 47  f
+STEP    35 / 47  f
+STEP    36 / 47  f
+STEP    37 / 47  f
+STEP    38 / 47  f
+STEP    39 / 47  f
+STEP    40 / 47  f
+STEP    41 / 47  f
+STEP    42 / 47  f
+STEP    43 / 47  f
+STEP    44 / 47  f
+STEP    45 / 47  f
+STEP    46 / 47  f
+STEP    47 / 47  f
 done.
 
 disttbfast (aa) Version 7.487

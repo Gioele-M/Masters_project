@@ -1,0 +1,11 @@
+[
+	[
+		{
+		'TSeq_seqtype': StringElement
+			(
+			'', attributes={'value': 'protein'}
+			), 
+			'TSeq_accver': 'NP_003131.1', 'TSeq_taxid': '9606', 'TSeq_orgname': 'Homo sapiens', 'TSeq_defline': 'sex-determining region Y protein [Homo sapiens]', 'TSeq_length': '204', 'TSeq_sequence': 'MQSYASAMLSVFNSDDYSPAVQENIPALRRSSSFLCTESCNSKYQCETGENSKGNVQDRVKRPMNAFIVWSRDQRRKMALENPRMRNSEISKQLGYQWKMLTEAEKWPFFQEAQKLQAMHREKYPNYKYRPRRKAKMLPKNCSLLPADPASVLCSEVQLDNRLYRDDCTKATHSRMEHQLGHLPPINAASSPQQRDRYSHWTKL'
+		}
+	]
+]

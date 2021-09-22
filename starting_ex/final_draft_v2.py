@@ -24,11 +24,11 @@ def open_fasta(filename):
 
 
 #Function to run BLAST with taxid list
-def blastn_with_list(sequence, list_taxid = [], query_size = 200, blast_type = 'blastn'):
+def blastp_with_list(sequence, list_taxid = [], query_size = 200, blast_type = 'blastn'):
     result_handler, result_storer = None, None
     #If list is empty run query without specific taxid
     if len(list_taxid) <1:
-        result_handler = NCBIWWW.qblast('blastn', 'nt', sequence, hitlist_size=query_size) 
+        result_handler = NCBIWWW.qblast('blastp', 'nr', sequence, hitlist_size=query_size) 
         result_storer = result_handler.read()
     #Prepare string of Entrez and parse it to qblast
     else:
@@ -37,15 +37,15 @@ def blastn_with_list(sequence, list_taxid = [], query_size = 200, blast_type = '
             entrez_query += f'txid{taxid}[ORGN]'
             if taxid != list_taxid[-1]:
                 entrez_query += ' OR '
-        result_handler = NCBIWWW.qblast('blastn', 'nt', sequence, entrez_query= entrez_query, hitlist_size=query_size)
+        result_handler = NCBIWWW.qblast('blastp', 'nr', sequence, entrez_query= entrez_query, hitlist_size=query_size)
         result_storer = result_handler.read()
     return result_storer
 
 
 #Single blast query for threading
-def blast_single_taxid(sequence, taxid, query_size = 20):
+def blastp_single_taxid(sequence, taxid, query_size = 20):
     entrez_query = f'txid{taxid}[ORGN]'
-    result_handler = NCBIWWW.qblast('blastn', 'nt', sequence, entrez_query= entrez_query, hitlist_size=query_size)    
+    result_handler = NCBIWWW.qblast('blastp', 'nr', sequence, entrez_query= entrez_query, hitlist_size=query_size)    
     result_storer = result_handler.read()
     return result_storer
 
@@ -235,19 +235,6 @@ def genbank_to_dictionary(list_of_genbank):
         dictionary_gen['Organism'].append(find_value(first_wrapper, 'GBSeq_organism'))
         dictionary_gen['Taxonomy'].append(find_value(first_wrapper, 'GBSeq_taxonomy'))
         dictionary_gen['Nuc_sequence'].append(find_value(first_wrapper, 'GBSeq_sequence'))
-
-        #Old extraction raised error
-        '''
-        dictionary_gen['Accession'].append(first_wrapper['GBSeq_primary-accession'])
-        dictionary_gen['Accession_version'].append(first_wrapper['GBSeq_accession-version'])
-        dictionary_gen['Gene_length'].append(first_wrapper['GBSeq_length'])
-        dictionary_gen['Strandedness'].append(first_wrapper['GBSeq_strandedness']) 
-        dictionary_gen['Molecule_type'].append(first_wrapper['GBSeq_moltype'])
-        dictionary_gen['Organism'].append(first_wrapper['GBSeq_organism'])
-        dictionary_gen['Taxonomy'].append(first_wrapper['GBSeq_taxonomy'])
-        dictionary_gen['Nuc_sequence'].append(first_wrapper['GBSeq_sequence'])
-        '''
-
         dictionary_gen['Taxon'].append(find_taxon(first_wrapper['GBSeq_feature-table']))
         dictionary_gen['Protein_ID'].append(find_prot_id(first_wrapper['GBSeq_feature-table']))
         dictionary_gen['Prot_sequence'].append(find_prot_seq(first_wrapper['GBSeq_feature-table']))
@@ -421,6 +408,8 @@ if __name__ == '__main__':
     
 
     #OPTIONAL USER INPUTS
+    type_of_query = ['nucleotide', 'amino_acid', 'accession'] #Default amino_acid
+
     local_query = False
     threading = False
     query_size = 100
@@ -431,9 +420,6 @@ if __name__ == '__main__':
     identity_threshold = 50
 
     sequences_per_taxon = 3
-    import_aa_sequence = False
-    query_protein = 'sry_protein.fasta'
-    
     
 
 
@@ -506,7 +492,7 @@ if __name__ == '__main__':
     #Substitutive code for single list taxid
     #--------------
     #Taxid with list
-    blast_results = blastn_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
+    blast_results = blastp_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
     #Parse handler to xml_string_to_handler to be able to feed it in SearchIO.read
     handler = xml_string_to_handler(blast_results)
     
@@ -514,7 +500,7 @@ if __name__ == '__main__':
     results_df = pd.DataFrame.from_dict(dictionary)
 
 
-    print('Prepared DF')
+    print('Prepared DF BLAST')
     print(f'In {round(time.perf_counter()-start,2)}')
     print(len(results_df))
     #--------------
@@ -587,14 +573,8 @@ if __name__ == '__main__':
 
 
 
-    #Declare protein
-    protein_seq = None
-    #Check if user specified ambiguities for AA translation
-    if import_aa_sequence:
-        protein_seq = open_fasta(query_protein)
-    else:
-        #Get protein from query if not specified otherwise
-        protein_seq = fasta_record.translate(to_stop=True)
+    #Get protein from query if not specified otherwise
+    protein_seq = fasta_record.translate(to_stop=True)
 
     
 
@@ -642,27 +622,3 @@ if __name__ == '__main__':
     end = time.perf_counter()
     print(f'Finished in {round(end-start,2)}')
 
-
-
-    '''
-
-    Make fasta for alignment 
-
-    '''
-
-
-
-
-
-
-
-
-
-
-
-
-    '''
-    #Write proteins for alignment in a file to feed to mofft
-    with open('sequences_for_alignment_filtered_v2.fasta', 'w') as savefile:
-        savefile.write(fasta_for_alignment)
-    '''

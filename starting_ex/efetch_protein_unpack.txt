@@ -1,0 +1,875 @@
+[
+	{
+	'Bioseq-set_seq-set': 
+		[
+			{
+			'Seq-entry_set': 
+				{
+				'Bioseq-set': 
+					{
+					'Bioseq-set_level': '1', 'Bioseq-set_class': StringElement
+						(
+						'', attributes=
+							{
+							'value': 'nuc-prot'
+							}
+						), 
+					'Bioseq-set_descr': 
+						{
+						'Seq-descr': 
+							[
+								{
+								'Seqdesc_source': 
+									{
+									'BioSource': 
+										{
+										'BioSource_genome': StringElement
+											(
+											'1', attributes=
+												{
+												'value': 'genomic'
+												}
+											), 
+											'BioSource_org': 
+											{'Org-ref': 
+												{'
+												Org-ref_taxname': 'Homo sapiens', 'Org-ref_common': 'human', 'Org-ref_db': [{'Dbtag_db': 'taxon', 'Dbtag_tag': {'Object-id': {'Object-id_id': '9606'}}}], 
+													'Org-ref_orgname': 
+														{'OrgName': 
+															{'OrgName_name': 
+																{'OrgName_name_binomial': 
+																	{'BinomialOrgName': 
+																		{'BinomialOrgName_genus': 'Homo', 'BinomialOrgName_species': 'sapiens'}
+																	}
+																}, 
+															'OrgName_attrib': 'specified', 'OrgName_lineage': 'Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae; Homo', 'OrgName_gcode': '1', 'OrgName_mgcode': '2', 'OrgName_div': 'PRI'
+															}
+														}
+												}
+											}, 
+											'BioSource_subtype': 
+												[
+													{'SubSource_subtype': StringElement
+														('1', attributes=
+															{'value': 'chromosome'}
+														), 
+														'SubSource_name': 'Y'
+													}, 
+													{'SubSource_subtype': StringElement('2', attributes={'value': 'map'}), 'SubSource_name': 'Yp11.2'}
+												]
+										}
+									}
+								},
+
+
+								{
+								'Seqdesc_pub': 
+									{
+									'Pubdesc': 
+										{
+										'Pubdesc_pub': 
+											{
+											'Pub-equiv': 
+												[
+													{'Pub_pmid': 
+														{'PubMedId': '32423256'}
+													}, 
+													{
+													'Pub_article': 
+														{
+														'Cit-art': 
+															{
+															'Cit-art_title': 
+																{
+																'Title': 
+																	[
+																		{'Title_E_name': 'Gene Copy Number Quantification of SHOX, VAMP7, and SRY for the Detection of Sex Chromosome Aneuploidies in Neonates.'}
+																	]
+																},
+
+																'Cit-art_authors': 
+																{'Auth-list': 
+																	{'Auth-list_names': 
+																		{'Auth-list_names_std': 
+																			[
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Ibarra-Ramirez M'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				,
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Lugo-Trampe JJ'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Campos-Acevedo LD'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Zamudio-Osuna M'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Torres-Munoz I'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Gomez-Puente V'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Garcia-Castaneda G'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Arredondo-Vazquez P'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Epidemiologia, Servicios de Salud de Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Rodriguez-Sanchez IP'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Schaeffer SE'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Posgrado en Ingenieria de Sistemas (PISIS), FIME, Universidad Autonoma de Nuevo Leon (UANL), San Nicolas de los Garza, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Velasco-Sepulveda BH'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Villarreal-Perez JZ'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Endocrinologia, Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																				, 
+																				{'Author_name': {'Person-id': {'Person-id_ml': 'Martinez-de-Villarreal LE'}}, 'Author_affil': {'Affil': {'Affil_str': 'Departamento de Genetica and Facultad de Medicina y Hospital Universitario Jose E. Gonzalez, Universidad Autonoma de Nuevo Leon (UANL), Monterrey, Nuevo Leon, Mexico.'}}}
+																			]
+																		}
+																	}
+																}, 
+																'Cit-art_from': 
+																{
+																'Cit-art_from_journal': 
+																	{
+																	'Cit-jour': 
+																		{'Cit-jour_title': 
+																			{'Title': 
+																				[
+																					{'Title_E_iso-jta': 'Genet Test Mol Biomarkers'}, 
+																					{'Title_E_ml-jta': 'Genet Test Mol Biomarkers'}, 
+																					{'Title_E_issn': '1945-0257'}, 
+																					{'Title_E_name': 'Genetic testing and molecular biomarkers'}
+																				]
+																			}, 
+																			'Cit-jour_imp': 
+																				{'Imprint': 
+																					{'Imprint_date': 
+																						{'Date': 
+																							{'Date_std': 
+																								{'Date-std': 
+																									{'Date-std_year': '2020', 'Date-std_month': '6'}
+																								}
+																							}
+																						}, 
+																						'Imprint_volume': '24', 'Imprint_issue': '6', 'Imprint_pages': '352-358', 'Imprint_language': 'eng', 'Imprint_pubstatus': 
+																							{'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 
+																							'Imprint_history': 
+																								{
+																								'PubStatusDateSet': 
+																									[
+																										{
+																										'PubStatusDate_pubstatus': 
+																											{'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 
+																												'PubStatusDate_date': 
+																												{
+																												'Date': 
+																													{
+																													'Date_std': 
+																														{
+																														'Date-std': 
+																															{'Date-std_year': '2020', 'Date-std_month': '5', 'Date-std_day': '20', 'Date-std_hour': '6', 'Date-std_minute': '0'}
+																														}
+																													}
+																												}
+																										}, 
+																										{
+																										'PubStatusDate_pubstatus': 
+																											{'PubStatus': StringElement('12', attributes={'value': 'medline'})},
+																											'PubStatusDate_date': 
+																												{
+																												'Date': 
+																													{
+																													'Date_std': 
+																														{
+																														'Date-std': 
+																															{
+																															'Date-std_year': '2021', 'Date-std_month': '3', 'Date-std_day': '2', 'Date-std_hour': '6', 'Date-std_minute': '0'
+																															}
+																														}
+																													}
+																												}
+																										}, 
+																										{
+																										'PubStatusDate_pubstatus': 
+																											{'PubStatus': StringElement('255', attributes={'value': 'other'})},'PubStatusDate_date': 
+																												{
+																												'Date': 
+																													{
+																													'Date_std': 
+																														{
+																														'Date-std': 
+																															{
+																															'Date-std_year': '2020', 'Date-std_month': '5', 'Date-std_day': '20', 'Date-std_hour': '6', 'Date-std_minute': '0'
+																															}
+																														}
+																													}
+																												}
+																										}
+																									]
+																								}
+																					}
+																				}
+																		}
+																	}
+																},
+																'Cit-art_ids': 
+																	{
+																	'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '32423256'}}, {'ArticleId_doi': {'DOI': '10.1089/gtmb.2019.0226'}}, {'ArticleId_other': {'Dbtag': {'Dbtag_db': 'ELocationID doi', 'Dbtag_tag': {'Object-id': {'Object-id_str': '10.1089/gtmb.2019.0226'}}}}}]
+																	}
+															}
+														}
+													}
+												]
+											}, 
+										'Pubdesc_comment': 'GeneRIF: Gene Copy Number Quantification of SHOX, VAMP7, and SRY for the Detection of Sex Chromosome Aneuploidies in Neonates.'
+										}
+									}
+								},
+
+								{
+								'Seqdesc_pub': 
+									{
+									'Pubdesc': 
+										{
+										'Pubdesc_pub': 
+											{
+											'Pub-equiv': 
+												[
+													{
+													'Pub_pmid': 
+														{'PubMedId': '20301714'}
+													}, 
+													{
+													'Pub_article': 
+														{
+														'Cit-art': 
+															{
+															'Cit-art_title': 
+																{
+																'Title': 
+																	[
+																		{'Title_E_name': 'Nonsyndromic Disorders of Testicular Development'}
+																	]
+																}, 
+																'Cit-art_authors': 
+																	{
+																	'Auth-list': 
+																		{
+																		'Auth-list_names': 
+																			{
+																			'Auth-list_names_std': 
+																				[
+																					{
+																					'Author_name': 
+																						{
+																						'Person-id': 
+																							{
+																							'Person-id_name': 
+																								{
+																								'Name-std': 
+																									{
+																									'Name-std_last': 'Mohnach', 'Name-std_first': 'L', 'Name-std_initials': 'L.'
+																									}
+																								}
+																							}
+																						}
+																					}, 
+																					{
+																					'Author_name': 
+																						{
+																						'Person-id': 
+																							{
+																							'Person-id_name': 
+																								{
+																								'Name-std': 
+																									{
+																									'Name-std_last': 'Fechner', 'Name-std_first': 'P', 'Name-std_initials': 'P.Y.'
+																									}
+																								}
+																							}
+																						}
+																					}, 
+																					{
+																					'Author_name': 
+																						{
+																						'Person-id': 
+																							{
+																							'Person-id_name': 
+																								{
+																								'Name-std': 
+																									{
+																									'Name-std_last': 'Keegan', 'Name-std_first': 'C', 'Name-std_initials': 'C.E.'
+																									}
+																								}
+																							}
+																						}
+																					}
+																				]
+																			}
+																		}
+																	}, 
+																	'Cit-art_from': 
+																	{
+																	'Cit-art_from_book': 
+																		{
+																		'Cit-book': 
+																			{
+																			'Cit-book_title': 
+																				{
+																				'Title': 
+																					[
+																						{
+																						'Title_E_name': 'GeneReviews((R))'
+																						}
+																					]
+																				}, 
+																				'Cit-book_authors': 
+																				{
+																				'Auth-list': 
+																					{
+																					'Auth-list_names': 
+																						{
+																						'Auth-list_names_std': 
+																							[
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': 
+																										{'Person-id_ml': 'Adam MP'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': 
+																										{'Person-id_ml': 'Ardinger HH'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{'Author_name': 
+																									{
+																									'Person-id': {'Person-id_ml': 'Pagon RA'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': {'Person-id_ml': 'Wallace SE'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': {'Person-id_ml': 'Bean LJH'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': {'Person-id_ml': 'Mirzaa G'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}, 
+																								{
+																								'Author_name': 
+																									{
+																									'Person-id': {'Person-id_ml': 'Amemiya A'}
+																									}, 
+																									'Author_role': StringElement('', attributes={'value': 'editor'})
+																								}
+																							]
+																						}
+																					}
+																				}, 
+																				'Cit-book_imp': 
+																				{
+																				'Imprint': 
+																					{
+																					'Imprint_date': 
+																						{
+																						'Date': 
+																							{
+																							'Date_std': 
+																								{
+																								'Date-std': 
+																									{
+																									'Date-std_year': '1993'
+																									}
+																								}
+																							}
+																						},
+																						'Imprint_language': 'eng', 'Imprint_pubstatus': 
+																						{
+																						'PubStatus': StringElement('4', attributes={'value': 'ppublish'})
+																						}, 
+																						'Imprint_history': 
+																						{
+																						'PubStatusDateSet': 
+																							[
+																								{
+																								'PubStatusDate_pubstatus': 
+																									{
+																									'PubStatus': StringElement('8', attributes={'value': 'pubmed'})
+																									}, 
+																								'PubStatusDate_date': 
+																									{
+																									'Date': 
+																										{
+																										'Date_std': 
+																											{
+																											'Date-std': 
+																												{
+																												'Date-std_year': '2016', 'Date-std_month': '6', 'Date-std_day': '2', 'Date-std_hour': '6', 'Date-std_minute': '0'
+																												}
+																											}
+																										}
+																									}
+																								}, 
+																								{
+																								'PubStatusDate_pubstatus': 
+																									{
+																									'PubStatus': StringElement('12', attributes={'value': 'medline'})
+																									}, 
+																									'PubStatusDate_date': 
+																									{
+																									'Date': 
+																										{
+																										'Date_std': 
+																											{
+																											'Date-std': 
+																												{
+																												'Date-std_year': '2016', 'Date-std_month': '6', 'Date-std_day': '2', 'Date-std_hour': '6', 'Date-std_minute': '0'
+																												}
+																											}
+																										}
+																									}
+																								}, 
+																								{
+																								'PubStatusDate_pubstatus': 
+																									{
+																									'PubStatus': StringElement('255', attributes={'value': 'other'})
+																									}, 
+																									'PubStatusDate_date': 
+																									{
+																									'Date': 
+																										{
+																										'Date_std': 
+																											{
+																											'Date-std': 
+																												{
+																												'Date-std_year': '2010', 'Date-std_month': '3', 'Date-std_day': '20', 'Date-std_hour': '6', 'Date-std_minute': '0'
+																												}
+																											}
+																										}
+																									}
+																								}
+																							]
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}, 
+																	'Cit-art_ids': 
+																	{
+																	'ArticleIdSet': 
+																		[
+																			{
+																			'ArticleId_pubmed': 
+																				{
+																				'PubMedId': '20301714'
+																				}
+																			}
+																		]
+																	}
+															}
+														}
+													}
+												]
+											}
+										}
+									}
+								},
+
+								{
+								'Seqdesc_pub': 
+									{
+									'Pubdesc': 
+										{
+										'Pubdesc_pub': 
+											{
+											'Pub-equiv': 
+												[
+													{
+													'Pub_pmid': {'PubMedId': '20301589'}
+													}, 
+													{
+													'Pub_article': 
+														{
+														'Cit-art': 
+															{
+															'Cit-art_title': 
+																{
+																'Title': 
+																	[
+																		{
+																		'Title_E_name': 'Nonsyndromic 46,XX Testicular Disorders of Sex Development'
+																		}
+																	]
+																}, 
+																'Cit-art_authors': 
+																{
+																'Auth-list': 
+																	{
+																	'Auth-list_names': 
+																		{
+																		'Auth-list_names_std': 
+																			[
+																				{
+																				'Author_name': 
+																					{
+																					'Person-id': 
+																						{
+																						'Person-id_name': 
+																							{
+																							'Name-std': 
+																								{
+																								'Name-std_last': 'Delot', 'Name-std_first': 'E', 'Name-std_initials': 'E.C.'
+																								}
+																							}
+																						}
+																					}
+																				}, 
+																				{
+																				'Author_name': 
+																					{
+																					'Person-id': 
+																						{
+																						'Person-id_name': 
+																							{
+																							'Name-std': 
+																								{
+																								'Name-std_last': 'Vilain', 'Name-std_first': 'E', 'Name-std_initials': 'E.J.'
+																								}
+																							}
+																						}
+																					}
+																				}
+																			]
+																		}
+																	}
+																}, 
+																'Cit-art_from': 
+																{
+																'Cit-art_from_book': 
+																	{
+																	'Cit-book': 
+																		{
+																		'Cit-book_title': 
+																			{
+																			'Title': 
+																				[
+																					{
+																					'Title_E_name': 'GeneReviews((R))'
+																					}
+																				]
+																			}, 
+																			'Cit-book_authors': 
+																			{
+																			'Auth-list': 
+																				{
+																				'Auth-list_names': 
+																					{
+																					'Auth-list_names_std': 
+																						[
+																							{
+																							'Author_name': 
+																								{
+																								'Person-id': 
+																									{
+																									'Person-id_ml': 'Adam MP'
+																									}
+																								}, 
+																								'Author_role': StringElement('', attributes={'value': 'editor'})
+																							}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Ardinger HH'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Pagon RA'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Wallace SE'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Bean LJH'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Mirzaa G'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}, 
+																							{'Author_name': {'Person-id': {'Person-id_ml': 'Amemiya A'}}, 'Author_role': StringElement('', attributes={'value': 'editor'})}
+																						]
+																					}
+																				}
+																			}, 
+																			'Cit-book_imp': 
+																			{
+																			'Imprint': 
+																				{
+																				'Imprint_date': 
+																					{
+																					'Date': 
+																						{
+																						'Date_std': 
+																							{
+																							'Date-std': 
+																								{
+																								'Date-std_year': '1993'
+																								}
+																							}
+																						}
+																					}, 
+																					'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 
+																					'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2015', 'Date-std_month': '5', 'Date-std_day': '7', 'Date-std_hour': '6', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2015', 'Date-std_month': '5', 'Date-std_day': '7', 'Date-std_hour': '6', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2010', 'Date-std_month': '3', 'Date-std_day': '20', 'Date-std_hour': '6', 'Date-std_minute': '0'}}}}}]}
+																				}
+																			}
+																		}
+																	}
+																}, 
+																'Cit-art_ids': 
+																{
+																'ArticleIdSet': 
+																	[
+																		{
+																		'ArticleId_pubmed': 
+																			{
+																			'PubMedId': '20301589'
+																			}
+																		}
+																	]
+																}
+															}
+														}
+													}
+												]
+											}
+										}
+									}
+								},
+
+								{
+								'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '19372376'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'Upstream open reading frames cause widespread reduction of protein expression and are polymorphic among humans.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Calvo SE'}}, 'Author_affil': {'Affil': {'Affil_str': 'Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA.'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Pagliarini DJ'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Mootha VK'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Proc Natl Acad Sci U S A'}, {'Title_E_ml-jta': 'Proc Natl Acad Sci U S A'}, {'Title_E_issn': '1091-6490'}, {'Title_E_name': 'Proceedings of the National Academy of Sciences of the United States of America'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '5', 'Date-std_day': '5'}}}}, 'Imprint_volume': '106', 'Imprint_issue': '18', 'Imprint_pages': '7507-7512', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '4', 'Date-std_day': '18', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '4', 'Date-std_day': '18', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '5', 'Date-std_day': '30', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '19372376'}}, {'ArticleId_pii': {'PII': '0810916106'}}, {'ArticleId_doi': {'DOI': '10.1073/pnas.0810916106'}}, {'ArticleId_other': {'Dbtag': {'Dbtag_db': 'pmc', 'Dbtag_tag': {'Object-id': {'Object-id_str': 'PMC2669787'}}}}}, {'ArticleId_other': {'Dbtag': {'Dbtag_db': 'ELocationID doi', 'Dbtag_tag': {'Object-id': {'Object-id_str': '10.1073/pnas.0810916106'}}}}}]}}}}]}, 'Pubdesc_comment': 'GeneRIF: Includes the study of a disease-related upstream ORF in this gene, and shows that it functions to reduce protein levels by 100%.'}}
+								}, 
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '19027189'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'Sex determination and SRY: down to a wink and a nudge?'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Sekido R'}}, 'Author_affil': {'Affil': {'Affil_str': 'Division of Developmental Genetics, Medical Research Council, National Institute for Medical Research, The Ridgeway, Mill Hill, London NW7 1AA, UK. rsekido@nimr.mrc.ac.uk'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Lovell-Badge R'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Trends Genet'}, {'Title_E_ml-jta': 'Trends Genet'}, {'Title_E_issn': '0168-9525'}, {'Title_E_name': 'Trends in genetics : TIG'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '1'}}}}, 'Imprint_volume': '25', 'Imprint_issue': '1', 'Imprint_pages': '19-29', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('1', attributes={'value': 'received'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2008', 'Date-std_month': '8', 'Date-std_day': '20'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('5', attributes={'value': 'revised'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2008', 'Date-std_month': '10', 'Date-std_day': '25'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('2', attributes={'value': 'accepted'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2008', 'Date-std_month': '10', 'Date-std_day': '25'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2008', 'Date-std_month': '11', 'Date-std_day': '26', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2009', 'Date-std_month': '3', 'Date-std_day': '13', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2008', 'Date-std_month': '11', 'Date-std_day': '26', 'Date-std_hour': '9', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '19027189'}}, {'ArticleId_pii': {'PII': 'S0168-9525(08)00290-4'}}, {'ArticleId_doi': {'DOI': '10.1016/j.tig.2008.10.008'}}, {'ArticleId_other': {'Dbtag': {'Dbtag_db': 'ELocationID doi', 'Dbtag_tag': {'Object-id': {'Object-id_str': '10.1016/j.tig.2008.10.008'}}}}}]}}}}]}, 'Pubdesc_comment': 'Review article'}}
+								}, 
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '8434602'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'Identification of the transcriptional unit, structural organization, and promoter sequence of the human sex-determining region Y (SRY) gene, using a reverse genetic approach.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Su H'}}, 'Author_affil': {'Affil': {'Affil_str': 'Department of Medicine, VA Medical Center, University of California, San Francisco 94121.'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Lau YF'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Am J Hum Genet'}, {'Title_E_ml-jta': 'Am J Hum Genet'}, {'Title_E_issn': '0002-9297'}, {'Title_E_name': 'American journal of human genetics'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '1'}}}}, 'Imprint_volume': '52', 'Imprint_issue': '1', 'Imprint_pages': '24-38', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '1', 'Date-std_day': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '1', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '1', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '8434602'}}, {'ArticleId_other': {'Dbtag': {'Dbtag_db': 'pmc', 'Dbtag_tag': {'Object-id': {'Object-id_str': 'PMC1682107'}}}}}]}}}}]}}}
+								}, 
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '8244390'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'Evidence that the SRY protein is encoded by a single exon on the human Y chromosome.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Behlke MA'}}, 'Author_affil': {'Affil': {'Affil_str': 'Howard Hughes Research Laboratories, Whitehead Institute, Cambridge, Massachusetts.'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Bogan JS'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Beer-Romero P'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Page DC'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Genomics'}, {'Title_E_ml-jta': 'Genomics'}, {'Title_E_issn': '0888-7543'}, {'Title_E_name': 'Genomics'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '9'}}}}, 'Imprint_volume': '17', 'Imprint_issue': '3', 'Imprint_pages': '736-739', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '9', 'Date-std_day': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '9', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '9', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '8244390'}}, {'ArticleId_pii': {'PII': 'S0888-7543(83)71395-9'}}, {'ArticleId_doi': {'DOI': '10.1006/geno.1993.1395'}}]}}}}]}}}
+								}, 
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '8111368'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'The human SRY transcript.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Clepet C'}}, 'Author_affil': {'Affil': {'Affil_str': 'Department of Genetics, University of Cambridge, UK.'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Schafer AJ'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Sinclair AH'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Palmer MS'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Lovell-Badge R'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Goodfellow PN'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Hum Mol Genet'}, {'Title_E_ml-jta': 'Hum Mol Genet'}, {'Title_E_issn': '0964-6906'}, {'Title_E_name': 'Human molecular genetics'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '12'}}}}, 'Imprint_volume': '2', 'Imprint_issue': '12', 'Imprint_pages': '2007-2012', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '12', 'Date-std_day': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '12', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1993', 'Date-std_month': '12', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '8111368'}}, {'ArticleId_doi': {'DOI': '10.1093/hmg/2.12.2007'}}]}}}}]}}}
+								},
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '1695712'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'A gene from the human sex-determining region encodes a protein with homology to a conserved DNA-binding motif.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Sinclair AH'}}, 'Author_affil': {'Affil': {'Affil_str': "Human Molecular Genetics Laboratory, Imperial Cancer Research Fund, Lincoln's Inn Fields, London, UK."}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Berta P'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Palmer MS'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Hawkins JR'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Griffiths BL'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Smith MJ'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Foster JW'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Frischauf AM'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Lovell-Badge R'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Goodfellow PN'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Nature'}, {'Title_E_ml-jta': 'Nature'}, {'Title_E_issn': '0028-0836'}, {'Title_E_name': 'Nature'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1990', 'Date-std_month': '7', 'Date-std_day': '19'}}}}, 'Imprint_volume': '346', 'Imprint_issue': '6281', 'Imprint_pages': '240-244', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1990', 'Date-std_month': '7', 'Date-std_day': '19'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1990', 'Date-std_month': '7', 'Date-std_day': '19', 'Date-std_hour': '0', 'Date-std_minute': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1990', 'Date-std_month': '7', 'Date-std_day': '19', 'Date-std_hour': '0', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '1695712'}}, {'ArticleId_doi': {'DOI': '10.1038/346240a0'}}]}}}}]}}}
+								}, 
+
+								{'Seqdesc_pub': 
+									{'Pubdesc': {'Pubdesc_pub': {'Pub-equiv': [{'Pub_pmid': {'PubMedId': '1339396'}}, {'Pub_article': {'Cit-art': {'Cit-art_title': {'Title': [{'Title_E_name': 'Mutational analysis of SRY: nonsense and missense mutations in XY sex reversal.'}]}, 'Cit-art_authors': {'Auth-list': {'Auth-list_names': {'Auth-list_names_std': [{'Author_name': {'Person-id': {'Person-id_ml': 'Hawkins JR'}}, 'Author_affil': {'Affil': {'Affil_str': 'Imperial Cancer Research Fund, London, UK.'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Taylor A'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Berta P'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Levilliers J'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Van der Auwera B'}}}, {'Author_name': {'Person-id': {'Person-id_ml': 'Goodfellow PN'}}}]}}}, 'Cit-art_from': {'Cit-art_from_journal': {'Cit-jour': {'Cit-jour_title': {'Title': [{'Title_E_iso-jta': 'Hum Genet'}, {'Title_E_ml-jta': 'Hum Genet'}, {'Title_E_issn': '0340-6717'}, {'Title_E_name': 'Human genetics'}]}, 'Cit-jour_imp': {'Imprint': {'Imprint_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1992', 'Date-std_month': '2'}}}}, 'Imprint_volume': '88', 'Imprint_issue': '4', 'Imprint_pages': '471-474', 'Imprint_language': 'eng', 'Imprint_pubstatus': {'PubStatus': StringElement('4', attributes={'value': 'ppublish'})}, 'Imprint_history': {'PubStatusDateSet': [{'PubStatusDate_pubstatus': {'PubStatus': StringElement('8', attributes={'value': 'pubmed'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1992', 'Date-std_month': '2', 'Date-std_day': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('12', attributes={'value': 'medline'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1992', 'Date-std_month': '2', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '1'}}}}}, {'PubStatusDate_pubstatus': {'PubStatus': StringElement('255', attributes={'value': 'other'})}, 'PubStatusDate_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1992', 'Date-std_month': '2', 'Date-std_day': '1', 'Date-std_hour': '0', 'Date-std_minute': '0'}}}}}]}}}}}}, 'Cit-art_ids': {'ArticleIdSet': [{'ArticleId_pubmed': {'PubMedId': '1339396'}}, {'ArticleId_doi': {'DOI': '10.1007/BF00215684'}}]}}}}]}}}
+								},
+
+								{'Seqdesc_comment': '~Summary: This intronless gene encodes a transcription factor that is a member of the high mobility group (HMG)-box family of DNA-binding proteins. This protein is the testis-determining factor (TDF), which initiates male sex determination. Mutations in this gene give rise to XY females with gonadal dysgenesis (Swyer syndrome); translocation of part of the Y chromosome containing this gene to the X chromosome causes XX male syndrome. [provided by RefSeq, Jul 2008]'}, 
+
+								{'Seqdesc_comment': '~Publication Note:  This RefSeq record includes a subset of the publications that are available for this gene. Please see the Gene record to access additional publications.'}, 
+
+								{'Seqdesc_user': {'User-object': {'User-object_type': {'Object-id': {'Object-id_str': 'RefSeqGene'}}, 'User-object_data': [{'User-field_label': {'Object-id': {'Object-id_str': 'Status'}}, 'User-field_data': {'User-field_data_str': 'Reference Standard'}}]}}},
+
+								{'Seqdesc_user': {'User-object': {'User-object_type': {'Object-id': {'Object-id_str': 'RefGeneTracking'}}, 'User-object_data': [{'User-field_label': {'Object-id': {'Object-id_str': 'Status'}}, 'User-field_data': {'User-field_data_str': 'Reviewed'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'Assembly'}}, 'User-field_data': {'User-field_data_fields': [{'User-field_label': {'Object-id': {'Object-id_id': '0'}}, 'User-field_data': {'User-field_data_fields': [{'User-field_label': {'Object-id': {'Object-id_str': 'accession'}}, 'User-field_data': {'User-field_data_str': 'L10101.1'}}]}}]}}, {'User-field_label': {'Object-id': {'Object-id_str': 'EnsemblLocation'}}, 'User-field_data': {'User-field_data_fields': [{'User-field_label': {'Object-id': {'Object-id_str': 'seq_id'}}, 'User-field_data': {'User-field_data_str': 'ref|NC_000024.10|'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'from'}}, 'User-field_data': {'User-field_data_int': '2786854'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'to'}}, 'User-field_data': {'User-field_data_int': '2787681'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'strand'}}, 'User-field_data': {'User-field_data_str': '-'}}]}}]}}}, 
+
+								{'Seqdesc_user': {'User-object': {'User-object_type': {'Object-id': {'Object-id_str': 'StructuredComment'}}, 'User-object_data': [{'User-field_label': {'Object-id': {'Object-id_str': 'StructuredCommentPrefix'}}, 'User-field_data': {'User-field_data_str': '##Evidence-Data-START##'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'Transcript is intronless'}}, 'User-field_data': {'User-field_data_str': 'L10101.1, BC074923.2 [ECO:0000345]'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'StructuredCommentSuffix'}}, 'User-field_data': {'User-field_data_str': '##Evidence-Data-END##'}}]}}},
+
+								{'Seqdesc_user': {'User-object': {'User-object_type': {'Object-id': {'Object-id_str': 'StructuredComment'}}, 'User-object_data': [{'User-field_label': {'Object-id': {'Object-id_str': 'StructuredCommentPrefix'}}, 'User-field_data': {'User-field_data_str': '##RefSeq-Attributes-START##'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'MANE Ensembl match'}}, 'User-field_data': {'User-field_data_str': 'ENST00000383070.2/ ENSP00000372547.1'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'RefSeq Select criteria'}}, 'User-field_data': {'User-field_data_str': 'based on single protein-coding transcript'}}, {'User-field_label': {'Object-id': {'Object-id_str': 'StructuredCommentSuffix'}}, 'User-field_data': {'User-field_data_str': '##RefSeq-Attributes-END##'}}]}}}, 
+
+								{'Seqdesc_update-date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2021', 'Date-std_month': '6', 'Date-std_day': '27'}}}}}
+
+							]
+						}, 
+				'Bioseq-set_seq-set': 
+				[
+					{
+					'Seq-entry_seq': 
+						{
+						'Bioseq': 
+							{
+							'Bioseq_id': 
+								[
+									{
+									'Seq-id_other': 
+										{
+										'Textseq-id': 
+											{
+											'Textseq-id_accession': 'NM_003140', 'Textseq-id_version': '3'
+											}
+										}
+									}, 
+									{'Seq-id_gi': '1653960407'}
+								], 
+								'Bioseq_descr': 
+								{
+								'Seq-descr': 
+									[
+										{
+										'Seqdesc_title': 'Homo sapiens sex determining region Y (SRY), mRNA.'
+										}, 
+										{
+										'Seqdesc_molinfo': 
+											{
+											'MolInfo': 
+												{
+												'MolInfo_biomol': StringElement('3', attributes={'value': 'mRNA'}), 'MolInfo_completeness': StringElement('1', attributes={'value': 'complete'})
+												}
+											}
+										},
+										{
+										'Seqdesc_user': 
+											{
+											'User-object': 
+												{
+												'User-object_class': '1.0', 'User-object_type': 
+													{
+													'Object-id': 
+														{
+														'Object-id_str': 'AutodefOptions'
+														}
+													}, 
+													'User-object_data': User-field_label': 
+													{
+													'Object-id': 
+														{'Object-id_str': 'SpecifyNuclearProduct'}
+													}, 
+													'User-field_data': 
+													{
+													'User-field_data_bool': StringElement('', attributes={'value': 'true'})
+													}
+												}, 
+												{
+												'User-field_label': 
+													{
+													'Object-id': {'Object-id_str': 'MaxMods'}
+													},
+													'User-field_data': 
+													{
+													'User-field_data_int': '-99'
+													}
+												},
+												{
+												'User-field_label': 
+													{'Object-id': 
+														{'Object-id_str': 'FeatureListType'
+														}
+													}, 
+													'User-field_data': 
+														{'User-field_data_str': 'List All Features'}
+												}, 
+												{
+												'User-field_label': 
+													{
+													'Object-id': 
+														{
+														'Object-id_str': 'MiscFeatRule'
+														}
+													}, 
+													'User-field_data': 
+													{
+													'User-field_data_str': 'NoncodingProductFeat'
+													}
+												}, 
+												{
+												'User-field_label': 
+													{
+													'Object-id': 
+														{
+														'Object-id_str': 'HIVRule'
+														}
+													}, 
+													'User-field_data': 
+													{
+													'User-field_data_str': 'WantBoth'
+													}
+												}, 
+												{
+												'User-field_label': 
+													{
+													'Object-id': {'Object-id_str': 'CustomFeatureClause'}
+													}, 
+													'User-field_data': {'User-field_data_str': 'sex determining region Y (SRY), mRNA'}
+												}
+											]}
+										}
+								},
+								{'Seqdesc_genbank': {'GB-block': {'GB-block_keywords': ['MANE Select']}}}, 
+								{'Seqdesc_create-date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1999', 'Date-std_month': '3', 'Date-std_day': '19'}}}}}
+							]
+							}
+							, 'Bioseq_inst': 
+							{
+							'Seq-inst': 
+								{
+								'Seq-inst_repr': StringElement('', attributes={'value': 'raw'}), 'Seq-inst_mol': StringElement('', attributes={'value': 'rna'}), 'Seq-inst_length': '828', 'Seq-inst_seq-data': {'Seq-data': {'Seq-data_ncbi2na': {'NCBI2na': '20B8BFE8CB00C2FD81DE917F43FED91DD7EFFE10E434CE7DE73BC26CF412638F12D49EE4220CF56775A209DF5F5FE47809EC1DC2CD2EE01A88012C0A41B528C8B8261538193D36EEB766348A6423A77220D520E601D223490927A8C52E8039F1E096003A53DF528A4480F1294E448880C560F30B36176DA0A608E796083E4BF9F5648D59F6B1DE4982E41E8412BEC4A8E1EC6025111D083A245272947C59534192527459241A859C4947A1027B28436AC13E9C4085C5C8E75FFC6307C495D1FDF3BF2FD0CFBFDFF77A70C0A5F3D3F4'}}}, 'Seq-inst_hist': {'Seq-hist': {'Seq-hist_assembly': [{'Seq-align_type': StringElement('', attributes={'value': 'partial'}), 'Seq-align_dim': '2', 'Seq-align_segs': {'Seq-align_segs_denseg': {'Dense-seg': {'Dense-seg_dim': '2', 'Dense-seg_numseg': '1', 'Dense-seg_ids': [{'Seq-id_gi': '1653960407'}, {'Seq-id_gi': '292511'}], 'Dense-seg_starts': ['0', '17'], 'Dense-seg_lens': ['828'], 'Dense-seg_strands': [StringElement('', attributes={'value': 'plus'}), StringElement('', attributes={'value': 'plus'})]}}}}], 'Seq-hist_replaces': {'Seq-hist-rec': {'Seq-hist-rec_date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '2019', 'Date-std_month': '5', 'Date-std_day': '17'}}}}, 'Seq-hist-rec_ids': [{'Seq-id_gi': '519666780'}]}}}}}
+							}, 'Bioseq_annot': 
+							[{'Seq-annot_data': {'Seq-annot_data_ftable': [{'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_gene': {'Gene-ref': {'Gene-ref_locus': 'SRY', 'Gene-ref_desc': 'sex determining region Y', 'Gene-ref_syn': ['SRXX1', 'SRXY1', 'TDF', 'TDY']}	}}}, 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '0', 'Seq-interval_to': '827', 'Seq-interval_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}, 'Seq-feat_dbxref': [{'Dbtag_db': 'GeneID', 'Dbtag_tag': {'Object-id': {'Object-id_id': '6736'}}}, {'Dbtag_db': 'HGNC', 'Dbtag_tag': {'Object-id': {'Object-id_str': 'HGNC:11311'}}}, {'Dbtag_db': 'MIM', 'Dbtag_tag': {'Object-id': {'Object-id_id': '480000'}}}]}, {'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_imp': {'Imp-feat': {'Imp-feat_key': 'misc_feature'}}}}, 'Seq-feat_comment': 'upstream in-frame stop codon', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '19', 'Seq-interval_to': '21', 'Seq-interval_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}}]}}]
+						}
+					}
+				},
+				{'Seq-entry_seq': 
+					{'Bioseq': 
+						{
+						'Bioseq_id': [{'Seq-id_other': {'Textseq-id': {'Textseq-id_accession': 'NP_003131', 'Textseq-id_version': '1'}}}, {'Seq-id_gi': '4507225'}], 
+						'Bioseq_descr': 
+							{'Seq-descr': [{'Seqdesc_title': 'sex-determining region Y protein [Homo sapiens]'}, {'Seqdesc_molinfo': {'MolInfo': {'MolInfo_biomol': StringElement('8', attributes={'value': 'peptide'})}}}, {'Seqdesc_genbank': {'GB-block': {'GB-block_keywords': ['MANE Select']}}}, {'Seqdesc_create-date': {'Date': {'Date_std': {'Date-std': {'Date-std_year': '1999', 'Date-std_month': '3', 'Date-std_day': '19'}}}}}]
+							}, 
+							'Bioseq_inst': 
+								{
+								'Seq-inst': {'Seq-inst_repr': StringElement('', attributes={'value': 'raw'}), 'Seq-inst_mol': StringElement('', attributes={'value': 'aa'}), 'Seq-inst_length': '204', 'Seq-inst_seq-data': {'Seq-data': {'Seq-data_ncbieaa': {'NCBIeaa': 'MQSYASAMLSVFNSDDYSPAVQENIPALRRSSSFLCTESCNSKYQCETGENSKGNVQDRVKRPMNAFIVWSRDQRRKMALENPRMRNSEISKQLGYQWKMLTEAEKWPFFQEAQKLQAMHREKYPNYKYRPRRKAKMLPKNCSLLPADPASVLCSEVQLDNRLYRDDCTKATHSRMEHQLGHLPPINAASSPQQRDRYSHWTKL'}}}}
+								},
+								'Bioseq_annot': 
+								[{'Seq-annot_data': 
+									{
+									'Seq-annot_data_ftable': 
+										[
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_prot': {'Prot-ref': {'Prot-ref_name': ['sex-determining region Y protein', 'essential protein for sex determination in human males', 'sex-determining region on Y', 'testis-determining factor on Y', 'truncated sex-determining region Y protein']}}}}, 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '0', 'Seq-interval_to': '203', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Sufficient for interaction with KPNB1. /evidence=ECO:0000269|PubMed:15297880'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': 
+												{'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '58', 'Seq-interval_to': '135', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}
+												}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Required for nuclear localization. /evidence=ECO:0000269|PubMed:12764225, ECO:0000269|PubMed:15746192'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '60', 'Seq-interval_to': '76', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Sufficient for interaction with EP300. /evidence=ECO:0000269|PubMed:15297880'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '106', 'Seq-interval_to': '138', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Required for nuclear localization. /evidence=ECO:0000269|PubMed:15297880'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '129', 'Seq-interval_to': '135', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_site': StringElement('', attributes={'value': 'acetylation'})}}, 'Seq-feat_comment': 'N6-acetyllysine. /evidence=ECO:0000269|PubMed:15297880; propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_pnt': {'Seq-point': {'Seq-point_point': '135', 'Seq-point_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Necessary for interaction with ZNF208 isoform KRAB-O. /evidence=ECO:0000269|PubMed:15469996'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '137', 'Seq-interval_to': '154', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '174', 'Seq-interval_to': '203', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}, 
+											{
+											'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_region': 'Necessary for interaction with SLC9A3R2. /evidence=ECO:0000269|PubMed:9054412'}}, 'Seq-feat_comment': 'propagated from UniProtKB/Swiss-Prot (Q05066.1)', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '197', 'Seq-interval_to': '203', 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '4507225'}}}}}}
+											}
+										]
+									}
+								}]
+							}
+						}
+					}
+				], 
+				'Bioseq-set_annot': 
+				[
+				{'Seq-annot_data': {'Seq-annot_data_ftable': [{'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_cdregion': {'Cdregion': {'Cdregion_code': {'Genetic-code': [{'Genetic-code_E_id': '1'}]}}}}}, 'Seq-feat_product': {'Seq-loc': {'Seq-loc_whole': {'Seq-id': {'Seq-id_gi': '4507225'}}}}, 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '79', 'Seq-interval_to': '693', 'Seq-interval_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}, 'Seq-feat_dbxref': [{'Dbtag_db': 'CCDS', 'Dbtag_tag': {'Object-id': {'Object-id_str': 'CCDS14772.1'}}}]}]}}, {'Seq-annot_name': 'exons', 'Seq-annot_data': {'Seq-annot_data_ftable': [{'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_imp': {'Imp-feat': {'Imp-feat_key': 'exon'}}}}, 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '0', 'Seq-interval_to': '827', 'Seq-interval_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}, 'Seq-feat_qual': [{'Gb-qual_qual': 'inference', 'Gb-qual_val': 'alignment:Splign:2.1.0'}]}]}}, {'Seq-annot_name': 'polyA sites', 'Seq-annot_data': {'Seq-annot_data_ftable': [{'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_imp': {'Imp-feat': {'Imp-feat_key': 'polyA_site'}}}}, 'Seq-feat_comment': 'major polyA site', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_pnt': {'Seq-point': {'Seq-point_point': '827', 'Seq-point_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-point_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}}, {'Seq-feat_data': {'SeqFeatData': {'SeqFeatData_imp': {'Imp-feat': {'Imp-feat_key': 'regulatory'}}}}, 'Seq-feat_comment': 'hexamer: AATAAA', 'Seq-feat_location': {'Seq-loc': {'Seq-loc_int': {'Seq-interval': {'Seq-interval_from': '806', 'Seq-interval_to': '811', 'Seq-interval_strand': {'Na-strand': StringElement('', attributes={'value': 'plus'})}, 'Seq-interval_id': {'Seq-id': {'Seq-id_gi': '1653960407'}}}}}}, 'Seq-feat_qual': [{'Gb-qual_qual': 'regulatory_class', 'Gb-qual_val': 'polyA_signal_sequence'}]}]}}
+				]
+			}
+		}
+	}
+]
+}
+]

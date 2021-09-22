@@ -1,34 +1,167 @@
     1
-   15
-  0.659
+   48
+  0.712
    1. =Query:NM_003140
-   2. =NM_003140 Homo sapiens
-   3. =BC074924 Homo sapiens
-   4. =AM884747 Homo sapiens
-   5. =XM_024354057 Pan troglodytes
-   6. =NM_001008988 Pan troglodytes
-   7. =JF293177 Pan troglodytes
-   8. =DQ977198 Pan paniscus
-   9. =XM_032756524 Hylobates moloch
-  10. =XM_010369191 Rhinopithecus roxellana
-  11. =X86383 Pongo pygmaeus
-  12. =JF293178 Pongo abelii
-  13. =AB464705 synthetic construct
-  14. =EU446863 synthetic construct
-  15. =X86382 Gorilla gorilla
- 0.000 0.000 0.000 0.068 0.068 0.068 0.110 0.145 0.173 0.137 0.107 0.000
- 0.000 0.032
- 0.000 0.000 0.068 0.068 0.068 0.110 0.145 0.173 0.137 0.107 0.000 0.000
- 0.032
- 0.000 0.068 0.068 0.068 0.110 0.145 0.173 0.137 0.107 0.000 0.000 0.032
- 0.068 0.068 0.068 0.110 0.145 0.173 0.137 0.107 0.000 0.000 0.032
- 0.000 0.000 0.039 0.185 0.224 0.151 0.126 0.068 0.068 0.077
- 0.000 0.039 0.185 0.224 0.151 0.126 0.068 0.068 0.077
- 0.039 0.185 0.224 0.151 0.126 0.068 0.068 0.077
- 0.224 0.264 0.193 0.166 0.110 0.110 0.119
- 0.204 0.162 0.147 0.145 0.145 0.154
- 0.189 0.174 0.173 0.173 0.182
- 0.015 0.137 0.137 0.147
- 0.107 0.107 0.116
- 0.000 0.032
- 0.032
+   2. =NP_003131.1Homo sapiens sex-determining region Y protein [Homo sapiens]
+   3. =QBA69874.1Homo sapiens sex-determining region Y protein, partial [Homo sapiens]
+   4. =CAP05197.1Homo sapiens sex determining region Y [Homo sapiens]
+   5. =P48046.1Gorilla gorilla gorilla RecName: Full=Sex-determining region Y protein; AltName: Full=Testis-determining factor
+   6. =AAB58342.1Carica papaya sex-determining region Y protein, partial [Carica papaya]
+   7. =NP_001008988.1Pan troglodytes sex-determining region Y protein [Pan troglodytes]
+   8. =Q28778.1Pan paniscus RecName: Full=Sex-determining region Y protein; AltName: Full=Testis-determining factor
+   9. =Q28783.1Pongo pygmaeus RecName: Full=Sex-determining region Y protein; AltName: Full=Testis-determining factor
+  10. =ADX95829.1Pongo abelii sex-determining region Y protein, partial [Pongo abelii]
+  11. =AAL09290.1Miopithecus talapoin SRY, partial [Miopithecus talapoin]
+  12. =Q28447.1Hylobates lar RecName: Full=Sex-determining region Y protein; AltName: Full=Testis-determining factor
+  13. =NP_001028008.1Macaca mulatta sex-determining region Y protein [Macaca mulatta]
+  14. =XP_032612415.1Hylobates moloch sex-determining region Y protein [Hylobates moloch]
+  15. =AAL09287.1Erythrocebus patas SRY, partial [Erythrocebus patas]
+  16. =AAS19186.1Cercopithecus hamlyni sex-determining region protein, partial [Cercopithecus hamlyni]
+  17. =AAW23363.1Cercopithecus hamlyni sex-determining protein SRY [Cercopithecus hamlyni]
+  18. =ADX95838.1Pygathrix nemaeus sex-determining region Y protein, partial [Pygathrix nemaeus]
+  19. =AAG34391.1Presbytis melalophos SRY, partial [Presbytis melalophos]
+  20. =ABV44686.1Presbytis melalophos SRY, partial [Presbytis melalophos]
+  21. =AAL09284.1Cercopithecus mitis SRY, partial [Cercopithecus mitis]
+  22. =AAS19187.1Cercopithecus mitis sex-determining region protein, partial [Cercopithecus mitis]
+  23. =AAL09282.1Allochrocebus lhoesti SRY, partial [Allochrocebus lhoesti]
+  24. =AAS19192.1Cercopithecus diana sex-determining region protein, partial [Cercopithecus diana]
+  25. =AAW23362.1Cercopithecus diana sex-determining protein SRY [Cercopithecus diana]
+  26. =ADX95840.1Simias concolor sex-determining region Y protein, partial [Simias concolor]
+  27. =ABS82755.1Cercopithecus ascanius sex-determining factor, partial [Cercopithecus ascanius]
+  28. =AAS19191.1Cercopithecus wolfi sex-determining region protein, partial [Cercopithecus wolfi]
+  29. =ADX95836.1Procolobus verus sex-determining region Y protein, partial [Procolobus verus]
+  30. =AAG34436.1Macaca thibetana SRY, partial [Macaca thibetana]
+  31. =AAG34440.1Allenopithecus nigroviridis SRY, partial [Allenopithecus nigroviridis]
+  32. =AAL09285.1Chlorocebus aethiops SRY, partial [Chlorocebus aethiops]
+  33. =AAW23367.1Cercopithecus erythrogaster erythrogaster sex-determining protein SRY [Cercopithecus erythrogaster erythrogaster]
+  34. =AAG34393.1Macaca sinica SRY, partial [Macaca sinica]
+  35. =AGY96995.1Chlorocebus pygerythrus sex-determining region Y protein, partial [Chlorocebus pygerythrus]
+  36. =AAG34401.1Macaca arctoides SRY, partial [Macaca arctoides]
+  37. =AAW23366.1Cercopithecus cephus cephus sex-determining protein SRY [Cercopithecus cephus cephus]
+  38. =AAG34405.1Macaca cyclopis SRY, partial [Macaca cyclopis]
+  39. =AAW23369.1Cercopithecus pogonias sex-determining protein SRY [Cercopithecus pogonias]
+  40. =ABV44688.1Semnopithecus entellus SRY, partial [Semnopithecus entellus]
+  41. =AGY96998.1Chlorocebus tantalus sex-determining region Y protein, partial [Chlorocebus tantalus]
+  42. =AAG34441.1Cercopithecus mona SRY, partial [Cercopithecus mona]
+  43. =AAG34434.1Macaca sylvanus SRY, partial [Macaca sylvanus]
+  44. =AAS19188.1Cercopithecus neglectus sex-determining region protein, partial [Cercopithecus neglectus]
+  45. =AAG34395.1Macaca tonkeana SRY, partial [Macaca tonkeana]
+  46. =AAG34404.1Macaca assamensis SRY, partial [Macaca assamensis]
+  47. =AAG34407.1Macaca fascicularis SRY, partial [Macaca fascicularis]
+  48. =AAG34439.1Mandrillus sphinx SRY, partial [Mandrillus sphinx]
+ 0.000 0.004 0.006 0.032 0.015 0.068 0.110 0.137 0.107 0.141 0.139 0.144
+ 0.145 0.150 0.164 0.171 0.134 0.141 0.144 0.170 0.181 0.169 0.173 0.173
+ 0.142 0.177 0.181 0.149 0.166 0.179 0.181 0.173 0.170 0.185 0.175 0.172
+ 0.174 0.182 0.165 0.187 0.193 0.176 0.196 0.181 0.177 0.183 0.180
+ 0.004 0.006 0.032 0.015 0.068 0.110 0.137 0.107 0.141 0.139 0.144 0.145
+ 0.150 0.164 0.171 0.134 0.141 0.144 0.170 0.181 0.169 0.173 0.173 0.142
+ 0.177 0.181 0.149 0.166 0.179 0.181 0.173 0.170 0.185 0.175 0.172 0.174
+ 0.182 0.165 0.187 0.193 0.176 0.196 0.181 0.177 0.183 0.180
+ 0.010 0.037 0.019 0.072 0.114 0.142 0.111 0.145 0.143 0.148 0.149 0.154
+ 0.169 0.175 0.138 0.145 0.148 0.174 0.185 0.173 0.176 0.177 0.146 0.181
+ 0.185 0.153 0.169 0.183 0.185 0.177 0.174 0.189 0.179 0.175 0.178 0.185
+ 0.169 0.191 0.196 0.180 0.200 0.185 0.180 0.187 0.184
+ 0.038 0.022 0.075 0.117 0.143 0.114 0.147 0.145 0.150 0.152 0.156 0.170
+ 0.178 0.141 0.147 0.151 0.177 0.188 0.175 0.179 0.180 0.149 0.184 0.187
+ 0.156 0.172 0.186 0.187 0.180 0.177 0.191 0.182 0.178 0.181 0.188 0.172
+ 0.194 0.199 0.183 0.203 0.187 0.183 0.189 0.186
+ 0.048 0.077 0.119 0.147 0.116 0.150 0.148 0.153 0.154 0.159 0.174 0.180
+ 0.143 0.150 0.157 0.179 0.190 0.178 0.181 0.182 0.151 0.186 0.184 0.158
+ 0.175 0.188 0.190 0.182 0.179 0.194 0.184 0.181 0.183 0.185 0.174 0.196
+ 0.196 0.185 0.205 0.190 0.185 0.192 0.189
+ 0.090 0.131 0.114 0.114 0.149 0.155 0.155 0.160 0.149 0.184 0.201 0.168
+ 0.175 0.178 0.176 0.193 0.176 0.178 0.186 0.181 0.184 0.185 0.186 0.180
+ 0.191 0.181 0.189 0.184 0.185 0.188 0.193 0.190 0.194 0.185 0.188 0.196
+ 0.191 0.191 0.192 0.192 0.208 0.193
+ 0.039 0.151 0.126 0.191 0.178 0.194 0.185 0.196 0.209 0.221 0.185 0.192
+ 0.199 0.220 0.231 0.219 0.223 0.223 0.193 0.227 0.231 0.200 0.216 0.229
+ 0.227 0.223 0.220 0.231 0.225 0.222 0.224 0.232 0.216 0.234 0.241 0.227
+ 0.243 0.231 0.227 0.233 0.230
+ 0.193 0.166 0.231 0.218 0.234 0.224 0.237 0.251 0.261 0.225 0.232 0.239
+ 0.260 0.271 0.258 0.262 0.263 0.233 0.267 0.270 0.240 0.255 0.269 0.269
+ 0.263 0.260 0.272 0.265 0.262 0.264 0.271 0.256 0.275 0.282 0.266 0.285
+ 0.271 0.266 0.273 0.270
+ 0.015 0.157 0.155 0.160 0.162 0.191 0.217 0.219 0.151 0.157 0.164 0.187
+ 0.198 0.185 0.189 0.190 0.159 0.194 0.197 0.166 0.167 0.198 0.197 0.190
+ 0.172 0.201 0.177 0.188 0.176 0.198 0.167 0.204 0.209 0.178 0.212 0.183
+ 0.178 0.185 0.182
+ 0.138 0.140 0.143 0.147 0.161 0.182 0.198 0.136 0.143 0.150 0.164 0.180
+ 0.163 0.166 0.173 0.144 0.171 0.172 0.151 0.153 0.181 0.169 0.175 0.157
+ 0.172 0.161 0.173 0.161 0.181 0.167 0.175 0.183 0.163 0.185 0.164 0.164
+ 0.170 0.165
+ 0.158 0.013 0.164 0.023 0.044 0.061 0.046 0.052 0.060 0.026 0.040 0.026
+ 0.028 0.032 0.054 0.033 0.034 0.061 0.051 0.040 0.031 0.032 0.034 0.035
+ 0.039 0.030 0.037 0.041 0.077 0.037 0.045 0.040 0.047 0.045 0.040 0.045
+ 0.052
+ 0.163 0.018 0.173 0.195 0.211 0.168 0.174 0.181 0.176 0.193 0.175 0.178
+ 0.186 0.176 0.184 0.184 0.182 0.199 0.193 0.175 0.186 0.192 0.178 0.196
+ 0.189 0.197 0.193 0.199 0.181 0.195 0.198 0.197 0.200 0.199 0.208 0.186
+ 0.169 0.036 0.057 0.074 0.062 0.068 0.075 0.039 0.055 0.039 0.041 0.047
+ 0.069 0.046 0.047 0.076 0.062 0.056 0.044 0.047 0.044 0.048 0.049 0.045
+ 0.039 0.056 0.092 0.050 0.058 0.050 0.060 0.054 0.050 0.047 0.063
+ 0.179 0.201 0.217 0.172 0.178 0.185 0.183 0.199 0.182 0.185 0.192 0.180
+ 0.190 0.191 0.186 0.205 0.199 0.181 0.191 0.198 0.185 0.202 0.193 0.203
+ 0.199 0.203 0.187 0.202 0.205 0.203 0.206 0.205 0.212 0.193
+ 0.066 0.072 0.070 0.076 0.083 0.040 0.051 0.018 0.042 0.043 0.077 0.047
+ 0.051 0.084 0.074 0.051 0.030 0.042 0.057 0.034 0.062 0.040 0.061 0.051
+ 0.100 0.037 0.063 0.063 0.066 0.068 0.063 0.069 0.067
+ 0.000 0.091 0.097 0.105 0.018 0.029 0.060 0.020 0.020 0.099 0.025 0.029
+ 0.106 0.096 0.060 0.072 0.020 0.078 0.076 0.083 0.018 0.082 0.029 0.122
+ 0.079 0.041 0.084 0.044 0.089 0.084 0.090 0.089
+ 0.108 0.114 0.121 0.032 0.045 0.075 0.034 0.029 0.115 0.039 0.040 0.122
+ 0.112 0.076 0.080 0.036 0.094 0.084 0.099 0.018 0.098 0.037 0.138 0.086
+ 0.051 0.101 0.053 0.105 0.101 0.107 0.105
+ 0.006 0.013 0.073 0.089 0.072 0.075 0.083 0.007 0.080 0.081 0.014 0.081
+ 0.090 0.078 0.081 0.085 0.081 0.089 0.089 0.091 0.090 0.030 0.084 0.092
+ 0.092 0.094 0.093 0.093 0.109 0.103
+ 0.007 0.079 0.095 0.078 0.081 0.089 0.014 0.086 0.087 0.021 0.088 0.096
+ 0.084 0.088 0.092 0.088 0.096 0.096 0.097 0.096 0.037 0.090 0.098 0.098
+ 0.100 0.099 0.099 0.116 0.109
+ 0.086 0.103 0.086 0.088 0.096 0.021 0.093 0.094 0.028 0.095 0.103 0.091
+ 0.095 0.099 0.095 0.103 0.103 0.104 0.103 0.044 0.098 0.105 0.105 0.107
+ 0.107 0.106 0.123 0.116
+ 0.011 0.042 0.002 0.002 0.081 0.007 0.008 0.087 0.077 0.042 0.048 0.002
+ 0.060 0.052 0.065 0.000 0.064 0.011 0.103 0.054 0.019 0.066 0.021 0.071
+ 0.066 0.072 0.071
+ 0.053 0.012 0.018 0.083 0.018 0.019 0.104 0.094 0.058 0.059 0.018 0.076
+ 0.062 0.081 0.016 0.080 0.027 0.120 0.065 0.029 0.082 0.031 0.086 0.082
+ 0.088 0.087
+ 0.044 0.045 0.080 0.049 0.050 0.087 0.077 0.053 0.026 0.045 0.059 0.029
+ 0.064 0.043 0.063 0.054 0.103 0.032 0.061 0.066 0.063 0.070 0.066 0.071
+ 0.070
+ 0.000 0.082 0.009 0.010 0.089 0.079 0.044 0.050 0.004 0.062 0.054 0.067
+ 0.002 0.066 0.013 0.105 0.057 0.021 0.068 0.023 0.073 0.068 0.074 0.073
+ 0.090 0.009 0.010 0.097 0.087 0.050 0.050 0.012 0.070 0.054 0.075 0.002
+ 0.073 0.019 0.113 0.057 0.021 0.076 0.023 0.078 0.076 0.082 0.080
+ 0.088 0.089 0.025 0.089 0.097 0.085 0.089 0.093 0.089 0.097 0.097 0.098
+ 0.097 0.043 0.092 0.100 0.100 0.102 0.101 0.100 0.117 0.111
+ 0.015 0.094 0.071 0.049 0.055 0.009 0.053 0.058 0.058 0.007 0.057 0.018
+ 0.111 0.061 0.026 0.059 0.027 0.064 0.059 0.072 0.064
+ 0.095 0.085 0.050 0.059 0.010 0.068 0.062 0.073 0.008 0.072 0.000 0.112
+ 0.065 0.011 0.074 0.031 0.079 0.074 0.080 0.079
+ 0.096 0.104 0.092 0.096 0.100 0.096 0.104 0.104 0.105 0.104 0.048 0.099
+ 0.106 0.106 0.108 0.108 0.107 0.124 0.117
+ 0.094 0.082 0.088 0.017 0.086 0.021 0.087 0.022 0.094 0.112 0.089 0.096
+ 0.024 0.098 0.025 0.011 0.037 0.035
+ 0.059 0.050 0.077 0.062 0.082 0.048 0.081 0.059 0.120 0.065 0.061 0.083
+ 0.063 0.087 0.083 0.089 0.087
+ 0.050 0.065 0.004 0.070 0.048 0.069 0.059 0.108 0.006 0.071 0.071 0.074
+ 0.076 0.071 0.077 0.075
+ 0.070 0.054 0.074 0.013 0.076 0.019 0.112 0.057 0.021 0.077 0.023 0.078
+ 0.078 0.085 0.080
+ 0.068 0.004 0.069 0.004 0.077 0.116 0.071 0.079 0.006 0.081 0.008 0.006
+ 0.019 0.017
+ 0.073 0.052 0.072 0.063 0.112 0.010 0.074 0.075 0.078 0.079 0.075 0.080
+ 0.079
+ 0.073 0.008 0.082 0.120 0.076 0.084 0.010 0.086 0.013 0.010 0.023 0.022
+ 0.074 0.008 0.120 0.055 0.019 0.075 0.021 0.076 0.076 0.088 0.078
+ 0.080 0.121 0.075 0.083 0.010 0.085 0.011 0.011 0.015 0.021
+ 0.120 0.065 0.011 0.083 0.032 0.087 0.083 0.089 0.087
+ 0.115 0.123 0.123 0.124 0.124 0.123 0.140 0.133
+ 0.077 0.077 0.081 0.082 0.077 0.083 0.082
+ 0.085 0.043 0.090 0.085 0.091 0.090
+ 0.087 0.014 0.013 0.025 0.023
+ 0.092 0.087 0.093 0.091
+ 0.014 0.026 0.026
+ 0.026 0.023
+ 0.036
