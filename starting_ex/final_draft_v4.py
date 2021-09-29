@@ -1,8 +1,3 @@
-
-
-# VERSION WITH BLASTP AND DIFFERENT EFETCH HANDLING 
-
-
 import os
 from sys import stderr, stdout
 import tempfile
@@ -71,8 +66,7 @@ def xml_string_to_handler(string):
 #Creation of a dictionary with all HSPS
 #Bitscore, Bitscore raw and Evalue appear twice given that are difficult to average. For later QC only the values of the first hsp are considered
 def blast_to_dictionary(blastresult):
-    blast_dictionary = {'ID' : [], 'Description' : [], 'Seq_length' : [], 'Accession' : [], 'Bitscore' : [], 'Bitscore_raw' : [], 
-    'Evalue' : [], 'Bitscore_combined':[], 'Bitscore_raw_combined' : [], 'Evalue_combined':[],'Hit_start' : [], 'Hit_end' : [], 'Query_frame' : [], 'Gap_num' : [], 'Aln_span' : [], 'Tot_aln_span':[], 'Identity' :[]}
+    blast_dictionary = {'ID' : [], 'Description' : [], 'Seq_length' : [], 'Accession' : [], 'Bitscore' : [], 'Evalue' : [], 'Tot_aln_span':[], 'Identity' :[]}
     #Loop through results 
     for result in blastresult:
         blast_dictionary['ID'].append(result.id)
@@ -82,40 +76,13 @@ def blast_to_dictionary(blastresult):
         #Store results of first HSP
         first_hsp = result.hsps[0]
         blast_dictionary['Bitscore'].append(first_hsp.bitscore)
-        blast_dictionary['Bitscore_raw'].append(first_hsp.bitscore_raw)
         blast_dictionary['Evalue'].append(first_hsp.evalue)
         #Create variables to store results of multiple hsps
-        bitscore, bitscore_raw, evalue, hitstart, hitend, queryframe, gapnum, alnspan = '','','','','','','',''
         all_alnspan, all_gapnum = [],[] 
         #Collect data of all hsps for each hit #REMOVE!!!!!!!!!
         for hsp in result.hsps:
-            bitscore += str(hsp.bitscore)
-            bitscore_raw += str(hsp.bitscore_raw)
-            evalue += str(hsp.evalue)
-            hitstart += str(hsp.hit_start)
-            hitend += str(hsp.hit_end)
-            queryframe += str(hsp.query_frame)
-            gapnum += str(hsp.gap_num)
-            alnspan += str(hsp.aln_span)
-            if hsp != result.hsps[-1]:
-                bitscore += '/'
-                bitscore_raw += '/' 
-                evalue += '/'
-                hitstart += '/'
-                hitend += '/'
-                queryframe += '/'
-                gapnum += '/' 
-                alnspan += '/' #I know it's not neat but it would give an error otherwise :(
             all_alnspan.append(int(hsp.aln_span))
             all_gapnum.append(int(hsp.gap_num))
-        blast_dictionary['Bitscore_combined'].append(bitscore)
-        blast_dictionary['Bitscore_raw_combined'].append(bitscore_raw)
-        blast_dictionary['Evalue_combined'].append(evalue)
-        blast_dictionary['Hit_start'].append(hitstart)
-        blast_dictionary['Hit_end'].append(hitend)
-        blast_dictionary['Query_frame'].append(queryframe)
-        blast_dictionary['Gap_num'].append(gapnum)
-        blast_dictionary['Aln_span'].append(alnspan)
         #Calculate total alignment span and gaps to calculate identity
         tot_alnspan, tot_gapnum = int(), int()
         seq_len = int(result.seq_len) #DOUBLE CHECK 
@@ -172,6 +139,7 @@ def retrieve_all_efetch(list_of_entries, email):
         gb_info = Bio.Entrez.read(handler, 'text')#Returns nested lists and dictionaries 
         list_of_sequences.append(gb_info)
     return list_of_sequences
+
 
 
 #Efetch to dictionary parser
@@ -231,7 +199,7 @@ def fasta_for_alignment(query:SeqRecord, df:DataFrame) -> str:
         #Check if protein is missing ------------------------------------------------Add to report? ERROR.LOG FILE!!!!!
         if len(df['Prot_sequence'][i]) <1:
             continue
-        string += f">{df['Protein_ID'][i]} {df['Organism_name'][i]} {df['Description'][i]}\n"
+        string += f">{df['ID'][i]}\n" # {df['Organism_name'][i]} {df['Description'][i]}
         string += f"{df['Prot_sequence'][i]}"
         #Check if is not the last element in the list 
         if i != len(df['Accession']):
@@ -298,7 +266,7 @@ if __name__ == '__main__':
     taxid_list = [] #['9592']
     mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
     email = 'A.N.Other@example.com'
-    output_name = 'draft_v3'
+    output_name = 'draft_v4_1'
 
     #OPTIONAL USER INPUTS
     #type_of_query_list = ['nucleotide', 'amino_acid', 'accession'] #Default amino_acid
@@ -397,7 +365,7 @@ if __name__ == '__main__':
 
     #Merge blast and efetch DataFrames
     left = filtered_blast_df.loc[:,['Accession', 'ID','Seq_length', 'Evalue', 'Bitscore', 'Tot_aln_span', 'Identity']]
-    right = efetch_df.loc[:,['Accession', 'Protein_ID', 'Taxid', 'Organism_name', 'Description', 'Prot_sequence']]
+    right = efetch_df.loc[:,['Accession', 'Taxid', 'Organism_name', 'Description', 'Prot_sequence']]
     combined_df = pd.merge(left, right, on='Accession')
 
 
@@ -409,8 +377,11 @@ if __name__ == '__main__':
         handle.write(filtered_df.to_csv())'''
     filtered_df.to_csv(output_df, index = False)
     
+    #####df = df[ ['Mid'] + [ col for col in df.columns if col != 'Mid' ] ]
+    ###############
+    tsv_df = output_df[['ID'] + [col for col in output_df.columns if col!= 'ID']]
     #Add TSV!!! Rearrange columns for ProteinID first!!!!!
-    filtered_df.to_csv(output_df, sep = '\t', index = False)
+    filtered_df.to_csv(tsv_df, sep = '\t', index = False)
 
 
     #Prepare for multiple alingment
@@ -453,3 +424,31 @@ if __name__ == '__main__':
 
 
 
+
+
+
+
+    '''
+            
+        #make sure it's a coding sequence
+        if len(seq)%3 != 0:
+            print("\n\n\\(*'o'*)/\tOops! Sequence %s has length not a multiple of 3...\n\n"%str(rec.id))
+            return
+        
+        
+        #save amino acid sequence as string
+        aa = str(Seq(seq).translate())
+        
+        #remove stop codons at the end
+        if aa[-1] == '*':
+            aa = aa[:-1]
+            seq = seq[:-3]
+        
+        #check for internal stop codons
+        if '*' in aa:
+            print("\n\n\\(*'o'*)/\tOops! Sequence %s has internal stop codons...\n\n"%str(rec.id))
+            return  
+
+
+    
+    '''
