@@ -11,15 +11,17 @@ import Bio.Entrez
 from Bio.Phylo.TreeConstruction import DistanceCalculator,DistanceTreeConstructor
 from pandas.core import construction
 from pandas.core.frame import DataFrame
-
-import re
+import logging
 import time
+import traceback
+
 
 
 #Function to open fasta file of imput
 def open_fasta(filename) -> SeqRecord:
     with open(filename) as handle:
         sequence_record = SeqIO.read(handle, 'fasta')
+    logging.info(f'Opened sequence {sequence_record.id}')
     return sequence_record
 
 
@@ -39,6 +41,8 @@ def blastp_with_list(sequence, list_taxid = [], query_size = 200):
                 entrez_query += ' OR '
         result_handler = NCBIWWW.qblast('blastp', 'nr', sequence, entrez_query= entrez_query, hitlist_size=query_size)
         result_storer = result_handler.read()
+    logging.info(f'BLASTp specifying {len(list_taxid)} taxid(s) completed')
+
     return result_storer
 
 
@@ -60,11 +64,11 @@ def xml_string_to_handler(string):
     tmp.write(string)
     handler = SearchIO.read(tmp.name, 'blast-xml')
     tmp.close()
+    logging.info(f'Blast returned {len(handler)} results')
     return handler
 
 
 #Creation of a dictionary with all HSPS
-#Bitscore, Bitscore raw and Evalue appear twice given that are difficult to average. For later QC only the values of the first hsp are considered
 def blast_to_dictionary(blastresult):
     blast_dictionary = {'ID' : [], 'Description' : [], 'Seq_length' : [], 'Accession' : [], 'Bitscore' : [], 'Evalue' : [], 'Tot_aln_span':[], 'Identity' :[]}
     #Loop through results 
@@ -79,7 +83,7 @@ def blast_to_dictionary(blastresult):
         blast_dictionary['Evalue'].append(first_hsp.evalue)
         #Create variables to store results of multiple hsps
         all_alnspan, all_gapnum = [],[] 
-        #Collect data of all hsps for each hit #REMOVE!!!!!!!!!
+        #Collect data of all hsps for each hit
         for hsp in result.hsps:
             all_alnspan.append(int(hsp.aln_span))
             all_gapnum.append(int(hsp.gap_num))
@@ -90,14 +94,19 @@ def blast_to_dictionary(blastresult):
             tot_alnspan += span
         for gap in all_gapnum:
             tot_gapnum += gap
-        identity = (tot_alnspan - tot_gapnum)/seq_len*100
+        identity = ((tot_alnspan - tot_gapnum)/seq_len)*100
         blast_dictionary['Tot_aln_span'].append(tot_alnspan)
         blast_dictionary['Identity'].append(round(identity, 3))
+
+    logging.info(f"{len(blast_dictionary['ID'])} entries were recorded from the BLASTp results")
     return blast_dictionary
 
 
 #Filter DF based on Evalue, sequence length and identity
 def filter_df_blast(df:DataFrame, query:SeqRecord, evalue = 10**-10, difference_from_query = 50, identity_threshold=50) -> DataFrame:
+    #Record initial dataframe length
+    initial_len = len(df)
+
     remove_index = []
     #Check if main HSP is significant for threshold, store indexes of non-significant hits
     for i in range(len(df.index)):
@@ -127,6 +136,10 @@ def filter_df_blast(df:DataFrame, query:SeqRecord, evalue = 10**-10, difference_
     df_to_return = df_to_return[df_to_return['Identity'] > identity_threshold]
     df_to_return = df_to_return.reset_index(drop=True)
     
+    #Calculate how many sequences were removed
+    final_len = len(df_to_return)
+
+    logging.info(f"{initial_len-final_len} sequences were removed filtering the BLAST results DF, returning a DF with {final_len} entries")
     return df_to_return
 
 
@@ -138,6 +151,7 @@ def retrieve_all_efetch(list_of_entries, email):
         handler = Bio.Entrez.efetch(db='protein', id=entry, rettype = 'fasta',retmode = 'xml', retmax=1) #Returns JSON regardless
         gb_info = Bio.Entrez.read(handler, 'text')#Returns nested lists and dictionaries 
         list_of_sequences.append(gb_info)
+    logging.info(f'{len(list_of_sequences)} protein entries were retrieved from NCBI protein database')
     return list_of_sequences
 
 
@@ -147,22 +161,29 @@ def efetch_protein_to_dictionary(list_of_efetch):
     #Declare new dictionary
     dictionary = {'Accession':[],'Protein_ID':[], 'Taxid':[], 'Organism_name':[], 'Description':[], 'Seq_length':[], 'Prot_sequence':[]}
     for wrapper in list_of_efetch:
-        #Cast into dictionary to avoid random exception
-        result = dict(wrapper[0])
-        acc_ver = result['TSeq_accver']
-        accession = acc_ver.split('.')
-        dictionary['Accession'].append(accession[0])
-        dictionary['Protein_ID'].append(result['TSeq_accver'])
-        dictionary['Taxid'].append(result['TSeq_taxid'])
-        dictionary['Organism_name'].append(result['TSeq_orgname'])
-        dictionary['Description'].append(result['TSeq_defline'])
-        dictionary['Seq_length'].append(result['TSeq_length'])
-        dictionary['Prot_sequence'].append(result['TSeq_sequence'])
-        
+        try:
+            #Cast into dictionary to avoid random exception
+            result = dict(wrapper[0])
+            acc_ver = result['TSeq_accver']
+            accession = acc_ver.split('.')
+            dictionary['Accession'].append(accession[0])
+            dictionary['Protein_ID'].append(result['TSeq_accver'])
+            dictionary['Taxid'].append(result['TSeq_taxid'])
+            dictionary['Organism_name'].append(result['TSeq_orgname'])
+            dictionary['Description'].append(result['TSeq_defline'])
+            dictionary['Seq_length'].append(result['TSeq_length'])
+            dictionary['Prot_sequence'].append(result['TSeq_sequence'])
+        except KeyError:
+            logging.error('A sequence failed parsing from EFetch')
+            print('Could not parse one sequence from efetch')
+    logging.info(f"{len(dictionary['Accession'])} sequences were parsed correctly")
     return dictionary
 
 
 def filter_df_taxon(df:DataFrame, n_of_sequences = 1) -> DataFrame:
+    #Record initial length of DF
+    initial_len = len(df)
+
     #Make a list of all retrieved taxons
     retrieved_taxids = df['Taxid'].tolist() 
     #Make list from dictionary to eliminate duplicates 
@@ -185,6 +206,9 @@ def filter_df_taxon(df:DataFrame, n_of_sequences = 1) -> DataFrame:
     #Refactor indexes
     df_toreturn = df_toreturn.reset_index(drop=True)
 
+    #Calculate final length and append info to logging 
+    final_len = len(df_toreturn)
+    logging.info(f"Filtering by taxon: {len(retrieved_taxids)} unique taxid(s) collected, {initial_len - final_len} entries discarded")
     return df_toreturn
 
 
@@ -204,7 +228,7 @@ def fasta_for_alignment(query:SeqRecord, df:DataFrame) -> str:
         #Check if is not the last element in the list 
         if i != len(df['Accession']):
             string += '\n'
-    
+    logging.info(f"{len(df)} sequences were prepared for alignment with the query")
     return string
 
 
@@ -227,24 +251,50 @@ def run_mafft_saving_file(fasta:str, mafft_directory:str, filename:str) -> str:
 
 
 #Function to get protein sequence and save fasta file given an accession number
-#The function recycles functions used with lists 
-def get_fasta_from_accession(accession, output_name):
-    #Cast into list to recycle code 
-    accession_query_list = [accession]
+def get_fasta_from_accession(accession, email):
+
     #Get the efetch handler 
-    query_protein_efetch = retrieve_all_efetch(accession_query_list, 'A.N.Other@example.com')
-    #Make a dictionary
-    dictionary_query = efetch_protein_to_dictionary(query_protein_efetch)
+    Bio.Entrez.email = email
+    handler = Bio.Entrez.efetch(db='protein', id=accession, rettype = 'fasta',retmode = 'xml', retmax=1) #Returns JSON regardless
+    query_protein_efetch = Bio.Entrez.read(handler, 'text')#Returns nested lists and dictionaries 
+    
+    #Make a dictionary -- passed as list to recycle the efetch_protein_to_dictionary function
+    dictionary_query = efetch_protein_to_dictionary([query_protein_efetch])
 
     #Make and save fasta file 
     fasta_string_query = f">{dictionary_query['Accession'][0]} \n {dictionary_query['Prot_sequence'][0]}"
 
-    fasta_file_name = output_name + '_sequence.fasta'
+    fasta_file_name = f"{dictionary_query['Accession'][0]}_sequence.fasta"
     with open(fasta_file_name, 'w') as handle:
         handle.write(fasta_string_query)
 
+    #Open sequence with open_fasta and return it 
     fasta_record_q = open_fasta(fasta_file_name)
     return fasta_record_q
+
+
+def open_input(input, email):
+    #Declare empty protein sequence
+    protein_sequence = None
+    #Check that the parsed string has a fasta extension, if it does pass it to open fasta function
+    if input.endswith('.fas') or input.endswith('.fasta'):
+        sequence = open_fasta(input)
+        #Try translating the sequence, if an error is raised the sequence is already a peptide and can be returned
+        try: 
+            protein_sequence = sequence.translate(to_stop = True)
+            logging.info('Nucleotide sequence was translated to protein')
+        except Exception:
+            protein_sequence = sequence
+            logging.info('Protein sequence was opened')
+    #If the string doesn't have an extension it will be passed to the get_fasta_from_accession function
+    else:
+        try:
+            protein_sequence = get_fasta_from_accession(input, email)
+            logging.info('Protein sequence was retrieved from NCBI protein database')
+        except Exception as e:
+            logging.error(traceback.format_exc())
+
+    return protein_sequence
 
 
 def tree_from_alignment(alignment):
@@ -253,6 +303,7 @@ def tree_from_alignment(alignment):
 
     constructor = DistanceTreeConstructor(calculator, 'nj')
     tree = constructor.build_tree(alignment)
+    logging.info('Tree was produced with this and that method') #Placeholder to change
     return tree
 
 
@@ -261,24 +312,19 @@ def tree_from_alignment(alignment):
 
 #MAIN 
 if __name__ == '__main__':
+
+    
     #USER INPUTS
-    filename = 'sry_protein.fasta' 
+    input_string = 'human_mx1.fas' #'sry_protein.fasta' 'QBA69874'
     taxid_list = [] #['9592']
     mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
     email = 'A.N.Other@example.com'
-    output_name = 'draft_v4_1'
-
-    #OPTIONAL USER INPUTS
-    #type_of_query_list = ['nucleotide', 'amino_acid', 'accession'] #Default amino_acid
-    type_of_query = 'amino_acid'                        #DETERMINE YOURSELF!!!!!! CHECK IF NOT A FASTA FILE, THEN CHECK FOR AA IN SEQ
-                                                        #CAN CHECK IF THERE IS A .FAS/.FASTA IN THE NAME +++ ERROR LOG FILE 
-    #Used if accession option is on 
-    accession = 'QBA69874'
+    output_name = 'draft_v4_2'
 
 
     local_query = False
     threading = False
-    query_size = 1000
+    query_size = 100
 
     evalue_threshold = 10**-10
     len_threshold = 50
@@ -286,6 +332,11 @@ if __name__ == '__main__':
 
     sequences_per_taxon = 1
 
+    #Make tsv for figtree compatibility
+    make_tsv = True
+
+    #Logging file 
+    logging.basicConfig(filename=f'{output_name}.log', filemode='w', format='%(levelname)s:%(message)s', level=logging.DEBUG) #Logging refreshes every run and only displays type of message: message
 
     #Filenames:
     #Implemented
@@ -302,30 +353,16 @@ if __name__ == '__main__':
 
 
 
-
     #START OF THE SCRIPT
     start = time.perf_counter()
 
-    #Declare fasta record, check loop to fill it 
-    fasta_record = None
-    #Open fasta record appropriately 
-    if type_of_query == 'nucleotide':
-        #Get protein from nucleotide 
-        fasta_nucleotide = open_fasta(filename) #filename 
-        #Further QC? 
-        fasta_record = fasta_nucleotide.translate(to_stop=True)
-    elif type_of_query == 'accession':
-        #Get fasta record from accession 
-        fasta_record = get_fasta_from_accession(accession, output_name)
-    else: 
-        fasta_record = open_fasta(filename)
+    #Open fasta record
+    fasta_record = open_input(input_string, email)
 
-    
-    print('Opened record')
-    print(f'In {round(time.perf_counter()-start,2)}')
+    print(f'Opened input record in {round(time.perf_counter()-start,2)} seconds')
     
 
-    #NEED TO DOUBLECHECK AND IMPLEMENT BLAST WITH THREADING 
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NEED TO DOUBLECHECK AND IMPLEMENT BLAST WITH THREADING 
 
     #Blast with list 
     blast_results = blastp_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
@@ -336,16 +373,16 @@ if __name__ == '__main__':
     #Make dictionary from handler
     dictionary_blast = blast_to_dictionary(handler_blast)
 
-    #Transfor dictionary into DF
+    #Transform dictionary into DF
     results_df_blast = pd.DataFrame.from_dict(dictionary_blast)
 
-    print('Prepared DF BLAST')
-    print(f'In {round(time.perf_counter()-start,2)}')
-
+    print(f'Prepared BLAST DF with {len(results_df_blast)} entries in {round(time.perf_counter()-start,2)}')
 
     #Filter DF by E-value / Bitscore / Identity
     filtered_blast_df = filter_df_blast(results_df_blast, fasta_record, evalue=evalue_threshold, difference_from_query=len_threshold, identity_threshold=identity_threshold)
  
+    print(f"BLAST DF after filtering holds {len(results_df_blast)} entries")
+
     #Retrieve all results with efetch 
     #Retrieve accession list
     accession_list = filtered_blast_df['Accession'].tolist()
@@ -358,9 +395,7 @@ if __name__ == '__main__':
     #Transform dictionary into DF
     efetch_df = pd.DataFrame.from_dict(dictionary_efetch)
 
-    print('Done Efetch')
-    print(f'In {round(time.perf_counter()-start,2)}')
-
+    print(f'Efetch retrieved and parsed {len(efetch_df)} entries in {round(time.perf_counter()-start,2)}')
 
 
     #Merge blast and efetch DataFrames
@@ -372,16 +407,15 @@ if __name__ == '__main__':
     #Filter DF based on taxons
     filtered_df = filter_df_taxon(combined_df, n_of_sequences=sequences_per_taxon)
 
+    print(f"The combined DF having {len(combined_df)} entries was reduced to {len(filtered_df)} entries")
+
     #Save DF of sequences that are going to be aligned 
-    '''with open(output_df, 'w') as handle:
-        handle.write(filtered_df.to_csv())'''
     filtered_df.to_csv(output_df, index = False)
     
-    #####df = df[ ['Mid'] + [ col for col in df.columns if col != 'Mid' ] ]
-    ###############
-    tsv_df = output_df[['ID'] + [col for col in output_df.columns if col!= 'ID']]
-    #Add TSV!!! Rearrange columns for ProteinID first!!!!!
-    filtered_df.to_csv(tsv_df, sep = '\t', index = False)
+    #Check if TSV output is requested. Useful for FigTree
+    if make_tsv:    
+        tsv_df = filtered_df[['ID'] + [col for col in filtered_df.columns if col!= 'ID']]
+        tsv_df.to_csv(f'{output_df}.tsv', sep = '\t', index = False)
 
 
     #Prepare for multiple alingment
@@ -394,8 +428,7 @@ if __name__ == '__main__':
     with open(output_alignment, 'w') as savefile:
         savefile.write(mafft_alignment)
 
-    print('Alignment done')
-    print(f'In {round(time.perf_counter()-start,2)}')
+    print(f'Alignment with mafft was produced in {round(time.perf_counter()-start,2)} seconds')
 
 
     #Open AlignIO from fasta file 
@@ -412,43 +445,8 @@ if __name__ == '__main__':
     Phylo.write(tree, output_tree_newick, 'newick')
 
 
-    print('Done!')  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
+    print(f'Inferred tree was produced comprehending {len(filtered_df)} sequences. \n Check the log file {output_name}.log for detailed results')  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
 
     end = time.perf_counter()
-    print(f'Finished in {round(end-start,2)}')
+    print(f'Run has completed in {round(end-start,2)}')
 
-
-
-
-
-
-
-
-
-
-
-
-    '''
-            
-        #make sure it's a coding sequence
-        if len(seq)%3 != 0:
-            print("\n\n\\(*'o'*)/\tOops! Sequence %s has length not a multiple of 3...\n\n"%str(rec.id))
-            return
-        
-        
-        #save amino acid sequence as string
-        aa = str(Seq(seq).translate())
-        
-        #remove stop codons at the end
-        if aa[-1] == '*':
-            aa = aa[:-1]
-            seq = seq[:-3]
-        
-        #check for internal stop codons
-        if '*' in aa:
-            print("\n\n\\(*'o'*)/\tOops! Sequence %s has internal stop codons...\n\n"%str(rec.id))
-            return  
-
-
-    
-    '''

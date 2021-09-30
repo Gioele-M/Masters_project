@@ -123,7 +123,7 @@ def blast_to_dictionary(blastresult):
             tot_alnspan += span
         for gap in all_gapnum:
             tot_gapnum += gap
-        identity = (tot_alnspan - tot_gapnum)/seq_len*100
+        identity = ((tot_alnspan - tot_gapnum)/seq_len)*100
         blast_dictionary['Tot_aln_span'].append(tot_alnspan)
         blast_dictionary['Identity'].append(round(identity, 3))
     return blast_dictionary
