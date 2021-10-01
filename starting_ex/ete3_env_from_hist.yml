@@ -1,0 +1,48 @@
+name: ete3_2
+channels:
+  - defaults
+dependencies:
+  - python=3.5
+  - ete3
+  - ete_toolchain
+  - appnope
+  - pyzmq
+  - ncurses
+  - six
+  - pexpect
+  - tk
+  - jupyter_client
+  - sqlite
+  - zeromq
+  - pickleshare
+  - prompt_toolkit
+  - ptyprocess
+  - libffi
+  - traitlets
+  - libcxx
+  - libedit
+  - openssl
+  - backcall
+  - libsodium
+  - decorator
+  - certifi
+  - ca-certificates
+  - zlib
+  - simplegeneric
+  - ipython_genutils
+  - wcwidth
+  - pygments
+  - jupyter_core
+  - xz
+  - setuptools
+  - tornado
+  - ipython
+  - wheel
+  - python-dateutil
+  - pip
+  - readline
+  - ipykernel
+  - parso
+  - numpy
+  - pandas
+prefix: /Users/Gioele/miniconda3/envs/ete3_2
