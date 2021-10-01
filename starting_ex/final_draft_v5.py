@@ -320,7 +320,7 @@ if __name__ == '__main__':
     taxid_list = [] #['9592']
     mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
     email = 'A.N.Other@example.com'
-    output_name = 'draft_v5'
+    output_name = 'draft_v5_python3.9'
 
 
     local_query = False
@@ -336,8 +336,8 @@ if __name__ == '__main__':
     #Make tsv for figtree compatibility
     make_tsv = False
 
-    ##logging file 
-    ##logging.basicConfig(filename='{}.log'.format(output_name), filemode='w', format='%(levelname)s:%(message)s', level=logging.DEBUG) #logging refreshes every run and only displays type of message: message
+    #logging file 
+    logging.basicConfig(filename='{}.log'.format(output_name), filemode='w', format='%(levelname)s:%(message)s', level=logging.DEBUG) #logging refreshes every run and only displays type of message: message
 
     #Filenames:
     #Implemented
@@ -457,7 +457,7 @@ if __name__ == '__main__':
 
     print('Inferred tree was produced comprehending {} sequences. \n Check the log file {}.log for detailed results'.format(len(filtered_df), output_name))  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
 
-
+    '''
     from ete3 import Tree
 
     t = Tree( "((a,b),c);" )
@@ -467,3 +467,4 @@ if __name__ == '__main__':
 
     end = time.perf_counter()
     print('Run has completed in {}'.format(end-start))
+    '''
