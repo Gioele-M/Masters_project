@@ -57,5 +57,5 @@ command_parser.add_argument('-m', '--molecule_type', choices=['nucleotide', 'ami
 
 args = command_parser.parse_args()
 
-print(f'{args}')
-print(f'input: {args.input_file}') 
+print('{}'.format(args))
+print('input: {}'.format(args.input_file)) 

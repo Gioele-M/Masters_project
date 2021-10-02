@@ -457,7 +457,7 @@ if __name__ == '__main__':
 
     print('Inferred tree was produced comprehending {} sequences. \n Check the log file {}.log for detailed results'.format(len(filtered_df), output_name))  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
 
-    '''
+
     from ete3 import Tree
 
     t = Tree( "((a,b),c);" )
@@ -467,4 +467,3 @@ if __name__ == '__main__':
 
     end = time.perf_counter()
     print('Run has completed in {}'.format(end-start))
-    '''

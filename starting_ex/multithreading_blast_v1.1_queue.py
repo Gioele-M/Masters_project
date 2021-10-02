@@ -1,3 +1,6 @@
+#NOT RESOLVED YET
+
+import queue
 import threading
 from Bio import SeqIO, SearchIO
 from Bio.Blast import NCBIWWW
@@ -119,7 +122,6 @@ if __name__ ==  '__main__':
 
 
 
-
     storer = ''
     
     for request in results:
@@ -132,18 +134,3 @@ if __name__ ==  '__main__':
     end = time.perf_counter()
     print(f'Finished in {round(end-start,2)}')
 
-
-
-
-
-
-#arg_line = " ".join(sys.argv[1:])
-'''
-def parse(arg_line: str) -> Dict[str, str]:
-    args: Dict[str, str] = {}
-    if match_object := args_pattern.match(arg_line):
-        args = {k: v for k, v in match_object.groupdict().items()
-                if v is not None}
-    return args
-'''
-#TO TRY!!!!!!

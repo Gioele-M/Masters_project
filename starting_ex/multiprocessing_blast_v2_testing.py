@@ -25,8 +25,8 @@ if __name__ ==  '__main__':
     
     start = time.perf_counter()
 
-    fasta_record = open_fasta('starting_ex/human_mx1.fas')
-    taxid_list = ['9592', '9527', '40674', '314147', '9531', '9544', '2008792']
+    fasta_record = open_fasta('human_mx1.fas')
+    taxid_list = ['9606', '9597', '9593', '9600', '9601', '61853', '9546', '9544', '9541', '54180']
 
     threads=multiprocessing.cpu_count()-1
     pool = multiprocessing.Pool(threads)
@@ -41,8 +41,8 @@ if __name__ ==  '__main__':
         storer += str(request)
         storer += '\n'
 
-    with open('test_multithread.xml', 'w') as handle:
+    with open('test_multiprocessing.xml', 'w') as handle:
         handle.write(storer)
 
     end = time.perf_counter()
-    print(f'Finished in {round(end-start,2)}')
+    print(f'Threading of {len(taxid_list)} taxids finished in {round(end-start,2)}')
