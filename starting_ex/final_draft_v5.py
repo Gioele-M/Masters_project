@@ -13,6 +13,8 @@ from pandas.core.frame import DataFrame
 import logging
 import time
 import traceback
+from ete3 import PhyloTree
+
 
 
 #Function to open fasta file of imput
@@ -249,7 +251,7 @@ def run_mafft_saving_file(fasta:str, mafft_directory:str, filename:str) -> str:
     stdout, stderr = process.communicate()
 
     #Save standard error of mafft
-    with open('aligned_mafft.stderr', 'w') as handle:
+    with open('{}.stderr'.format(filename), 'w') as handle:
         handle.write(stderr)
     #Retrun alignment 
     return stdout
@@ -310,7 +312,7 @@ def tree_from_alignment(alignment):
 
     constructor = DistanceTreeConstructor(calculator, 'nj')
     tree = constructor.build_tree(alignment)
-    logging.info('Tree was produced with this and that method') #Placeholder to change
+    logging.info('Tree was produced using the neighbour joining method') #Placeholder to change
     return tree
 
 
@@ -346,7 +348,7 @@ if __name__ == '__main__':
     output_xml_tree = '{}_xml_tree.xml'.format(output_name)
     #To add
     output_tree_newick = '{}_newick_tree.nwk'.format(output_name) #!!!!
-    output_tree_jpg = '{}_tree_image.jpg'.format(output_name)
+    output_tree_png = '{}_tree_image.png'.format(output_name)
 
 
 
@@ -423,7 +425,7 @@ if __name__ == '__main__':
 
     #Check if TSV output is requested. Useful for FigTree
     if make_tsv:    
-        tsv_df = filtered_df[['ID'] + [col for col in filtered_df.columns if col!= 'ID']]
+        tsv_df = filtered_df[['ID'] + [col for col in filtered_df.columns if col!= 'ID' or 'Prot_sequence']]
         tsv_df.to_csv('{}.tsv'.format(output_df), sep = '\t', index = False)
 
 
@@ -431,7 +433,7 @@ if __name__ == '__main__':
     fasta_string_for_alignment = fasta_for_alignment(fasta_record, filtered_df)
 
     #Run mafft alignment saving file
-    mafft_alignment = run_mafft_saving_file(fasta_string_for_alignment, mafft_directory, 'multiple_seq_fasta')
+    mafft_alignment = run_mafft_saving_file(fasta_string_for_alignment, mafft_directory, output_name)
 
     print('Alignment with mafft was produced in {} seconds'.format(time.perf_counter()-start))
 
@@ -455,15 +457,32 @@ if __name__ == '__main__':
     Phylo.write(tree, output_tree_newick, 'newick')
 
 
-    print('Inferred tree was produced comprehending {} sequences. \n Check the log file {}.log for detailed results'.format(len(filtered_df), output_name))  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
+    #Re-import newick string
+
+    with open(output_tree_newick, 'r') as handle:
+        newick_string = handle.read()
 
 
-    from ete3 import Tree
 
-    t = Tree( "((a,b),c);" )
-    t.render("mytree_v5.png", w=183, units="mm")
+    #Create PhyloTree object from newick string
+    msa_tree = PhyloTree(newick_string, quoted_node_names=True, format=1) 
 
-    print('ETE3 done!')
+    #Rooting of the tree
+    #Returns the node that divides the current tree into two distance-balanced partitions.
+    R = msa_tree.get_midpoint_outgroup()
+    #Sets a descendant node as the outgroup of a tree
+    msa_tree.set_outgroup(R)
+
+    #Link tree to the MAFFT Alignment 
+    msa_tree.link_to_alignment(alignment=mafft_alignment, alg_format='fasta')
+    
+    #Render final tree
+    msa_tree.render(output_tree_png)
+
+
 
     end = time.perf_counter()
     print('Run has completed in {}'.format(end-start))
+
+
+    print('Inferred tree was produced comprehending {} sequences. \n Check the log file {}.log for detailed results'.format(len(filtered_df), output_name))  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
