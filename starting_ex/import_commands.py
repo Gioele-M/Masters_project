@@ -37,7 +37,7 @@ command_parser.add_argument('email')
 command_parser.add_argument('output_name')
 
 #Taxid list as optional list
-command_parser.add_argument('-x', '--taxid_list', nargs='*')
+command_parser.add_argument('-x', '--taxid_list', nargs='*', type=str)
 
 #optional argument
 command_parser.add_argument('-l', '--local_query', action='store_true', default=False) #action='store_true' -> returns true if flag is called 
@@ -47,13 +47,9 @@ command_parser.add_argument('-e', '--evalue_threshold', type=float, default=10**
 command_parser.add_argument('-n', '--length_threshold', type=float, default=50.0)
 command_parser.add_argument('-i', '--identity_threshold', type=float, default=50.0)
 
-command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=3)
-command_parser.add_argument('-p', '--import_protein', action='store_true', default=False)
-command_parser.add_argument('-q', '--query_protein', help='Filename')
+command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
+command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
 
-
-#Optional argument from list of options
-command_parser.add_argument('-m', '--molecule_type', choices=['nucleotide', 'aminoacid', 'entry'],default='nucleotide')
 
 args = command_parser.parse_args()
 
