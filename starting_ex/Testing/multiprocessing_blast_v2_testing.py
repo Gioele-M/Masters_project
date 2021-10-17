@@ -45,4 +45,4 @@ if __name__ ==  '__main__':
         handle.write(storer)
 
     end = time.perf_counter()
-    print(f'Threading of {len(taxid_list)} taxids finished in {round(end-start,2)}')
+    print(f'Multiprocessing of {len(taxid_list)} taxids finished in {round(end-start,2)}')
