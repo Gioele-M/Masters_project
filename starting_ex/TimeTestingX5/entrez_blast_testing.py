@@ -1,6 +1,7 @@
 from Bio import SeqIO
 from Bio.Blast import NCBIWWW
 import time
+import datetime
 
 def open_fasta(filename):
     with open(filename) as handle:
@@ -42,10 +43,11 @@ if __name__ ==  '__main__':
 
     
     #Blast with list 
-    blast_results = blastp_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
+    #blast_results = blastp_with_list(fasta_record.seq, query_size=query_size, list_taxid=taxid_list)
 
-    with open('test_entrez.xml', 'w') as handle:
-        handle.write(blast_results)
+    #with open('test_entrez.xml', 'w') as handle:
+    #    handle.write(blast_results)
 
     end = time.perf_counter()
-    print(f'Entrez query of {len(taxid_list)} taxids finished in {round(end-start,2)}, query size = {query_size}')
+    timestamp = datetime.now()
+    print(f'Entrez query of {len(taxid_list)} taxids finished in {round(end-start,2)}, query size = {query_size}, Time = {timestamp}')
