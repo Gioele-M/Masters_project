@@ -319,15 +319,15 @@ def tree_from_alignment(alignment):
 if __name__ == '__main__':
     #USER INPUTS
     input_string = 'insulin_human.fasta' #'sry_protein.fasta' 'QBA69874'
-    taxid_list = ['40674'] #['9592']
+    taxid_list = ['32523'] #['9592']
     mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
     email = 'A.N.Other@example.com'
-    output_name = 'insulin_human_mammal'
+    output_name = 'insulin_human_tetrapods'
 
 
     local_query = False
     threading = False
-    query_size = 50
+    query_size = 100
 
     evalue_threshold = 10**-10
     len_threshold = 20
@@ -336,7 +336,7 @@ if __name__ == '__main__':
     sequences_per_taxon = 1
 
     #Make tsv for figtree compatibility
-    make_tsv = False
+    make_tsv = True
 
     #logging file 
     logging.basicConfig(filename='{}.log'.format(output_name), filemode='w', format='%(levelname)s:%(message)s', level=logging.DEBUG) #logging refreshes every run and only displays type of message: message

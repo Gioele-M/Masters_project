@@ -228,14 +228,13 @@ def fasta_for_alignment(query:SeqRecord, df:DataFrame) -> str:
         #Check if protein is missing ------------------------------------------------Add to report? ERROR.LOG FILE!!!!!
         if len(df['Prot_sequence'][i]) <1:
             continue
-        string += ">{}\n".format(df['ID'][i]) # {df['Organism_name'][i]} {df['Description'][i]}
+        string += ">{}\n".format(df['Protein_ID'][i]) # {df['Organism_name'][i]} {df['Description'][i]}
         string += "{}".format(df['Prot_sequence'][i])
         #Check if is not the last element in the list 
         if i != len(df['Accession']):
             string += '\n'
     logging.info("{} sequences were prepared for alignment with the query".format(len(df)))
     return string
-
 
 
 
@@ -325,8 +324,6 @@ if __name__ == '__main__':
     output_name = 'draft_v5_python3.9'
 
 
-    local_query = False
-    threading = False
     query_size = 100
 
     evalue_threshold = 10**-10
@@ -335,8 +332,6 @@ if __name__ == '__main__':
 
     sequences_per_taxon = 1
 
-    #Make tsv for figtree compatibility
-    make_tsv = False
 
     #logging file 
     logging.basicConfig(filename='{}.log'.format(output_name), filemode='w', format='%(levelname)s:%(message)s', level=logging.DEBUG) #logging refreshes every run and only displays type of message: message
@@ -423,10 +418,10 @@ if __name__ == '__main__':
     filtered_df.to_csv(output_df, index = False)
 
 
-    #Check if TSV output is requested. Useful for FigTree
-    if make_tsv:    
-        tsv_df = filtered_df[['ID'] + [col for col in filtered_df.columns if col!= 'ID' or 'Prot_sequence']]
-        tsv_df.to_csv('{}.tsv'.format(output_df), sep = '\t', index = False)
+    #Output TSV for FigTree
+    tsv_df = filtered_df[['Protein_ID'] + [col for col in filtered_df.columns if col!= 'Protein_ID']]
+    tsv_df = tsv_df.drop('Prot_sequence', axis = 1)
+    tsv_df.to_csv('{}.tsv'.format(output_df), sep = '\t', index = False)
 
 
     #Prepare for multiple alingment
@@ -463,6 +458,8 @@ if __name__ == '__main__':
         newick_string = handle.read()
 
 
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
     #Create PhyloTree object from newick string
     msa_tree = PhyloTree(newick_string, quoted_node_names=True, format=1) 
@@ -486,3 +483,20 @@ if __name__ == '__main__':
 
 
     print('Inferred tree was produced comprehending {} sequences. \n Check the log file {}.log for detailed results'.format(len(filtered_df), output_name))  #MORE DETAILED!!!!! SO MANY SEQUENCES FOUND FOR THIS MANY TAXA, PRINTED IN THIS FILE, THE LOG IS THAT FILE ETC.....
+
+
+
+
+
+    #Before ETE3, change string in Newick and match MSA 
+    '''
+    df.to_dict('records')
+    {'XP2345':'Homo sapiens', 'XP45677': 'Macaca mulata'}
+    
+    #Species|ProteinID
+
+
+    for acc in list(dictionary):
+    newick_string = newick_string.replace(acc, dictionary[acc]) ---> species_name.replace(' ', '_')
+
+    '''

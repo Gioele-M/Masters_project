@@ -48,7 +48,7 @@ command_parser.add_argument('-n', '--length_threshold', type=float, default=50.0
 command_parser.add_argument('-i', '--identity_threshold', type=float, default=50.0)
 
 command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
-command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
+command_parser.add_argument('-b', '--retrieve_blast', type=int, default=100)
 
 
 args = command_parser.parse_args()

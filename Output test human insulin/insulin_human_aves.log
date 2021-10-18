@@ -1,0 +1,11 @@
+INFO:Opened sequence NP_000198.1
+INFO:Protein sequence was opened
+INFO:BLASTp specifying 1 taxid(s) completed
+INFO:Blast returned 100 results
+INFO:100 entries were recorded from the BLASTp results
+INFO:12 sequences were removed filtering the BLAST results DF, returning a DF with 88 entries
+INFO:88 protein entries were retrieved from NCBI protein database
+INFO:88 sequences were parsed correctly
+INFO:Filtering by taxon: 88 unique taxid(s) collected, 0 entries discarded
+INFO:88 sequences were prepared for alignment with the query
+INFO:Tree was produced with this and that method

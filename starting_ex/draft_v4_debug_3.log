@@ -1,5 +1,9 @@
 INFO:Opened sequence XM_005260978.4
 INFO:Nucleotide sequence was translated to protein
+INFO:Opened sequence XM_005260978.4
+INFO:Nucleotide sequence was translated to protein
+INFO:Opened sequence XM_005260978.4
+INFO:Nucleotide sequence was translated to protein
 INFO:BLASTp specifying 0 taxid(s) completed
 INFO:Blast returned 100 results
 INFO:100 entries were recorded from the BLASTp results
@@ -9,5 +13,3 @@ ERROR:A sequence failed parsing from EFetch
 ERROR:A sequence failed parsing from EFetch
 INFO:98 sequences were parsed correctly
 INFO:Filtering by taxon: 68 unique taxid(s) collected, 30 entries discarded
-INFO:68 sequences were prepared for alignment with the query
-INFO:Tree was produced with this and that method
