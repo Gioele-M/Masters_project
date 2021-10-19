@@ -3,10 +3,10 @@ INFO:Protein sequence was opened
 INFO:BLASTp specifying 1 taxid(s) completed
 INFO:Blast returned 100 results
 INFO:100 entries were recorded from the BLASTp results
-INFO:14 sequences were removed filtering the BLAST results DF, returning a DF with 86 entries
-INFO:86 protein entries were retrieved from NCBI protein database
+INFO:6 sequences were removed filtering the BLAST results DF, returning a DF with 94 entries
+INFO:94 protein entries were retrieved from NCBI protein database
 ERROR:A sequence failed parsing from EFetch
-INFO:85 sequences were parsed correctly
-INFO:Filtering by taxon: 65 unique taxid(s) collected, 20 entries discarded
-INFO:65 sequences were prepared for alignment with the query
+INFO:93 sequences were parsed correctly
+INFO:Filtering by taxon: 67 unique taxid(s) collected, 26 entries discarded
+INFO:67 sequences were prepared for alignment with the query
 INFO:Tree was produced with this and that method

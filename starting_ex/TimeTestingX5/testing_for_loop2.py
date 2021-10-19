@@ -5,11 +5,9 @@ import os
 
 print('imported packages')
 
-#ete3_3.8
-
 
 def run_for_loop():
-    list_of_scripts = ['entrez_blast_testing.py']
+    list_of_scripts = ['multithreading_blast_v1.1_testing.py']
 
     for x in range(5):    
         for script in list_of_scripts:  
@@ -23,7 +21,6 @@ def run_for_loop():
             
 
 print('scheduling')
-
 
 schedule.every(1).hour.do(run_for_loop)
 

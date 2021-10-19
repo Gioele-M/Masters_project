@@ -3,6 +3,7 @@ from Bio import SeqIO
 from Bio.Blast import NCBIWWW
 from itertools import repeat
 import time
+import datetime
 
 
 
@@ -13,11 +14,11 @@ def open_fasta(filename):
 
 
 def run_blast(fasta_record, taxid, query_size = 20):
-    print(taxid)
+    #print(taxid)
     entrez = f'txid{taxid}[ORGN]'
     result_handler = NCBIWWW.qblast('blastn', 'nt', fasta_record.seq, entrez_query= entrez, hitlist_size=query_size)
     result_storer = result_handler.read()
-    print(f'{taxid} done')
+    #print(f'{taxid} done')
     return result_storer
 
 
@@ -45,4 +46,6 @@ if __name__ ==  '__main__':
         handle.write(storer)
 
     end = time.perf_counter()
-    print(f'Multiprocessing of {len(taxid_list)} taxids finished in {round(end-start,2)}')
+    timestamp = datetime.datetime.now()
+
+    print(f'Multiprocessing of {len(taxid_list)} taxids finished in {round(end-start,2)}; Time {timestamp}')
