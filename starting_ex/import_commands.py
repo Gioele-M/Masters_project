@@ -40,18 +40,32 @@ command_parser.add_argument('output_name')
 command_parser.add_argument('-x', '--taxid_list', nargs='*', type=str)
 
 #optional argument
-command_parser.add_argument('-l', '--local_query', action='store_true', default=False) #action='store_true' -> returns true if flag is called 
-command_parser.add_argument('-t', '--threading', action='store_true', default=False)
-
 command_parser.add_argument('-e', '--evalue_threshold', type=float, default=10**-10)
 command_parser.add_argument('-n', '--length_threshold', type=float, default=50.0)
 command_parser.add_argument('-i', '--identity_threshold', type=float, default=50.0)
 
+command_parser.add_argument('-q', '--blast_query_size', type=int, default=100)
 command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
-command_parser.add_argument('-b', '--retrieve_blast', type=int, default=100)
 
 
 args = command_parser.parse_args()
 
-print('{}'.format(args))
-print('input: {}'.format(args.input_file)) 
+input_string = args.input_file
+mafft_directory = args.mafft_directory #r'/Users/Gioele/miniconda3/bin/mafft'
+email = args.email
+output_name = args.output_name
+
+taxid_list = [] #['9592']
+if type(args.taxid_list) == list:
+    taxid_list = args.taxid_list
+
+evalue_threshold = args.evalue_threshold
+len_threshold = args.length_threshold
+identity_threshold = args.identity_threshold
+
+
+query_size = args.blast_query_size
+sequences_per_taxon = args.sequences_per_taxon
+
+
+print(input_string, mafft_directory, email, output_name, taxid_list, evalue_threshold, len_threshold, identity_threshold, query_size,sequences_per_taxon)

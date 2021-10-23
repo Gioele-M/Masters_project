@@ -1,0 +1,11 @@
+Entrez query of 10 taxids finished in 65.08, query size = 100, Time = 2021-10-22 08:50:06.573639
+Threading of 10 taxids finished in 1344.24; Time 2021-10-22 09:12:31.980106
+Entrez query of 10 taxids finished in 62.41, query size = 100, Time = 2021-10-22 09:13:35.508989
+Threading of 10 taxids finished in 142.21; Time 2021-10-22 09:15:58.203091
+Entrez query of 10 taxids finished in 62.39, query size = 100, Time = 2021-10-22 09:17:01.571369
+Threading of 10 taxids finished in 202.15; Time 2021-10-22 09:20:24.418350
+Entrez query of 10 taxids finished in 62.66, query size = 100, Time = 2021-10-22 09:27:34.181504
+A result couldnt be parsed
+Threading of 10 taxids finished in 103.65; Time 2021-10-22 09:29:19.586024
+Entrez query of 10 taxids finished in 63.57, query size = 100, Time = 2021-10-22 09:30:24.270863
+Threading of 10 taxids finished in 142.93; Time 2021-10-22 09:32:48.180293

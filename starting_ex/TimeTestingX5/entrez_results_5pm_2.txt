@@ -1,0 +1,8 @@
+Entrez query of 10 taxids finished in 62.22, query size = 100, Time = 2021-10-22 17:22:36.747539
+Threading of 10 taxids finished in 142.2; Time 2021-10-22 17:25:00.055513
+Entrez query of 10 taxids finished in 62.24, query size = 100, Time = 2021-10-22 17:26:03.451702
+Threading of 10 taxids finished in 202.81; Time 2021-10-22 17:29:27.507713
+Entrez query of 10 taxids finished in 62.45, query size = 100, Time = 2021-10-22 17:30:31.138109
+Threading of 10 taxids finished in 203.44; Time 2021-10-22 17:33:55.762913
+Entrez query of 10 taxids finished in 184.07, query size = 100, Time = 2021-10-22 17:37:01.185743
+Threading of 10 taxids finished in 143.04; Time 2021-10-22 17:39:25.418384

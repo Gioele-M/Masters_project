@@ -1,0 +1,17 @@
+Entrez query of 10 taxids finished in 62.64, query size = 100, Time = 2021-10-21 17:28:23.849346
+Threading of 10 taxids finished in 263.04; Time 2021-10-21 17:32:47.979123
+Entrez query of 10 taxids finished in 122.22, query size = 100, Time = 2021-10-21 17:34:51.150737
+Threading of 10 taxids finished in 142.06; Time 2021-10-21 17:37:13.682300
+Entrez query of 10 taxids finished in 62.13, query size = 100, Time = 2021-10-21 17:38:16.492098
+Threading of 10 taxids finished in 142.14; Time 2021-10-21 17:40:39.148024
+Entrez query of 10 taxids finished in 62.14, query size = 100, Time = 2021-10-21 17:41:42.238543
+Threading of 10 taxids finished in 142.22; Time 2021-10-21 17:44:05.464747
+Entrez query of 10 taxids finished in 62.37, query size = 100, Time = 2021-10-21 17:45:08.703110
+Threading of 10 taxids finished in 142.08; Time 2021-10-21 17:47:31.285466
+Entrez query of 10 taxids finished in 242.1, query size = 100, Time = 2021-10-21 17:51:34.092118
+Threading of 10 taxids finished in 382.16; Time 2021-10-21 17:57:57.376937
+Entrez query of 10 taxids finished in 182.18, query size = 100, Time = 2021-10-21 18:01:00.570938
+Threading of 10 taxids finished in 504.38; Time 2021-10-21 18:09:25.923593
+Threading of 10 taxids finished in 0.26; Time 2021-10-21 18:09:27.811180
+Threading of 10 taxids finished in 0.28; Time 2021-10-21 18:09:29.064414
+Threading of 10 taxids finished in 0.28; Time 2021-10-21 18:09:30.277944

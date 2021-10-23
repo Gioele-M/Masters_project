@@ -1,18 +1,15 @@
-import os
-from sys import stderr, stdout
 import tempfile
 import subprocess
-from warnings import catch_warnings
-import pandas as pd
-import numpy as np
-from Bio import SeqIO, SeqRecord, Seq, SearchIO, AlignIO, Phylo
-from Bio.Blast import NCBIWWW, NCBIXML
-import Bio.Entrez
-from Bio.Phylo.TreeConstruction import DistanceCalculator,DistanceTreeConstructor
-from pandas.core.frame import DataFrame
 import logging
 import time
 import traceback
+import argparse
+import pandas as pd
+from pandas.core.frame import DataFrame
+from Bio import SeqIO, SeqRecord, SearchIO, AlignIO, Phylo
+from Bio.Blast import NCBIWWW
+import Bio.Entrez
+from Bio.Phylo.TreeConstruction import DistanceCalculator,DistanceTreeConstructor
 from ete3 import PhyloTree
 
 #Mammal, aves, tetrapods
@@ -128,7 +125,9 @@ def filter_df_blast(df:DataFrame, query:SeqRecord, evalue = 10**-10, difference_
     #Obtain query length
     query_length = len(query.seq)
     #Determine upper/lower threshold of acceptance for sequences 
-    lower, upper = query_length*(difference_from_query/100), query_length*((difference_from_query + 100)/100)
+    percent_query = query_length*(difference_from_query/100)
+
+    lower, upper = query_length-percent_query, query_length+percent_query
     #Filter DF
     df_to_return = df_to_return[df_to_return['Seq_length'] > lower]
     df_to_return = df_to_return.reset_index(drop=True)
@@ -249,7 +248,7 @@ def run_mafft_saving_file(fasta:str, mafft_directory:str, filename:str) -> str:
     with open(file, 'w') as handle:
         handle.write(fasta)
     #Parse and run with mafft 
-    command_list = [mafft_directory, '--distout', '{}'.format(file)]
+    command_list = [mafft_directory, '{}'.format(file)] #'--distout',
     process = subprocess.Popen(command_list, universal_newlines= True, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
     stdout, stderr = process.communicate()
 
@@ -321,20 +320,43 @@ def tree_from_alignment(alignment):
 
 if __name__ == '__main__':
     #USER INPUTS
-    input_string = 'human_mx1.fas' #'sry_protein.fasta' 'QBA69874'
+    command_parser = argparse.ArgumentParser(description='Run your BLAST and obtain MSA and phylogenetic tree')
+
+    command_parser.add_argument('input_file')
+    command_parser.add_argument('mafft_directory')
+    command_parser.add_argument('email')
+    command_parser.add_argument('output_name')
+
+    #Taxid list as optional list
+    command_parser.add_argument('-x', '--taxid_list', nargs='*', type=str)
+
+    #optional argument
+    command_parser.add_argument('-e', '--evalue_threshold', type=float, default=10**-10)
+    command_parser.add_argument('-n', '--length_threshold', type=float, default=50.0)
+    command_parser.add_argument('-i', '--identity_threshold', type=float, default=50.0)
+
+    command_parser.add_argument('-q', '--blast_query_size', type=int, default=100)
+    command_parser.add_argument('-s', '--sequences_per_taxon', type=int, default=1)
+
+
+    args = command_parser.parse_args()
+
+    input_string = args.input_file
+    mafft_directory = args.mafft_directory #r'/Users/Gioele/miniconda3/bin/mafft'
+    email = args.email
+    output_name = args.output_name
+
     taxid_list = [] #['9592']
-    mafft_directory = r'/Users/Gioele/miniconda3/bin/mafft'
-    email = 'A.N.Other@example.com'
-    output_name = 'draft_v5_python3.9'
+    if type(args.taxid_list) == list:
+        taxid_list = args.taxid_list
+
+    evalue_threshold = args.evalue_threshold
+    len_threshold = args.length_threshold
+    identity_threshold = args.identity_threshold
 
 
-    query_size = 100
-
-    evalue_threshold = 10**-10
-    len_threshold = 50
-    identity_threshold = 50
-
-    sequences_per_taxon = 1
+    query_size = args.blast_query_size
+    sequences_per_taxon = args.sequences_per_taxon
 
 
     #logging file 
@@ -383,7 +405,7 @@ if __name__ == '__main__':
     #Filter DF by E-value / Bitscore / Identity
     filtered_blast_df = filter_df_blast(results_df_blast, fasta_record, evalue=evalue_threshold, difference_from_query=len_threshold, identity_threshold=identity_threshold)
 
-    print("BLAST DF after filtering holds {} entries".format(len(results_df_blast)))
+    print("BLAST DF after filtering holds {} entries".format(len(filtered_blast_df)))
 
 
 

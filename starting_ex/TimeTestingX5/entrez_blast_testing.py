@@ -39,7 +39,7 @@ if __name__ ==  '__main__':
     for x in new_list:
         taxid_list.append(str(x))
     '''
-    query_size = 900
+    query_size = 100
 
     
     #Blast with list 

@@ -50,3 +50,38 @@ Entrez query of 100 taxids finished in 61.91, query size = 100, Time = 2021-10-1
 Entrez query of 100 taxids finished in 121.93, query size = 100, Time = 2021-10-19 17:16:23.271689
 Entrez query of 100 taxids finished in 781.75, query size = 100, Time = 2021-10-19 17:29:31.068154
 Entrez query of 100 taxids finished in 301.9, query size = 100, Time = 2021-10-19 17:34:39.129599
+Entrez query of 10 taxids finished in 62.99, query size = 900, Time = 2021-10-20 10:01:51.657953
+Threading of 10 taxids finished in 82.43; Time 2021-10-20 10:02:48.096088
+Entrez query of 10 taxids finished in 62.59, query size = 900, Time = 2021-10-20 10:03:00.189446
+Entrez query of 10 taxids finished in 422.89, query size = 900, Time = 2021-10-20 10:10:09.160854
+Threading of 10 taxids finished in 562.27; Time 2021-10-20 10:12:16.588906
+Entrez query of 10 taxids finished in 123.51, query size = 900, Time = 2021-10-20 10:12:18.916092
+Entrez query of 10 taxids finished in 122.79, query size = 900, Time = 2021-10-20 10:14:27.221321
+Threading of 10 taxids finished in 142.12; Time 2021-10-20 10:14:44.740946
+Threading of 10 taxids finished in 202.04; Time 2021-10-20 10:18:12.788563
+Threading of 10 taxids finished in 263.83; Time 2021-10-20 10:22:42.712919
+Entrez query of 10 taxids finished in 123.07, query size = 900, Time = 2021-10-20 11:02:52.163242
+Entrez query of 10 taxids finished in 62.94, query size = 900, Time = 2021-10-20 11:04:01.395878
+Entrez query of 10 taxids finished in 62.8, query size = 900, Time = 2021-10-20 11:05:10.440808
+Entrez query of 10 taxids finished in 2523.68, query size = 900, Time = 2021-10-20 11:47:21.024772
+Entrez query of 10 taxids finished in 64.6, query size = 900, Time = 2021-10-20 11:48:31.861012
+Entrez query of 10 taxids finished in 63.12, query size = 900, Time = 2021-10-20 11:58:14.727750
+Entrez query of 10 taxids finished in 122.66, query size = 900, Time = 2021-10-20 12:00:22.899683
+Threading of 10 taxids finished in 202.15; Time 2021-10-20 12:00:35.454793
+Entrez query of 10 taxids finished in 123.1, query size = 900, Time = 2021-10-20 12:02:32.015230
+Threading of 10 taxids finished in 202.03; Time 2021-10-20 12:04:03.581506
+Entrez query of 10 taxids finished in 122.58, query size = 900, Time = 2021-10-20 12:04:40.655346
+Entrez query of 10 taxids finished in 122.66, query size = 900, Time = 2021-10-20 12:06:49.327814
+Threading of 10 taxids finished in 1102.24; Time 2021-10-20 12:22:32.012980
+Threading of 10 taxids finished in 82.43; Time 2021-10-20 12:24:01.125603
+Threading of 10 taxids finished in 1882.08; Time 2021-10-20 12:55:29.580504
+Entrez query of 10 taxids finished in 62.97, query size = 900, Time = 2021-10-20 12:58:16.102452
+Entrez query of 10 taxids finished in 123.02, query size = 900, Time = 2021-10-20 13:00:25.249141
+Threading of 10 taxids finished in 562.27; Time 2021-10-20 13:06:36.620796
+Entrez query of 10 taxids finished in 783.46, query size = 900, Time = 2021-10-20 13:13:34.942631
+Threading of 10 taxids finished in 622.29; Time 2021-10-20 13:17:05.137679
+Entrez query of 10 taxids finished in 422.71, query size = 900, Time = 2021-10-20 13:20:43.924436
+Entrez query of 10 taxids finished in 122.87, query size = 900, Time = 2021-10-20 13:22:52.996832
+Threading of 10 taxids finished in 442.47; Time 2021-10-20 13:24:33.786992
+Threading of 10 taxids finished in 563.32; Time 2021-10-20 13:34:03.285294
+Threading of 10 taxids finished in 142.96; Time 2021-10-20 13:36:32.577203

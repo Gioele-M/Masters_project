@@ -1,0 +1,16 @@
+INFO:1 sequences were parsed correctly
+INFO:Opened sequence NP_000198
+INFO:Protein sequence was retrieved from NCBI protein database
+INFO:Opened sequence NM_003140
+INFO:1 sequences were parsed correctly
+INFO:Opened sequence NP_000198
+INFO:Protein sequence was retrieved from NCBI protein database
+INFO:BLASTp specifying 0 taxid(s) completed
+INFO:Blast returned 50 results
+INFO:50 entries were recorded from the BLASTp results
+INFO:10 sequences were removed filtering the BLAST results DF, returning a DF with 40 entries
+INFO:40 protein entries were retrieved from NCBI protein database
+INFO:40 sequences were parsed correctly
+INFO:Filtering by taxon: 31 unique taxid(s) collected, 9 entries discarded
+INFO:31 sequences were prepared for alignment with the query
+INFO:Tree was produced with this and that method

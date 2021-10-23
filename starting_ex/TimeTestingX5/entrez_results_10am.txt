@@ -1,0 +1,2 @@
+Entrez query of 10 taxids finished in 63.92, query size = 900, Time = 2021-10-21 11:24:18.749146
+Threading of 10 taxids finished in 323.36; Time 2021-10-21 11:29:56.343208
