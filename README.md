@@ -1,4 +1,5 @@
 **BlastPTree**
+-----
 
 BlastPTree is a pipeline coded in Python 3.5.6 which provides a fast tool for preliminary homology analysis and gene tree inference. The pipeline uses external tools and packages including Biopython, Pandas, ETE3 and MAFFT and requires being operated in a conda environment. 
 
@@ -9,6 +10,7 @@ The pipeline requires to have both *[MAFFT](https://mafft.cbrc.jp/alignment/soft
 
 ### Installation:
 The pipeline requires a conda environment to function properly. The setup YML file for the compatible environment is stored in the Git repository. The first step is cloning locally the repository.
+
 `git clone https://github.com/Gioele-M/Masters_project.git`
 
 Once the repository has been cloned, the YML file can be used to install the required conda environment.
@@ -53,7 +55,9 @@ To use the pipeline, the Python interpreter should be called first, followed by 
 
 
 ### Output
-The pipeline produces different types of output formats to allow the user to visualise the results in its favourite GUI. Output includes 
+The pipeline produces different types of output formats to allow the user to visualise the results in its favourite GUI. 
+
+Output includes: 
 * Tabular information on the sequences (CSV-TSV)
 * Aligned and unaligned sequences retrieved from Blast
 * Output tree in PhyloXML and Newick format
