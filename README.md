@@ -25,11 +25,17 @@ The pipeline requires activating the conda environment
 `conda activate BlastPTree_env`
 
 The pipeline has four compulsory positional arguments and six optional arguments
+
 Compulsory arguments
-* input string (input string can either be a nucleotide/protein fasta file or an accession number)
-* The MAFFT directory 
-* User’s email address (required by the biopython Bio.Entrez.efetch() module to connect to the NCBI servers) 
-* Output name
+
+  i) input string (input string can either be a nucleotide/protein fasta file or an accession number)
+
+  ii) The MAFFT directory 
+  
+  iii) User’s email address (required by the biopython Bio.Entrez.efetch() module to connect to the NCBI servers) 
+  
+  iv) Output name
+
 
 Optional arguments
 * `-e/--evalue_threshold` sets the threshold for the E-value for Blast results (default 10^-10) 
