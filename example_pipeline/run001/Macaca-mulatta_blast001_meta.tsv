@@ -1,6 +1,0 @@
-name	id	q_cover	e_val	hit_length	isoform	precursor	extra
-interferon-induced GTP-binding protein Mx1	XP_014988323.2	0.9984917043740572	0.0	662	 X1 [Macaca mulatta]		
-interferon-induced GTP-binding protein Mx2	NP_001073164.1	0.9396681749622926	0.0	626			Macaca mulatta]
-dynamin-2	XP_014978375.1	0.7179487179487181	1.6326399999999996e-68	488	 X10 [Macaca mulatta]		
-dynamin-1	XP_014972215.1	0.7104072398190046	4.895909999999999e-67	482	 X1 [Macaca mulatta]		
-dynamin-3	XP_014979548.2	0.6395173453996983	1.7914699999999997e-65	434	 X1 [Macaca mulatta]		

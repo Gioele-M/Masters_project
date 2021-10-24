@@ -1,7 +1,0 @@
-Entrez query of 10 taxids finished in 62.84, query size = 900, Time = 2021-10-20 14:16:42.594535
-Entrez query of 10 taxids finished in 303.08, query size = 900, Time = 2021-10-20 14:21:47.477678
-Entrez query of 10 taxids finished in 363.18, query size = 900, Time = 2021-10-20 14:27:54.934886
-Entrez query of 10 taxids finished in 62.98, query size = 900, Time = 2021-10-20 14:28:59.641207
-Entrez query of 10 taxids finished in 122.84, query size = 900, Time = 2021-10-20 14:31:03.915116
-Entrez query of 10 taxids finished in 65.15, query size = 900, Time = 2021-10-20 14:32:10.558469
-Entrez query of 10 taxids finished in 62.71, query size = 900, Time = 2021-10-20 14:33:14.981138
