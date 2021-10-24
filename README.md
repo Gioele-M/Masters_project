@@ -9,7 +9,7 @@ The pipeline requires to have both *[MAFFT](https://mafft.cbrc.jp/alignment/soft
 
 ### Installation:
 The pipeline requires a conda environment to function properly. The setup YML file for the compatible environment is stored in the Git repository. The first step is cloning locally the repository.
-‘git clone https://github.com/Username/final_branch.git'
+`git clone https://github.com/Gioele-M/Masters_project.git`
 
 Once the repository has been cloned, the YML file can be used to install the required conda environment.
 
@@ -25,11 +25,17 @@ The pipeline requires activating the conda environment
 `conda activate BlastPTree_env`
 
 The pipeline has four compulsory positional arguments and six optional arguments
+
 Compulsory arguments
-* i) the input string (input string can either be a nucleotide/protein fasta file or an accession number)
-* ii) the MAFFT directory 
-* iii) the user’s email address (required by the biopython Bio.Entrez.efetch() module to connect to the NCBI servers) 
-* iv) the output name
+
+  i) input string (input string can either be a nucleotide/protein fasta file or an accession number)
+
+  ii) The MAFFT directory 
+  
+  iii) User’s email address (required by the biopython Bio.Entrez.efetch() module to connect to the NCBI servers) 
+  
+  iv) Output name
+
 
 Optional arguments
 * `-e/--evalue_threshold` sets the threshold for the E-value for Blast results (default 10^-10) 
